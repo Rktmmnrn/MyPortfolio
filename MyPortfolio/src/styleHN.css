@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+
+/* .background { //this is the background image but maybe after
+  @apply absolute w-full top-0 h-auto;
+  z-index: -1;
+  img {
+    @apply w-full h-full object-cover;
+  }
+} */
+
+header {
+  @apply flex justify-between items-center uppercase absolute w-full p-5;
+  nav {
+    @apply flex font-bold rounded-3xl mt-5;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    gap: 60px;
+  }
+  figure {
+    width: 74px;
+    height: 100px;
+  }
+  span {
+    @apply rotate-270;
+    font-family: 'Aclonica', sans-serif;
+  }
+}
+header {
+  img {
+    @apply w-full h-full object-cover;
+  }
+  a {
+    /* color: #FC4850; */
+    color: white;
+  }
+}
+
+.hero {
+  @apply flex flex-col h-screen justify-center;
+  gap: 20px;
+  h1 {
+    @apply capitalize;
+    font-size: 96px;
+  }
+  h2 {
+    @apply capitalize w-1/2;
+    font-size: 48px;
+    font-family: 'Aclonica', sans-serif;
+  }
+}
