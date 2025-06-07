@@ -1,0 +1,4 @@
+Props : nom(variable), valeur
+1. Faire passer du props du composant parent a l'enfant
+2. Recuperer les props dans le composant enfant
+3. Consomer les props
