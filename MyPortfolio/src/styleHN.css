@@ -1,39 +1,146 @@
 @import 'tailwindcss';
 
+* {
+  scroll-behavior: smooth;
+}
+
 header {
-  @apply flex justify-between items-center uppercase absolute w-full p-5;
+  @apply flex justify-between items-center uppercase absolute w-full py-5 px-10 z-10;
 }
 header nav {
-  @apply flex font-bold rounded-3xl;
+  @apply flex font-bold rounded-lg;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  gap: 60px;
 }
 header figure {
   width: 50px;
   height: 70px;
 }
-header span {
-  /* @apply rotate-270; */
-  font-family: 'Aclonica', sans-serif;
-}
 header img {
   @apply w-full h-full object-cover;
 }
 header a {
+  @apply p-2 transition-all duration-300 ease-in-out;
   color: white;
+}
+header a:hover {
+  @apply bg-gray-200;
+  color: rgba(0, 0, 0, 0.5);
+}
+header button {
+  @apply p-3 relative flex flex-row gap-2 items-center transition-all duration-300 overflow-hidden;
+  border: 1px solid #800000;
+}
+header.scrolled {
+  @apply fixed py-1;
+  backdrop-filter: blur(5px);
+}
+
+main {
+  @apply flex flex-col items-center;
 }
 
 .hero {
-  @apply flex flex-col h-screen justify-center;
-  gap: 20px;
+  @apply flex flex-row h-screen justify-between px-10 items-center w-full;
+  gap: 100px;
 }
-.hero h1 {
-  @apply capitalize;
-  font-size: 96px;
+.hero>div {
+  @apply flex flex-col justify-center items-start;
 }
-.hero h2 {
-  @apply capitalize w-1/2;
+.hero>div p:first-child {
+  font-size: 36px;
+}
+.hero>div p {
+  @apply capitalize font-normal font-semibold;
   font-size: 48px;
+}
+.hero>div button {
+  margin-top: 40px;
+}
+.hero>div button:hover {
+  transition: 500ms ease;
+  transform: scale(1.01);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  transition: 500ms ease;
+}
+.hero figure {
+  @apply overflow-hidden;
+  width: 300px;
+  height: 300px;
+}
+.hero figure img {
+  @apply w-full h-full rounded-full object-cover;
+}
+.hero>div:last-child {
+  gap: 40px;
+}
+.hero>div>div {
+  @apply flex flex-row w-full justify-center items-center;
+  gap: 15px;
+}
+.hero>div>div::after {
+  content: "";
+  border: 1px solid #800000;
+  width: 20%;
+  height: 0;
+}
+.hero>div>div a {
+  width: 28px;
+  height: 28px;
+}
+.hero>div>div a:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+  transition: 500ms ease;
+}
+.hero>div>div a img {
+  @apply w-full h-full object-cover;
+}
+
+h2,h3,h4 {
+  @apply uppercase text-center;
+}
+h1 {
+  @apply capitalize;
+  font-size: 72px;
   font-family: 'Aclonica', sans-serif;
+}
+h2 {
+  @apply font-bold text-4xl;
+  color: #757575;
+}
+h3 {
+  @apply flex flex-row items-center justify-center font-bold;
+  font-size: 22px;
+  gap: 8px
+}
+h4 {
+  text-decoration: underline;
+}
+
+.divSkills {
+  @apply grid grid-cols-2;
+}
+.Skills-div-img {
+  @apply cursor-pointer;
+}
+.Skills-div-img:hover {
+  @apply duration-300 ease-in-out transition-all;
+}
+.Skills-div-name {
+  @apply font-light;
+}
+#Exp>div>div>span::after {
+  content: '';
+  @apply border-2 border-[#800000] absolute w-7 h-7 rounded-full overflow-hidden;
+}
+#Exp>div>div h3 a::before {
+  content: "";
+  @apply w-full h-full absolute top-0 border-b-2 translate-x-[-101%];
+}
+#Exp>div>div h3 a:hover::before {
+  @apply translate-x-4 duration-200 transition-all ease-in mt-0;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+
 }
