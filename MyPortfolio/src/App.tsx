@@ -1,5 +1,5 @@
 import './App.css'
-import First from './Hero&Nav.tsx'
+import Home from './Home.tsx'
 import Form from './Form.tsx' // formulaire
 import { useState } from 'react'
 
@@ -8,7 +8,7 @@ function App() {
   //render
   return (
     <>
-    <First />
+    <Home />
     <div style={{display: "flex"}}>
       {/* <Form /> */}
     </div>

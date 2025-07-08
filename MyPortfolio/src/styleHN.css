@@ -5,15 +5,17 @@
 }
 
 header {
-  @apply flex justify-between items-center uppercase absolute w-full py-5 px-10 z-10;
+  @apply flex justify-between items-center uppercase absolute w-full py-5 px-20 z-10;
 }
 header nav {
   @apply flex font-bold rounded-lg;
   background-color: rgba(0, 0, 0, 0.5);
 }
 header figure {
-  width: 50px;
-  height: 70px;
+  @apply w-[50px] h-[70px];
+}
+header figure.scrolled { /* Scrolled */
+  @apply w-[40px] h-[50px] transition-all duration-200;
 }
 header img {
   @apply w-full h-full object-cover;
@@ -30,17 +32,27 @@ header button {
   @apply p-3 relative flex flex-row gap-2 items-center transition-all duration-300 overflow-hidden;
   border: 1px solid #800000;
 }
-header.scrolled {
-  @apply fixed py-1;
+header.scrolled { /* Scrolled */
+  @apply fixed py-1 transition-all duration-200;
   backdrop-filter: blur(5px);
 }
 
 main {
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center mx-20 relative;
+}
+
+main>button { /* boutton retour en haut*/
+  @apply h-15 w-15 fixed bottom-10 z-1 right-20 border-2 rounded-full text-[#800000] border-[#800000] translate-y-[200px];
+}
+main>button.scrolled {
+  @apply flex transition-all duration-200 translate-y-0;
+}
+main>button img {
+  @apply w-full h-full object-contain;
 }
 
 .hero {
-  @apply flex flex-row h-screen justify-between px-10 items-center w-full;
+  @apply flex flex-row h-screen justify-between items-center w-full;
   gap: 100px;
 }
 .hero>div {
@@ -128,16 +140,24 @@ h4 {
 .Skills-div-name {
   @apply font-light;
 }
+
+#Skl, #Exp, #Abt, #Contct {
+  @apply h-screen items-center flex w-full justify-between;
+}
+
+#Exp>div>div>span {
+  @apply duration-200 ease-in transition-all;
+}
 #Exp>div>div>span::after {
-  content: '';
-  @apply border-2 border-[#800000] absolute w-7 h-7 rounded-full overflow-hidden;
+  content: "";
+  @apply border-3 border-[#800000] absolute w-8 h-8 rounded-full overflow-hidden;
 }
 #Exp>div>div h3 a::before {
   content: "";
   @apply w-full h-full absolute top-0 border-b-2 translate-x-[-101%];
 }
 #Exp>div>div h3 a:hover::before {
-  @apply translate-x-4 duration-200 transition-all ease-in mt-0;
+  @apply translate-x-0 duration-200 transition-all ease-in mt-0;
   z-index: -1;
 }
 

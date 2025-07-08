@@ -1,23 +1,31 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { easeInOut, motion } from 'framer-motion'
 import './styleHN.css' // styles
 
 import Logo from '/Logo.svg'
-import profil from './assets/jpg/IMG_20250428_092309.jpg'
-import fb from './assets/icons/Fb.svg'
-import lnkdn from './assets/icons/linkedin-svgrepo-com.svg'
-import github from './assets/icons/github-icon-1.svg'
-import down from './assets/icons/Download.svg'
 import talk from './assets/icons/talk-svgrepo-com.svg'
+import Up from './assets/icons/vue-svgrepo-com.svg'
 
 import Btn from './component/boutton'
 import Vector from './component/vector' // svg component
+
 import Skills from './Skills'
 import Experience from './Experiences'
+import About from './About'
+import Contact from './Contact'
+import Hero from './Hero'
 
 function app() {
-  const color1 = '#800000';
   const section = useRef(null);
   const [scrolled, setScrolled] = useState(false);
+
+  const up = () => {
+    return (
+      window.scrollTo({
+        top: 0,
+      })
+    )
+  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -33,14 +41,14 @@ function app() {
   return (
     <>
     <header className={scrolled ? "scrolled" : ""}>
-      <figure>
+      <figure className={scrolled ? "scrolled" : ""}>
         <img src={Logo} alt="Logo" />
       </figure>
       <nav>
         <a href="#Skl">skills & projects</a>
         <a href="#Exp">experiences</a>
-        <a href="">about</a>
-        <a href="">contact</a>
+        <a href="#Abt">about</a>
+        <a href="#Contct">contact</a>
       </nav>
       <button className='group'>
         <span className='capitalize font-bold text-[#800000] group-hover:text-white transition-all duration-300'>let's talk !</span>
@@ -50,34 +58,37 @@ function app() {
     </header>
 
     <main>
-      <section className="hero">
-        <div>
-          <p>hi, i'm</p>
-          <h1>fanomezan<span style={{color: color1}}>iavo</span></h1>
-          <p style={{color:color1}}>développeur web junior front-end</p>
-          <Btn>
-            download my CV here
-            <Vector nameVector={down} style={{width: '28px', height: '28px', objectFit: 'cover'}}></Vector>
-          </Btn>
-        </div>
-        <div>
-          <figure>
-            <img src={profil} alt="profil" />
-          </figure>
-          <div>
-            <a href="#" target='blank'><img src={lnkdn} alt="linkdIn" /></a>
-            <a href="#" target='blank'><img src={github} alt="GitHub" /></a>
-            <a href="#" target='blank'><img src={fb} alt="Fb" /></a>
-          </div>
-        </div>
+      <button onClick={up} className={scrolled ? "scrolled" : ""}>
+        <motion.img
+        src={Up}
+        animate= {{y: [0,5,0]}}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: 'loop',
+          ease: easeInOut,
+        }}
+        alt="turnUp"
+        />
+      </button>
+      <section id='Hero' className="hero">
+        <Hero></Hero>
       </section>
 
-      <section ref={section} id='Skl' className="flex flex-col items-center mx-10">
+      <section ref={section} id='Skl' className="flex-col">
         <Skills />
       </section>
 
-      <section id='Exp' className='py-16 px-6 max-w-4xl'>
-        <Experience/>
+      <section id='Exp' className='flex-row-reverse'>
+        <Experience />
+      </section>
+
+      <section id='Abt' className="flex-row">
+        <About />
+      </section>
+
+      <section id="Contct" className='flex-row-reverse'>
+        <Contact />
       </section>
     </main>
     </>

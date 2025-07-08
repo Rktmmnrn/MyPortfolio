@@ -1,30 +1,20 @@
 import { ReactNode, MouseEventHandler } from "react";
+import { motion } from 'framer-motion'
 
 type ButtonProps = {
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
-const color1 = '#800000';
 
 const Button = ({children, onClick}: ButtonProps) => {
   return (
-    <button
+    <motion.button
     onClick={onClick}
-    style={{
-        color: 'white',
-        backgroundColor: color1,
-        fontWeight: 'bold',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        textTransform: 'capitalize',
-        alignItems: 'center',
-        borderRadius: '50px',
-        padding: '10px 20px',
-        gap: '10px'
-        }}>
-        {children}
-    </button>
+    whileHover="hover"
+    className="text-white bg-[#800000] font-bold flex flex-row justify-between capitalize items-center rounded-[50px] py-2 px-5 gap-2"
+    >
+    {children}
+    </motion.button>
   );
 }
 export default Button; 
