@@ -1,30 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
 import './styleHN.css' // styles
+import ProgressBar from './component/ProgressBar'
 
-import Logo from '/Logo.svg'
-import talk from './assets/icons/talk-svgrepo-com.svg'
-import Up from './assets/icons/vue-svgrepo-com.svg'
+import { FiArrowUp } from "react-icons/fi"
 
-import Btn from './component/boutton'
-import Vector from './component/vector' // svg component
-
+import Header from './Header'
 import Skills from './Skills'
 import Experience from './Experiences'
 import About from './About'
 import Contact from './Contact'
 import Hero from './Hero'
 
-function app() {
-  const section = useRef(null);
+function App() {
   const [scrolled, setScrolled] = useState(false);
 
   const up = () => {
-    return (
-      window.scrollTo({
-        top: 0,
-      })
-    )
+    window.scrollTo({
+      top: 0,
+    })
   };
 
   useEffect(() => {
@@ -40,54 +34,41 @@ function app() {
 
   return (
     <>
-    <header className={scrolled ? "scrolled" : ""}>
-      <figure className={scrolled ? "scrolled" : ""}>
-        <img src={Logo} alt="Logo" />
-      </figure>
-      <nav>
-        <a href="#Skl">skills & projects</a>
-        <a href="#Exp">experiences</a>
-        <a href="#Abt">about</a>
-        <a href="#Contct">contact</a>
-      </nav>
-      <button className='group'>
-        <span className='capitalize font-bold text-[#800000] group-hover:text-white transition-all duration-300'>let's talk !</span>
-        <Vector nameVector={talk} style={{width: '28px', height: '28px', objectFit: 'cover'}}></Vector>
-        <span className='z-[-1] absolute bg-[#800000] w-[100%] h-full translate-x-[-105%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out'></span>
-      </button>
-    </header>
+    <ProgressBar />
+    <Header scrolled={scrolled} />
 
     <main>
       <button onClick={up} className={scrolled ? "scrolled" : ""}>
-        <motion.img
-        src={Up}
-        animate= {{y: [0,5,0]}}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          repeatType: 'loop',
-          ease: easeInOut,
-        }}
-        alt="turnUp"
-        />
+        <motion.span
+          animate={{ y: [0, 5, 0] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: 'loop',
+            ease: easeInOut,
+          }}
+          >
+          <FiArrowUp size={40} color="#800000"/>
+          </motion.span>
       </button>
+
       <section id='Hero' className="hero">
-        <Hero></Hero>
+        <Hero />
       </section>
 
-      <section ref={section} id='Skl' className="flex-col">
+      <section id='Skl' className="flex-col lg:flex-row">
         <Skills />
       </section>
 
-      <section id='Exp' className='flex-row-reverse'>
+      <section id='Exp' className='flex-col lg:flex-row-reverse'>
         <Experience />
       </section>
 
-      <section id='Abt' className="flex-row">
+      <section id='Abt' className="flex-col lg:flex-row">
         <About />
       </section>
 
-      <section id="Contct" className='flex-row-reverse'>
+      <section id="Contct" className='flex-col lg:flex-row-reverse'>
         <Contact />
       </section>
     </main>
@@ -95,4 +76,4 @@ function app() {
   )
 }
 
-export default app
+export default App;

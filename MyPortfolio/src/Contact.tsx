@@ -33,7 +33,6 @@ const Contact = () => {
         <div className="flex flex-col gap-3">
           <a href="mailto:rfanomezaniavo@gmail.com" className="text-[#800000] font-semibold hover:underline flex gap-2">
             <Vector nameVector={mail} style={{width: '20px'}}></Vector> rfanomezaniavo@gmail.com
-            {/* // <Fa500Px size={50}/> */}
           </a>
           <a href="https://github.com/Rktmmnrn" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
             <Vector nameVector={git} style={{width: '20px'}}></Vector> GitHub

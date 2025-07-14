@@ -1,7 +1,3 @@
-import Web from '../assets/icons/web-svgrepo-com.svg'
-import Syst from '../assets/icons/system-settings-svgrepo-com.svg'
-import Network from '../assets/icons/network-1-svgrepo-com.svg'
-import Others from '../assets/icons/link-svgrepo-com.svg'
 import Tailwind from '../assets/icons/tailwind-svgrepo-com.svg'
 import Sass from '../assets/icons/sass-svgrepo.svg'
 import ReactSvg from '../assets/react.svg'
@@ -21,10 +17,12 @@ import Wind from '../assets/icons/microsoft-windows-22.svg'
 import Linux from '../assets/icons/linux-svgrepo-com.svg'
 import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
+import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
+
 const skillsData = [
   {
     title: 'web',
-    icon: Web,
+    icon: <MdWeb size={32} />,
     categories: [
       {
         name: 'front-end & design',
@@ -50,7 +48,7 @@ const skillsData = [
   },
   {
     title: 'system & logiciel',
-    icon: Syst,
+    icon: <MdSettings size={32} />,
     items: [
       { name: 'C++', icon: Cplus },
       { name: 'C', icon: Cé },
@@ -59,7 +57,7 @@ const skillsData = [
   },
   {
     title: 'network & tools',
-    icon: Network,
+    icon: <MdNetworkCheck size={32} />,
     items: [
       { name: 'Routage IP', icon: Routage },
       { name: 'GitHub', icon: Git },
@@ -67,7 +65,7 @@ const skillsData = [
   },
   {
     title: 'others',
-    icon: Others,
+    icon: <MdLink size={32} />,
     items: [
       { name: 'Windows', icon: Wind },
       { name: 'Linux', icon: Linux },
