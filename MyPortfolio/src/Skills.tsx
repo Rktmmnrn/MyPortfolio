@@ -25,7 +25,7 @@ const skills = () => {
                     className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl py-4 shadow-lg"
                 >
                     <h3 className="flex items-center gap-2 text-xl font-semibold capitalize">
-                        <span className="w-7 h-7 flex items-center justify-center">{section.icon}</span>                        {section.title}
+                        <span className="w-7 h-7 flex items-center justify-center">{section.icon}</span>{section.title}
                     </h3>
 
                     {section.categories && section.categories.length > 0 ? (
@@ -33,7 +33,7 @@ const skills = () => {
                         <div key={i} className="col-span-1 flex-col flex items-center gap-2 justify-start h-full">
                             <h4 className="font-medium text-md capitalize">{category.name}</h4>
                             <div className="w-full overflow-x-hidden"> {/* Div web */}
-                                <div className='auto-scroll'>
+                                <div className='auto-scroll'> {/* autoScroll */}
                                     {category.items.map((item, j) => (
                                     <div key={j} className="flex flex-col items-center relative justify-center group w-[70px] h-[70px] overflow-hidden">
                                         <img key={item.name} src={item.icon} alt={item.name} className="w-12 h-12 object-contain Skills-div-img group-hover:translate-y-[-2px]" title={item.name}/>

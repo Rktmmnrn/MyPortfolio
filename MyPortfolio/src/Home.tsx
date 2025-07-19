@@ -11,6 +11,7 @@ import Experience from './Experiences'
 import About from './About'
 import Contact from './Contact'
 import Hero from './Hero'
+import Nav from './NavMenu'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,6 +37,7 @@ function App() {
     <>
     <ProgressBar />
     <Header scrolled={scrolled} />
+    <Nav />
 
     <main>
       <button onClick={up} className={scrolled ? "scrolled" : ""}>

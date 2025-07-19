@@ -4,12 +4,28 @@
   scroll-behavior: smooth;
 }
 
-header {
-  @apply flex justify-between items-center uppercase absolute w-full py-5 px-20 z-10;
+body {
+  @apply relative;
 }
-header nav {
-  @apply flex font-bold rounded-lg;
+
+
+nav {
   background-color: rgba(0, 0, 0, 0.5);
+}
+nav a {
+  @apply flex items-center p-2 transition-all duration-300 ease-in-out;
+  color: white;
+}
+nav a:hover {
+  @apply bg-gray-200;
+  color: rgba(0, 0, 0, 0.5);
+}
+nav span {
+  @apply hidden lg:inline;
+}
+
+header {
+  @apply flex justify-between items-center fixed w-full py-3 px-10 z-10 overflow-hidden;
 }
 header figure {
   @apply w-[50px] h-[70px];
@@ -20,25 +36,17 @@ header figure.scrolled { /* Scrolled */
 header img {
   @apply w-full h-full object-cover;
 }
-header a {
-  @apply p-2 transition-all duration-300 ease-in-out;
-  color: white;
-}
-header a:hover {
-  @apply bg-gray-200;
-  color: rgba(0, 0, 0, 0.5);
-}
 header button {
   @apply p-3 relative flex flex-row gap-2 items-center transition-all duration-300 overflow-hidden;
   border: 1px solid #800000;
 }
 header.scrolled { /* header Scrolled */
-  @apply fixed py-2 transition-all duration-200;
+  @apply py-2 transition-all duration-200;
   backdrop-filter: blur(5px);
 }
 
 main {
-  @apply flex flex-col items-center mx-20 relative;
+  @apply flex flex-col items-center mx-10 relative;
 }
 
 main>button { /* boutton retour en haut*/
@@ -52,13 +60,13 @@ main>button img {
 }
 
 .hero {
-  @apply flex flex-col-reverse h-screen justify-evenly items-center w-full gap-8;
+  @apply flex flex-col-reverse h-screen justify-evenly items-center w-full gap-5 mt-[100px];
 }
 .hero>div:first-child {
   @apply flex flex-col justify-center items-center;
 }
 .hero>div:last-child {
-  @apply flex flex-row justify-evenly items-center w-full;
+  @apply flex flex-row justify-center items-center w-full gap-10;
 }
 .hero>div p:first-child {
   font-size: 36px;
@@ -85,14 +93,20 @@ main>button img {
   @apply w-full h-full object-cover;
 }
 .hero>div:last-child>div {
-  @apply flex flex-col w-full justify-center items-center;
+  @apply flex flex-col w-auto justify-center items-center;
   gap: 15px;
+}
+.hero>div>div::before {
+  content: "";
+  border: 1px solid #800000;
+  width: 0;
+  height: 20px;
 }
 .hero>div>div::after {
   content: "";
   border: 1px solid #800000;
-  width: 20%;
-  height: 0;
+  width: 0;
+  height: 20px;
 }
 .hero>div>div a {
   width: 28px;
@@ -111,16 +125,16 @@ h2,h3,h4 {
 }
 h1 {
   @apply capitalize;
-  font-size: 65px;
+  font-size: 46px;
   font-family: 'Aclonica', sans-serif;
 }
 h2 {
-  @apply font-bold text-4xl;
+  @apply font-bold text-2xl;
   color: #757575;
 }
 h3 {
   @apply flex flex-row items-center justify-center font-bold;
-  font-size: 22px;
+  font-size: 18px;
   gap: 8px
 }
 h4 {
@@ -141,7 +155,7 @@ h4 {
 }
 
 #Skl, #Exp, #Abt, #Contct {
-  @apply py-24 md:py-32 lg:py-40 items-center flex w-full justify-evenly;
+  @apply py-24 md:py-32 lg:py-40 items-center flex w-full justify-evenly gap-5;
 }
 
 #Exp>div>div>span {
@@ -173,9 +187,52 @@ h4 {
   animation: scroll-horizontal 15s linear infinite paused;
 }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    text-decoration: underline;
+  }
+  header {
+    @apply px-15;
+  }
+
+  main {
+    @apply mx-15;
+  }
+}
+
 @media (min-width: 1024px) {
+  h1 {
+    font-size: 65px;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    text-decoration: underline;
+  }
+
+  header {
+    @apply px-20;
+  }
+
+  main {
+    @apply mx-20;
+  }
+
   .hero {
-    @apply flex-row justify-between gap-12;
+    @apply flex-row justify-between gap-12 mt-0;
   }
   .hero>div:first-child {
     @apply justify-start items-start;
@@ -185,10 +242,23 @@ h4 {
     height: 300px;
   }
   .hero>div:last-child {
-    @apply flex flex-col justify-center items-center gap-5;
+    @apply flex flex-col justify-center items-center gap-5 w-auto;
   }
   .hero>div:last-child>div {
     @apply flex-row w-full justify-center items-center;
     gap: 15px;
+  }
+  .hero>div>div::before {
+    @apply hidden;
+    content: "";
+  }
+  .hero>div>div::after {
+    content: "";
+    border: 1px solid #800000;
+    width: 20%;
+    height: 0;
+  }
+  #Skl, #Exp, #Abt, #Contct {
+    @apply gap-3 justify-between;
   }
 }
