@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './Home.tsx'
-import Form from './Form.tsx' // formulaire
+// import Form from './Form.tsx' // formulaire
 import Loader from './component/Loader.tsx'
 
 function App() {

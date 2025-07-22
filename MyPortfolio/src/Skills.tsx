@@ -1,6 +1,5 @@
 import skillsData from './component/SkillsData'
 import { motion } from 'framer-motion'
-import { div } from 'framer-motion/client'
 
 const skills = () => {
     return (

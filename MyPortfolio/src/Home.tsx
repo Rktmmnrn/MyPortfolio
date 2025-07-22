@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect,  useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
 import './styleHN.css' // styles
 import ProgressBar from './component/ProgressBar'

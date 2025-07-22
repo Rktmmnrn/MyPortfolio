@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 
 import profil from './assets/jpg/IMG_20250428_092309.jpg'

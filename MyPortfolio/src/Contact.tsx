@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Vector from './component/vector'
 
 import mail from './assets/icons/mail.svg'
-import { Fa500Px } from 'react-icons/fa'
+// import { Fa500Px } from 'react-icons/fa'
 import git from './assets/icons/github-icon-1.svg'
 import lnkdn from './assets/icons/linkedin-svgrepo-com.svg'
 
