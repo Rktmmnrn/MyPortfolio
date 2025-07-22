@@ -10,6 +10,7 @@ import Postgres from '../assets/icons/postgresql.svg'
 import Mysql from '../assets/icons/mysql-3.svg'
 import Cé from '../assets/icons/c-1.svg'
 import Cplus from '../assets/icons/c.svg'
+import Qt from '../assets/icons/qt-1.svg'
 import Java from '../assets/icons/java-svgrepo-com.svg'
 import Routage from '../assets/icons/router-svgrepo-com.svg'
 import Git from '../assets/icons/github-icon-1.svg'
@@ -21,21 +22,13 @@ import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
 
 const skillsData = [
   {
-    title: 'web',
+    title: 'web & database',
     icon: <MdWeb size={32} />,
-    categories: [
-      {
-        name: 'front-end & design',
         items: [
           { name: 'React', icon: ReactSvg },
           { name: 'Tailwind', icon: Tailwind },
           { name: 'Sass', icon: Sass },
           { name: 'Figma', icon: Figma },
-        ],
-      },
-      {
-        name: 'back-end & database',
-        items: [
           { name: 'Node.js', icon: Node },
           { name: 'JavaScript', icon: Js },
           { name: 'PHP', icon: Php },
@@ -43,14 +36,13 @@ const skillsData = [
           { name: 'PostgreSQL', icon: Postgres },
           { name: 'MySQL', icon: Mysql },
         ],
-      },
-    ],
   },
   {
     title: 'system & logiciel',
     icon: <MdSettings size={32} />,
     items: [
       { name: 'C++', icon: Cplus },
+      { name: 'QtCreator', icon: Qt },
       { name: 'C', icon: Cé },
       { name: 'Java', icon: Java },
     ],

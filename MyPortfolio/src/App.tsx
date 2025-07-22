@@ -18,7 +18,7 @@ function App() {
   //render
   return (
     <>
-    {isLoading ? <Loader /> : <Home />}
+      {isLoading ? <Loader /> : <Home />}
     </>
   )
 }

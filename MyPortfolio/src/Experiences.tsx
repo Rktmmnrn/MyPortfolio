@@ -41,7 +41,7 @@ const Experience = () => {
             viewport={{ once: true }}
             className="bg-white p-6 rounded-md shadow-md relative flex flex-col group"
           >
-          <span className="flex items-center justify-center absolute -left-[35px] top-0 w-5 h-5 bg-[#800000] border-3 border-[#800000] group-hover:border-gray-100 rounded-full"></span>
+          <span className="flex items-center justify-center absolute -left-[35px] top-0 w-5 h-5 bg-[#800000] border-3 border-[#800000] group-hover:border-gray-200 rounded-full"></span>
 
             <h3 className="text-xl font-semibold group flex items-center">    
               <span>{exp.poste}</span>

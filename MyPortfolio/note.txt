@@ -2,3 +2,10 @@ Props : nom(variable), valeur
 1. Faire passer du props du composant parent a l'enfant
 2. Recuperer les props dans le composant enfant
 3. Consomer les props
+
+
+ion.categories?.map((category, i) => (
+                        <div key={i} className="col-span-1 flex-col flex items-center gap-2 justify-start h-full"> {/* Tools */}
+                            <div className="w-full overflow-x-hidden"> {/* Div web */}
+                                <div className='auto-scroll'> {/* autoScroll */}
+                                    {category.items.map((item, j) => (

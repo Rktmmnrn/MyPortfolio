@@ -16,8 +16,8 @@ const NavMenu = () => {
 
     return (
         <nav
-        className={`transition-all duration-300 g:translate-y-0 flex font-bold rounded-lg z-20 uppercase fixed bottom-5 lg:top-5 lg:bottom-auto
-        ${isDesktop ? 'lg:left-0' : 'left-1/2 -translate-x-1/2'}`}
+        className={`left-1/2 transition-all duration-300 flex font-bold rounded-lg z-20 uppercase fixed
+        ${isDesktop ? 'top-0 bottom-auto -translate-x-1/2 translate-y-5' : 'bottom-0 -translate-y-5'}`}
         style={{
         transform: isDesktop
           ? "translate(-0%, -0%)"

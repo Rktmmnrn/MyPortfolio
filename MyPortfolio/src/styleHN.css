@@ -10,6 +10,7 @@ body {
 
 
 nav {
+  backdrop-filter: blur(2px);
   background-color: rgba(0, 0, 0, 0.5);
 }
 nav a {
@@ -34,7 +35,7 @@ header figure.scrolled { /* Scrolled */
   @apply w-[40px] h-[50px] transition-all duration-200;
 }
 header img {
-  @apply w-full h-full object-cover;
+  @apply w-full h-full object-cover cursor-pointer;
 }
 header button {
   @apply p-3 relative flex flex-row gap-2 items-center transition-all duration-300 overflow-hidden;
@@ -50,10 +51,10 @@ main {
 }
 
 main>button { /* boutton retour en haut*/
-  @apply h-12 w-12 fixed flex items-center justify-center bottom-10 z-1 right-20 border-2 rounded-full text-[#800000] border-[#800000] translate-y-[200px];
+  @apply h-12 w-12 transition-all duration-200 fixed flex items-center justify-center bottom-10 z-1 right-20 border-2 rounded-full border-[#800000] translate-y-[100px];
 }
 main>button.scrolled {
-  @apply flex transition-all duration-200 translate-y-0;
+  @apply flex translate-y-0;
 }
 main>button img {
   @apply w-full h-full object-contain;
@@ -84,7 +85,7 @@ main>button img {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
   transition: 500ms ease;
 }
-.hero figure {
+.hero figure { /* Profile */
   @apply overflow-hidden rounded-full;
   width: 250px;
   height: 210px;
@@ -124,7 +125,7 @@ h2,h3,h4 {
   @apply uppercase text-center;
 }
 h1 {
-  @apply capitalize;
+  @apply capitalize font-bold;
   font-size: 46px;
   font-family: 'Aclonica', sans-serif;
 }
@@ -141,17 +142,27 @@ h4 {
   text-decoration: underline;
 }
 
-.divSkills {
-  @apply grid grid-cols-2;
-}
 .Skills-div-img {
   @apply cursor-pointer;
 }
 .Skills-div-img:hover {
   @apply duration-300 ease-in-out transition-all;
 }
-.Skills-div-name {
-  @apply font-light;
+
+@keyframes scroll-horizontal {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.auto-scroll {
+  @apply flex gap-2 min-w-max items-center justify-between;
+  animation: scroll-horizontal 15s linear infinite;
+}
+.auto-scroll:hover {
+  animation: scroll-horizontal 15s linear infinite paused;
+}
+.auto {
+  @apply flex gap-2 min-w-max items-center justify-between;
 }
 
 #Skl, #Exp, #Abt, #Contct {
@@ -172,19 +183,6 @@ h4 {
 #Exp>div>div h3 a:hover::before {
   @apply translate-x-0 duration-200 transition-all ease-in mt-0;
   z-index: -1;
-}
-
-@keyframes scroll-horizontal {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-50%); }
-  100% { transform: translateX(0%); }
-}
-.auto-scroll {
-  @apply flex gap-2 min-w-max;
-  animation: scroll-horizontal 15s linear infinite;
-}
-.auto-scroll:hover {
-  animation: scroll-horizontal 15s linear infinite paused;
 }
 
 @media (min-width: 768px) {
@@ -237,9 +235,9 @@ h4 {
   .hero>div:first-child {
     @apply justify-start items-start;
   }
-  .hero figure {
-    width: 300px;
-    height: 300px;
+  .hero figure { /* Profile */
+    width: 250px;
+    height: 250px;
   }
   .hero>div:last-child {
     @apply flex flex-col justify-center items-center gap-5 w-auto;

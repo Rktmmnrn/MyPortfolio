@@ -4,14 +4,10 @@ import Typewriter from 'typewriter-effect'
 import profil from './assets/jpg/IMG_20250428_092309.jpg'
 import VectorD from './component/vectorDown'
 import down from './assets/icons/Download.svg'
-import fb from './assets/icons/Fb.svg'
-import lnkdn from './assets/icons/linkedin-svgrepo-com.svg'
-import github from './assets/icons/github-icon-1.svg'
 
 import Btn from './component/boutton'
 
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { HiDownload } from "react-icons/hi";
 
 const Hero = () => {
     const color1 = '#800000';
