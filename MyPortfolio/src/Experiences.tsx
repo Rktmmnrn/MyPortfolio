@@ -23,8 +23,8 @@ const Experience = () => {
   return (
     <>
       <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
         className="">
@@ -35,8 +35,8 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: index * 0.2 }}
             viewport={{ once: true }}
             className="bg-white p-6 rounded-md shadow-md relative flex flex-col group"

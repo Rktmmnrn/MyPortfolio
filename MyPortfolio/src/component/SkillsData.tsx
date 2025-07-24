@@ -18,24 +18,33 @@ import Wind from '../assets/icons/microsoft-windows-22.svg'
 import Linux from '../assets/icons/linux-svgrepo-com.svg'
 import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
+import restau from '../assets/png/restau.png'
+
 import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
 
 const skillsData = [
   {
     title: 'web & database',
     icon: <MdWeb size={32} />,
-        items: [
-          { name: 'React', icon: ReactSvg },
-          { name: 'Tailwind', icon: Tailwind },
-          { name: 'Sass', icon: Sass },
-          { name: 'Figma', icon: Figma },
-          { name: 'Node.js', icon: Node },
-          { name: 'JavaScript', icon: Js },
-          { name: 'PHP', icon: Php },
-          { name: 'SQLite', icon: SQlite },
-          { name: 'PostgreSQL', icon: Postgres },
-          { name: 'MySQL', icon: Mysql },
-        ],
+    items: [
+      { name: 'React', icon: ReactSvg },
+      { name: 'Tailwind', icon: Tailwind },
+      { name: 'Sass', icon: Sass },
+      { name: 'Figma', icon: Figma },
+      { name: 'Node.js', icon: Node },
+      { name: 'JavaScript', icon: Js },
+      { name: 'PHP', icon: Php },
+      { name: 'SQLite', icon: SQlite },
+      { name: 'PostgreSQL', icon: Postgres },
+      { name: 'MySQL', icon: Mysql },
+    ],
+    projects: [
+      {
+        name: 'website restau',
+        description: 'A complete restaurant website that I created during my first-year internship.',
+        image: restau
+      }
+    ]
   },
   {
     title: 'system & logiciel',
@@ -46,6 +55,13 @@ const skillsData = [
       { name: 'C', icon: Cé },
       { name: 'Java', icon: Java },
     ],
+    // projects: [
+    //   {
+    //     name: 'website restau',
+    //     description: 'Un site complet de restaurant que j ai crée en stage en 1ère année.',
+    //     image: restau
+    //   }
+    // ]
   },
   {
     title: 'network & tools',
@@ -54,6 +70,13 @@ const skillsData = [
       { name: 'Routage IP', icon: Routage },
       { name: 'GitHub', icon: Git },
     ],
+    // projects: [
+    //   {
+    //     name: 'website restau',
+    //     description: 'Un site complet de restaurant que j ai crée en stage en 1ère année.',
+    //     image: restau
+    //   }
+    // ]
   },
   {
     title: 'others',
@@ -63,6 +86,13 @@ const skillsData = [
       { name: 'Linux', icon: Linux },
       { name: 'Chess', icon: Chess },
     ],
+    // projects: [
+    //   {
+    //     name: 'website restau',
+    //     description: 'A complete restaurant website that I created during my first-year internship.',
+    //     image: restau
+    //   }
+    // ]
   },
 ];
 
