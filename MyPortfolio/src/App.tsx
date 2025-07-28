@@ -24,7 +24,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* autres routes */}
+            {/* Not found page */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

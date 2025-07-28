@@ -47,7 +47,7 @@ const skills = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl shadow-lg px-2"
+            className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl shadow-xl px-2"
           >
             <h3 className="flex items-center gap-2 text-xl font-semibold capitalize">
               <span className="w-7 h-7 flex items-center justify-center">{section.icon}</span>
@@ -55,12 +55,20 @@ const skills = () => {
             </h3>
 
             <div className='w-full relative'>
-              <FaFolderOpen
-                size={40}
-                className="w-10 h-10 cursor-pointer hover:scale-110 transition"
+              {section.projects?.map((project, i) => (
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  onClick={project.link ? () => window.open(project.link, '_blank') : undefined}
+                  className="w-full object-cover rounded-lg"
+                />
+              ))}
+              <button
                 onClick={() => toggleProjects(index)}
-                title={activeSection === index ? 'Cacher projets' : 'Voir projets'}
-              />
+              >
+                view all
+              </button>
+
               <AnimatePresence>
                 {activeSection === index && (
                   <motion.div
@@ -71,7 +79,7 @@ const skills = () => {
                     transition={{ duration: 0.3 }}
                     className="absolute top-12 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-lg p-4 z-50 min-w-[250px]"
                   >
-                    <h4 className="font-bold mb-2">Mes projets</h4>
+                    <h4 className="font-bold mb-2">My projects</h4>
                     <div className="grid grid-cols-1 gap-4">
                       {section.projects?.map((project, i) => (
                         <div key={i} className="border rounded-lg p-2 flex gap-2 items-center hover:shadow transition">

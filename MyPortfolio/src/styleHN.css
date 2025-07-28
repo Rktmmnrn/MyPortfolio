@@ -5,9 +5,8 @@
 }
 
 body {
-  @apply relative;
+  @apply relative overflow-x-hidden;
 }
-
 
 nav {
   backdrop-filter: blur(2px);
