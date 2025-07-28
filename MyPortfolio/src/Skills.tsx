@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import skillsData from './component/SkillsData'
 import { AnimatePresence, motion } from 'framer-motion'
-import {FaFolderOpen} from 'react-icons/fa'
 
 const skills = () => {
   const [activeSection, setActiveSection] = useState<number | null>(null);
