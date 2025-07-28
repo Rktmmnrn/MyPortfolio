@@ -6,12 +6,13 @@ import ProgressBar from './component/ProgressBar'
 import { FiArrowUp } from "react-icons/fi"
 
 import Header from './Header'
+import Nav from './NavMenu'
+import Hero from './Hero'
 import Skills from './Skills'
 import Experience from './Experiences'
 import About from './About'
 import Contact from './Contact'
-import Hero from './Hero'
-import Nav from './NavMenu'
+import Footer from './Footer'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -74,6 +75,8 @@ function App() {
         <Contact />
       </section>
     </main>
+
+    <Footer/>
     </>
   )
 }

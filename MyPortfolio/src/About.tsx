@@ -21,10 +21,12 @@ const About = () => {
         className="bg-white p-6 rounded-lg shadow-md leading-relaxed text-gray-700 w-2/3"
       >
         <p>
-          Passionate about technology and problem solving, I am a computer science student at the National School of Informatics (ENI Madagascar). I love building functional and elegant interfaces, and I constantly seek to improve my skills in web and software development.
+          Passionate about technology, I am a computer science student at the National School of Informatics (Ecole National Informatique de Madagascar).
+          I like building some applications (web and desktop), and I constantly seek to improve my skills in web and software development.
         </p>
-        <p className="mt-4">
-          I have already worked on various projects involving front-end development, databases, and system programming. I'm particularly interested in clean code, design systems, and efficient collaboration.
+        <p className="mt-2">
+          I have already worked on various projects involving front-end development, databases, and system programming.
+          I'm particularly interested in network security, design systems, and efficient collaboration.
         </p>
       </motion.div>
     </>

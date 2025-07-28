@@ -42,7 +42,8 @@ const skillsData = [
       {
         name: 'website restau',
         description: 'A complete restaurant website that I created during my first-year internship.',
-        image: restau
+        image: restau,
+        link: 'https://resto-flame.vercel.app/'
       }
     ]
   },
