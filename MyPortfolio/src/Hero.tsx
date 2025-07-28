@@ -35,13 +35,13 @@ const Hero = () => {
                     <img src={profil} alt="profil" />
                 </figure>
                 <div>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin size={28} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Rktmmnrn" target="_blank" rel="noopener noreferrer">
                         <FaGithub size={28} />
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/fenoherysarobidy.rakotomami" target="_blank" rel="noopener noreferrer">
                         <FaFacebook size={28} color=''/>
                     </a>
                 </div>

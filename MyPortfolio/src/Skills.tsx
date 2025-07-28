@@ -54,7 +54,7 @@ const skills = () => {
             </h3>
 
             <div className='w-full relative'>
-              {section.projects?.map((project, i) => (
+              {section.projects?.map((project) => (
                 <img
                   src={project.image}
                   alt={project.name}
