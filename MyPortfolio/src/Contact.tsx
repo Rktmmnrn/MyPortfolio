@@ -31,13 +31,13 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-col gap-3">
-          <a href="mailto:rfanomezaniavo@gmail.com" className="text-[#800000] font-semibold hover:underline flex gap-2">
+          <a href="mailto:rfanomezaniavo@gmail.com" rel="noopener noreferrer" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
             <Vector nameVector={mail} style={{width: '20px'}}></Vector> rfanomezaniavo@gmail.com
           </a>
-          <a href="https://github.com/Rktmmnrn" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
+          <a href="https://github.com/Rktmmnrn" rel="noopener noreferrer" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
             <Vector nameVector={git} style={{width: '20px'}}></Vector> GitHub
           </a>
-          <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
+          <a href="https://linkedin.com/in/fenohery-maminiriana" rel="noopener noreferrer" target="_blank" className="text-[#800000] font-semibold hover:underline flex gap-2">
             <Vector nameVector={lnkdn} style={{width: '20px'}}></Vector> LinkedIn
           </a>
         </div>
