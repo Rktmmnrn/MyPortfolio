@@ -4,7 +4,7 @@ import './App.css'
 import Home from './Home.tsx'
 // import Form from './Form.tsx' // formulaire
 import Loader from './component/Loader.tsx'
-import NotFound from './NotFound.tsx'
+import NotFound from './sections/NotFound.tsx'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

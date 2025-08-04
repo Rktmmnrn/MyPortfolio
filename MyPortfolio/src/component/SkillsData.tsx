@@ -19,6 +19,9 @@ import Linux from '../assets/icons/linux-svgrepo-com.svg'
 import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
 import restau from '../assets/png/restau.png'
+import appQt from '../assets/png/interfaceAppQt.png'
+import javaVenteVoiture from '../assets/png/javaVenteVoiture.png'
+import routageIP from '../assets/png/RoutageIP.png'
 
 import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
 
@@ -56,13 +59,20 @@ const skillsData = [
       { name: 'C', icon: Cé },
       { name: 'Java', icon: Java },
     ],
-    // projects: [
-    //   {
-    //     name: 'website restau',
-    //     description: 'Un site complet de restaurant que j ai crée en stage en 1ère année.',
-    //     image: restau
-    //   }
-    // ]
+    projects: [
+      {
+        name: 'app desktop',
+        description: 'first application in JAVA about car selling with Apache NetBeans.',
+        image: javaVenteVoiture,
+        link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture'
+      },
+      {
+        name: 'app desktop',
+        description: 'first application about IT park management with QTCreator based on C++.',
+        image: appQt,
+        link: 'https://github.com/Rktmmnrn/applicationC-_Qt/tree/main/Projets_Fin_d_ann%C3%A9e/projet'
+      }
+    ]
   },
   {
     title: 'network & tools',
@@ -71,13 +81,14 @@ const skillsData = [
       { name: 'Routage IP', icon: Routage },
       { name: 'GitHub', icon: Git },
     ],
-    // projects: [
-    //   {
-    //     name: 'website restau',
-    //     description: 'Un site complet de restaurant que j ai crée en stage en 1ère année.',
-    //     image: restau
-    //   }
-    // ]
+    projects: [
+      {
+        name: 'routage ip',
+        description: 'first project with GNS3 using OSPF & RIP.',
+        image: routageIP,
+        link: routageIP
+      }
+    ]
   },
   {
     title: 'others',
@@ -86,14 +97,7 @@ const skillsData = [
       { name: 'Windows', icon: Wind },
       { name: 'Linux', icon: Linux },
       { name: 'Chess', icon: Chess },
-    ],
-    // projects: [
-    //   {
-    //     name: 'website restau',
-    //     description: 'A complete restaurant website that I created during my first-year internship.',
-    //     image: restau
-    //   }
-    // ]
+    ]
   },
 ];
 

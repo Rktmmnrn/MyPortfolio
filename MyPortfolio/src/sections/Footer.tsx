@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="flex items-center justify-center">
+        <footer className="flex items-center justify-center border-t-1">
             <p className="font-bold capitalize">designed by me | fenohery</p>
         </footer>
     )

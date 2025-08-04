@@ -37,8 +37,8 @@ header img {
   @apply w-full h-full object-cover cursor-pointer;
 }
 header button {
-  @apply p-3 relative flex flex-row gap-2 items-center transition-all duration-300 overflow-hidden;
-  border: 1px solid #800000;
+  padding: 15px;
+  border: 1px dashed #800000;
 }
 header.scrolled { /* header Scrolled */
   @apply py-2 transition-all duration-200;
@@ -50,7 +50,7 @@ main {
 }
 
 main>button { /* boutton retour en haut*/
-  @apply h-12 w-12 transition-all duration-200 fixed flex items-center justify-center bottom-10 z-1 right-20 border-2 rounded-full border-[#800000] translate-y-[100px];
+  @apply h-12 w-12 transition-all duration-200 fixed flex items-center justify-center bottom-10 z-1 right-8 border-2 rounded-full border-[#800000] translate-y-[100px];
 }
 main>button.scrolled {
   @apply flex translate-y-0;
@@ -60,7 +60,7 @@ main>button img {
 }
 
 .hero {
-  @apply flex flex-col-reverse h-screen justify-evenly items-center w-full gap-5 mt-[100px];
+  @apply flex flex-col-reverse h-screen max-h-[650px] justify-evenly items-center w-full gap-5 mt-[100px];
 }
 .hero>div:first-child {
   @apply flex flex-col justify-center items-center;
@@ -73,10 +73,9 @@ main>button img {
 }
 .hero>div p {
   @apply capitalize font-semibold;
-  font-size: 48px;
 }
 .hero>div button {
-  margin-top: 40px;
+  @apply rounded-[50px] mt-10 capitalize;
 }
 .hero>div button:hover {
   transition: 500ms ease;
@@ -85,12 +84,16 @@ main>button img {
   transition: 500ms ease;
 }
 .hero figure { /* Profile */
-  @apply overflow-hidden rounded-full;
+  @apply overflow-hidden rounded-full border-3 border-double border-[#800000];
   width: 250px;
   height: 210px;
 }
 .hero figure img {
   @apply w-full h-full object-cover;
+}
+.hero figure img:hover {
+  @apply transition-all duration-300;
+  scale: 1.1;
 }
 .hero>div:last-child>div {
   @apply flex flex-col w-auto justify-center items-center;
@@ -129,7 +132,7 @@ h1 {
   font-family: 'Aclonica', sans-serif;
 }
 h2 {
-  @apply font-bold text-2xl;
+  @apply font-black text-2xl;
   color: #757575;
 }
 h3 {
@@ -186,6 +189,7 @@ h4 {
 
 footer {
   @apply mx-10 py-2;
+  color: #800000;
 }
 
 @media (min-width: 768px) {

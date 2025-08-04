@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
-import Vector from './component/vector'
+import Vector from '../component/vector'
 
-import mail from './assets/icons/mail.svg'
-import git from './assets/icons/github-icon-1.svg'
-import lnkdn from './assets/icons/linkedin-svgrepo-com.svg'
+import mail from '../assets/icons/mail.svg'
+import git from '../assets/icons/github-icon-1.svg'
+import lnkdn from '../assets/icons/linkedin-svgrepo-com.svg'
 
 const Contact = () => {
   return (

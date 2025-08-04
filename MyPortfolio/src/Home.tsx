@@ -1,18 +1,20 @@
-import { useEffect,  useState } from 'react'
+import { useEffect, useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
 import './styleHN.css' // styles
 import ProgressBar from './component/ProgressBar'
+import Cube3D from './component/cube3D'
 
 import { FiArrowUp } from "react-icons/fi"
 
-import Header from './Header'
-import Nav from './NavMenu'
-import Hero from './Hero'
-import Skills from './Skills'
-import Experience from './Experiences'
-import About from './About'
-import Contact from './Contact'
-import Footer from './Footer'
+import Header from './sections/Header'
+import Nav from './sections/NavMenu'
+import Hero from './sections/Hero'
+import Skills from './sections/Skills'
+import Experience from './sections/Experiences'
+import About from './sections/About'
+import Contact from './sections/Contact'
+import Footer from './sections/Footer'
+import Todo from './component/TodoList'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,47 +38,49 @@ function App() {
 
   return (
     <>
-    <ProgressBar />
-    <Header scrolled={scrolled} />
-    <Nav />
+      <ProgressBar />
+      <Cube3D />
+      <Header scrolled={scrolled} />
+      <Nav />
 
-    <main>
-      <button onClick={up} className={scrolled ? "scrolled" : ""}>
-        <motion.span
-          animate={{ y: [0, 5, 0] }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            repeatType: 'loop',
-            ease: easeInOut,
-          }}
+      <main>
+        <button onClick={up} className={scrolled ? "scrolled" : ""}>
+          <motion.span
+            animate={{ y: [0, 5, 0] }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: 'loop',
+              ease: easeInOut,
+            }}
           >
-          <FiArrowUp size={40} color="#800000"/>
+            <FiArrowUp size={40} color="#800000" />
           </motion.span>
-      </button>
+        </button>
 
-      <section id='Hero' className="hero">
-        <Hero />
-      </section>
+        <section id='Hero' className="hero">
+          <Hero />
+        </section>
 
-      <section id='Skl' className="flex-col lg:flex-row">
-        <Skills />
-      </section>
+        <section id='Skl' className="flex-col lg:flex-row">
+          <Skills />
+        </section>
 
-      <section id='Exp' className='flex-col lg:flex-row-reverse'>
-        <Experience />
-      </section>
+        <section id='Exp' className='flex-col lg:flex-row-reverse'>
+          <Experience />
+        </section>
 
-      <section id='Abt' className="flex-col lg:flex-row">
-        <About />
-      </section>
+        <section id='Abt' className="flex-col lg:flex-row">
+          <About />
+        </section>
 
-      <section id="Contct" className='flex-col lg:flex-row-reverse'>
-        <Contact />
-      </section>
-    </main>
+        <section id="Contct" className='flex-col lg:flex-row-reverse'>
+          <Contact />
+        </section>
+      </main>
 
-    <Footer/>
+      <Todo/>
+      <Footer />
     </>
   )
 }

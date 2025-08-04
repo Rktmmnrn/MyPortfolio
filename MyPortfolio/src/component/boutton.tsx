@@ -4,16 +4,17 @@ import { motion } from 'framer-motion'
 type ButtonProps = {
   children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  className?: string;
 };
 
-const Button = ({children, onClick}: ButtonProps) => {
+const Button = ({ children, onClick, className }: ButtonProps) => {
   return (
     <motion.button
-    onClick={onClick}
-    whileHover="hover"
-    className="text-white bg-[#800000] font-bold flex flex-row justify-between capitalize items-center rounded-[50px] py-2 px-5 gap-2"
+      onClick={onClick}
+      whileHover="hover"
+      className={`font-bold flex justify-between items-center py-2 px-5 ${className || ''}`}
     >
-    {children}
+      {children}
     </motion.button>
   );
 }
