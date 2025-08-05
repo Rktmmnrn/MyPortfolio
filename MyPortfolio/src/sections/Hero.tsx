@@ -25,8 +25,9 @@ const Hero = () => {
             <div>
                 <p>hi, i'm</p>
                 <h1>fanomezan<span style={{ color: color1 }}>iavo</span></h1>
-                <h2 style={{ color: color1 }}>
+                <h2 style={{ color: color1, minHeight: '50px' }}>
                     <Typewriter
+                        key="typewriter-hero"
                         options={{
                             strings: ['web developer', 'front-end', 'react'],
                             autoStart: true,
