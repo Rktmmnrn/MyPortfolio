@@ -1,4 +1,4 @@
-import '../styleCube.css'
+import '../styles/styleCube.css'
 
 const cube3D = () => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
-import './styleHN.css' // styles
+import './styles/styleHN.css' // styles
 import ProgressBar from './component/ProgressBar'
 import Cube3D from './component/cube3D'
 import Btn from './component/boutton'
