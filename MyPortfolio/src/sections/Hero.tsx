@@ -1,5 +1,4 @@
-import Typewriter from 'typewriter-effect'
-
+import Writer from '../component/MyTypeWriter'
 import VectorD from '../component/vectorDown'
 import Btn from '../component/boutton'
 
@@ -25,14 +24,8 @@ const Hero = () => {
             <div>
                 <p>hi, i'm</p>
                 <h1>fanomezan<span style={{ color: color1 }}>iavo</span></h1>
-                <h2 style={{ color: color1, minHeight: '50px' }}>
-                    <Typewriter
-                        key="typewriter-hero"
-                        options={{
-                            strings: ['web developer', 'front-end', 'react'],
-                            autoStart: true,
-                            loop: true,
-                        }} />
+                <h2 style={{ color: color1 }}>
+                    <Writer /> {/** autre alternatice que <Typewriter /> */}
                 </h2>
                 <Btn
                     onClick={handleClick}
