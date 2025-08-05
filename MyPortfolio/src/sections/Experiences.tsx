@@ -21,7 +21,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <>
+    <section id='Exp' className='flex-col lg:flex-row-reverse'>
       <motion.h2
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +52,7 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

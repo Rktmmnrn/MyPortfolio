@@ -3,6 +3,7 @@ import { easeInOut, motion } from 'framer-motion'
 import './styleHN.css' // styles
 import ProgressBar from './component/ProgressBar'
 import Cube3D from './component/cube3D'
+import Btn from './component/boutton'
 
 import { FiArrowUp } from "react-icons/fi"
 
@@ -44,7 +45,10 @@ function App() {
       <Nav />
 
       <main>
-        <button onClick={up} className={scrolled ? "scrolled" : ""}>
+        <Btn
+          onClick={up}
+          className={scrolled ? "scrolled" : ""}
+        >
           <motion.span
             animate={{ y: [0, 5, 0] }}
             transition={{
@@ -56,30 +60,21 @@ function App() {
           >
             <FiArrowUp size={40} color="#800000" />
           </motion.span>
-        </button>
+        </Btn>
 
-        <section id='Hero' className="hero">
-          <Hero />
-        </section>
+        <Hero />
 
-        <section id='Skl' className="flex-col lg:flex-row">
-          <Skills />
-        </section>
 
-        <section id='Exp' className='flex-col lg:flex-row-reverse'>
-          <Experience />
-        </section>
+        <Skills />
 
-        <section id='Abt' className="flex-col lg:flex-row">
-          <About />
-        </section>
+        <Experience />
 
-        <section id="Contct" className='flex-col lg:flex-row-reverse'>
-          <Contact />
-        </section>
+        <About />
+
+        <Contact />
       </main>
 
-      <Todo/>
+      <Todo />
       <Footer />
     </>
   )

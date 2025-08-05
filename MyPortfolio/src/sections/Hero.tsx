@@ -20,7 +20,7 @@ const Hero = () => {
         window.open(CV, '_blank');
     };
     return (
-        <>
+        <section id='Hero' className="hero">
             <div>
                 <p>hi, i'm</p>
                 <h1>fanomezan<span style={{ color: color1 }}>iavo</span></h1>
@@ -51,7 +51,7 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 

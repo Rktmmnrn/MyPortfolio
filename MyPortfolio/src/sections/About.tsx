@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <>
+    <section id='Abt' className="flex-col lg:flex-row">
       <motion.h2
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -29,7 +29,7 @@ const About = () => {
           I'm particularly interested in network security, design systems, and efficient collaboration.
         </p>
       </motion.div>
-    </>
+    </section>
   );
 };
 

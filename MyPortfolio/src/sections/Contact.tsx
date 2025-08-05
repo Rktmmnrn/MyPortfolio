@@ -7,7 +7,7 @@ import lnkdn from '../assets/icons/linkedin-svgrepo-com.svg'
 
 const Contact = () => {
   return (
-    <>
+    <section id="Contct" className='flex-col lg:flex-row-reverse'>
       <motion.h2
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -41,7 +41,7 @@ const Contact = () => {
           </a>
         </div>
       </motion.div>
-    </>
+    </section>
   );
 };
 
