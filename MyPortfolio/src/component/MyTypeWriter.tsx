@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const CompTypewriter = () => {
-  const words = ['Web Developer', 'Front-end', 'React'];
+  const words = ['developer web&desktop', 'react developer'];
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
