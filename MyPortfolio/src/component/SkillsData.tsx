@@ -70,7 +70,7 @@ const skillsData = [
         name: 'app desktop',
         description: 'first application about IT park management with QTCreator based on C++.',
         image: appQt,
-        link: 'https://github.com/Rktmmnrn/applicationC-_Qt/tree/main/Projets_Fin_d_ann%C3%A9e/projet'
+        link: 'https://github.com/Rktmmnrn/ParckInformatiqueInC-'
       }
     ]
   },
