@@ -1,29 +1,73 @@
 import Logo from '/Logo.svg';
-// import { CiMenuFries } from "react-icons/ci";
-import { RiKakaoTalkLine } from "react-icons/ri";
+import { translations, Language } from '../component/i18n';
 
-import Btn from '../component/boutton'
-
-type HeaderProps = {
+type HeaderProps = { 
   scrolled: boolean;
+  lang: Language;
+  setLang: (lang: Language) => void;
 };
 
-const Header = ({ scrolled }: HeaderProps) => (
-  <header className={scrolled ? "scrolled" : ""}>
-    <figure className={scrolled ? "scrolled" : ""}>
+const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
+  <header className={scrolled ? 'scrolled' : ''}>
+    {/* Logo */}
+    <figure className={scrolled ? 'scrolled' : ''}>
       <img src={Logo} alt="Logo" />
     </figure>
 
-    <Btn
-      onClick={ () => window.open('mailto:rfanomezaniavo@gmail.com', '_blank')}
-      className='relative flex-row gap-2 transition-all duration-300 overflow-hidden group'
-    >
-      <span className='capitalize font-bold text-[#800000] group-hover:text-white transition-all duration-300'>let's talk !</span>
-      <RiKakaoTalkLine className="w-7 h-7 object-cover text-[#800000] group-hover:text-white transition-colors duration-300" />
-      <span className='z-[-1] absolute bg-[#800000] w-[100%] h-full translate-x-[-105%] group-hover:translate-x-0 transition-transform duration-300 ease-in-out'></span>
-    </Btn>
+    <div className="flex items-center gap-5">
+      {/* Sélecteur de langue */}
+      <div 
+        className="flex items-center gap-1 border-r border-[rgba(180,20,20,0.18)] pr-4 mr-2"
+        style={{
+          fontFamily: 'var(--mono)',
+          fontSize: '11px',
+          letterSpacing: '1px',
+        }}
+      >
+        {(['en', 'fr', 'mg'] as Language[]).map((l) => (
+          <button
+            key={l}
+            onClick={() => setLang(l)}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: lang === l ? 'var(--red)' : 'var(--text-3)',
+              cursor: 'pointer',
+              fontWeight: lang === l ? '600' : 'normal',
+              textTransform: 'uppercase',
+              padding: '0 4px',
+              transition: 'color 0.2s',
+            }}
+          >
+            {l}
+          </button>
+        ))}
+      </div>
 
-    {/* <CiMenuFries className="cursor-pointer w-8 h-8 text-[#800000] flex lg:hidden" /> */}
+      {/* Badge disponibilité — visible md+ */}
+      <div
+        className="hidden md:flex items-center gap-2"
+        style={{
+          fontFamily: 'var(--mono)',
+          fontSize: '10px',
+          letterSpacing: '2px',
+          color: 'var(--text-3)',
+        }}
+      >
+        <span
+          style={{
+            width: '7px',
+            height: '7px',
+            borderRadius: '50%',
+            background: '#22c55e',
+            display: 'inline-block',
+            boxShadow: '0 0 6px rgba(34,197,94,0.7)',
+            animation: 'status-pulse 2.5s ease-in-out infinite',
+          }}
+        />
+        {translations[lang].availableForWork}
+      </div>
+    </div>
   </header>
 );
 

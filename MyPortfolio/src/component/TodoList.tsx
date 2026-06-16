@@ -6,7 +6,7 @@ const TodoList = () => {
   const [showList, setShowList] = useState(false);
 
   const todos = [
-    "Add dark and clear mode",
+    "Add clear mode",
     "Add chat box",
     "Improved the section skills",
     "Add some details for skills",
@@ -16,9 +16,10 @@ const TodoList = () => {
   ];
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md w-fit">
+    <div className="bg-[#131313] border border-[rgba(180,20,20,0.18)] p-4 rounded shadow-md w-fit text-[#e2e2e2]" style={{ fontFamily: 'var(--sans)' }}>
       <Btn
         className="rounded hover:bg-[#a00000] transition-all flex-col bg-[#800000] text-white"
+        style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '1px' } as React.CSSProperties}
         onClick={() => setShowList(!showList)}
       >
         <span>Improvement to come</span>
@@ -26,7 +27,7 @@ const TodoList = () => {
       </Btn>
 
       {showList && (
-        <ul className="list-disc pl-6 mt-4 text-gray-700">
+        <ul className="list-disc pl-6 mt-4 text-[#9a9a9a]" style={{ fontFamily: 'var(--mono)', fontSize: '12px' }}>
           {todos.map((task, index) => (
             <li key={index}>{task}</li>
           ))}

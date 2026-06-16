@@ -4,11 +4,30 @@ import { motion } from 'framer-motion'
 
 import Popup from '../component/windowPopup';
 import Btn from '../component/boutton'
+import { translations, Language } from '../component/i18n';
 
-const skills = () => {
+type SkillsProps = { lang: Language };
+
+const getCategoryTitle = (title: string, lang: Language) => {
+  if (lang === 'fr') {
+    if (title === 'web & database') return 'web & bases de données';
+    if (title === 'system & logiciel') return 'système & logiciel';
+    if (title === 'network & tools') return 'réseau & outils';
+    if (title === 'others') return 'autres';
+  }
+  if (lang === 'mg') {
+    if (title === 'web & database') return 'tranonkala & tahirin-kevitra';
+    if (title === 'system & logiciel') return 'rafitra & rindrankajy';
+    if (title === 'network & tools') return 'tambajotra & fitaovana';
+    if (title === 'others') return 'hafa';
+  }
+  return title;
+};
+
+const Skills = ({ lang }: SkillsProps) => {
   const [activeSection, setActiveSection] = useState<number | null>(null);
 
-  const toggleProjects = (index: number) => { // affichage projet a chaque click
+  const toggleProjects = (index: number) => {
     setActiveSection(prev => {
       const newValue = prev === index ? null : index;
       console.log('Toggle:', { prev, index, newValue });
@@ -24,7 +43,7 @@ const skills = () => {
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
       >
-        Skills & Projects
+        {translations[lang].skillsTitle}
       </motion.h2>
 
       <div className="grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-2 2xl:grid-cols-3">
@@ -39,12 +58,12 @@ const skills = () => {
           >
             <h3 className="flex items-center gap-2 text-xl font-semibold capitalize">
               <span className="w-7 h-7 flex items-center justify-center">{section.icon}</span>
-              {section.title}
+              {getCategoryTitle(section.title, lang)}
             </h3>
 
             <div className='w-full relative'>
               {section.projects?.[0] && (
-                <a href={section.projects[0].link} target='_blank'>
+                <a href={section.projects[0].link} target='_blank' rel="noopener noreferrer">
                   <img
                     src={section.projects[0].image}
                     alt={section.projects[0].name}
@@ -52,28 +71,30 @@ const skills = () => {
                   />
                 </a>
               )}
-              {section.title != 'others' && (
+              {section.title !== 'others' && (
                 <Btn
                   className='my-4 capitalize rounded bg-[#800000] text-white hover:bg-transparent hover:text-[#800000] border-1 border-[#800000] transition-all duration-200'
                   onClick={() => toggleProjects(index)}
                 >
-                  {activeSection === index ? 'view less' : 'view all'}
+                  {activeSection === index ? translations[lang].viewLess : translations[lang].viewAll}
                 </Btn>
               )}
             </div>
 
             {/* Popup */}
-            < Popup isOpen={activeSection === index} onClose={() => setActiveSection(null)}>
-              <h4 className="font-bold mb-2">My projects</h4>
+            <Popup isOpen={activeSection === index} onClose={() => setActiveSection(null)}>
+              <h4 className="font-bold mb-2">{translations[lang].myProjects}</h4>
               <div className="grid grid-cols-1 gap-4">
                 {section.projects?.map((project, i) => (
-                  <div key={i} className="border rounded-lg p-2 flex gap-2 items-center hover:shadow transition">
+                  <div key={i} className="border border-[rgba(180,20,20,0.18)] rounded-lg p-2 flex gap-2 items-center hover:shadow transition">
                     <img src={project.image} alt={project.name} className="w-12 h-12 object-cover rounded" />
                     <div>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <h5 className="font-semibold text-sm">{project.name}</h5>
                       </a>
-                      <p className="text-xs text-gray-600">{project.description}</p>
+                      <p className="text-xs text-[var(--text-2)]">
+                        {project.descKey ? (translations[lang] as any)[project.descKey] : project.description}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -100,4 +121,4 @@ const skills = () => {
   )
 }
 
-export default skills;
+export default Skills;

@@ -1,35 +1,44 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { FiCpu, FiBriefcase, FiUser, FiMail } from 'react-icons/fi';
+import { translations, Language } from '../component/i18n';
 
-import { GiSkills } from "react-icons/gi";
-import { AiFillExperiment } from "react-icons/ai";
-import { FcAbout } from "react-icons/fc";
-import { IoIosContacts } from "react-icons/io";
+type NavMenuProps = { lang: Language };
 
-const NavMenu = () => {
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
+const NavMenu = ({ lang }: NavMenuProps) => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
 
-    useEffect(() => {
-        const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-    return (
-        <nav
-        className={`left-1/2 transition-all duration-300 flex font-bold rounded-lg z-20 uppercase fixed
-        ${isDesktop ? 'top-0 bottom-auto -translate-x-1/2 translate-y-5' : 'bottom-0 -translate-y-5'}`}
-        style={{
-        transform: isDesktop
-          ? "translate(-0%, -0%)"
-          : "translate(-50%, 0%)",
-        }}
-        >
-            <a href="#Skl"><GiSkills className='w-5 h-5 inline lg:hidden'/> <span>skills & projects</span></a>
-            <a href="#Exp"><AiFillExperiment className='w-5 h-5 inline lg:hidden'/> <span>experiences</span></a>
-            <a href="#Abt"><FcAbout className='w-5 h-5 inline lg:hidden'/> <span>about</span></a>
-            <a href="#Contct"><IoIosContacts className='w-5 h-5 inline lg:hidden'/> <span>contact</span></a>
-        </nav>
-    )
+  return (
+    <nav
+      className={`fixed z-20 flex font-bold uppercase transition-all duration-300 ${
+        isDesktop
+          ? 'top-0 left-1/2 -translate-x-1/2 translate-y-[18px]'
+          : 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[-20px]'
+      }`}
+    >
+      <a href="#Skl">
+        <FiCpu className="w-4 h-4 inline lg:hidden" />
+        <span>{translations[lang].skillsAndProjects}</span>
+      </a>
+      <a href="#Exp">
+        <FiBriefcase className="w-4 h-4 inline lg:hidden" />
+        <span>{translations[lang].experiences}</span>
+      </a>
+      <a href="#Abt">
+        <FiUser className="w-4 h-4 inline lg:hidden" />
+        <span>{translations[lang].about}</span>
+      </a>
+      <a href="#Contct">
+        <FiMail className="w-4 h-4 inline lg:hidden" />
+        <span>{translations[lang].contact}</span>
+      </a>
+    </nav>
+  );
 };
 
 export default NavMenu;

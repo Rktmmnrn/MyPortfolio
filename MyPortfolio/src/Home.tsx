@@ -16,9 +16,20 @@ import About from './sections/About'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import Todo from './component/TodoList'
+import { RiKakaoTalkLine } from "react-icons/ri";
+import { Language } from './component/i18n'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [lang, setLang] = useState<Language>(() => {
+    const saved = localStorage.getItem('lang');
+    return (saved as Language) || 'en';
+  });
+
+  const changeLang = (l: Language) => {
+    setLang(l);
+    localStorage.setItem('lang', l);
+  };
 
   const up = () => {
     window.scrollTo({
@@ -30,8 +41,9 @@ function App() {
     const onScroll = () => {
       if (window.scrollY > 50) {
         setScrolled(true);
-        console.log("scroll ohhh");
-      } else setScrolled(false);
+      } else {
+        setScrolled(false);
+      }
     }
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -41,40 +53,53 @@ function App() {
     <>
       <ProgressBar />
       <Cube3D />
-      <Header scrolled={scrolled} />
-      <Nav />
+      <Header scrolled={scrolled} lang={lang} setLang={changeLang} />
+      <Nav lang={lang} />
 
       <main>
-        <Btn
-          onClick={up}
-          className={scrolled ? "scrolled" : ""}
+        <aside
+          className={`fixed z-10 flex-col items-center gap-4 transition-all duration-300 ${scrolled ? 'bottom-4 right-4' : 'bottom-[-60px] right-[-60px]'}`}
         >
-          <motion.span
-            animate={{ y: [0, 5, 0] }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              repeatType: 'loop',
-              ease: easeInOut,
-            }}
+          <Btn
+            onClick={() => window.open('mailto:rfanomezaniavo@gmail.com', '_blank')}
+            className="relative transition-all duration-300"
+            style={{
+              padding: '9px 18px',
+            } as React.CSSProperties}
           >
-            <FiArrowUp size={40} color="#800000" />
-          </motion.span>
-        </Btn>
+            <RiKakaoTalkLine className="w-10 h-10 text-[#b41414] group-hover:text-white transition-colors duration-300" />
+          </Btn>
+          <Btn
+            onClick={up}
+            className={scrolled ? "scrolled" : ""}
+          >
+            <motion.span
+              animate={{ y: [0, 5, 0] }}
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                repeatType: 'loop',
+                ease: easeInOut,
+              }}
+            >
+              <FiArrowUp size={40} color="#800000" />
+            </motion.span>
+          </Btn>
+        </aside>
 
-        <Hero />
+        <Hero lang={lang} />
 
-        <Skills />
+        <Skills lang={lang} />
 
-        <Experience />
+        <Experience lang={lang} />
 
-        <About />
+        <About lang={lang} />
 
-        <Contact />
+        <Contact lang={lang} />
       </main>
 
       <Todo />
-      <Footer />
+      <Footer lang={lang} />
     </>
   )
 }

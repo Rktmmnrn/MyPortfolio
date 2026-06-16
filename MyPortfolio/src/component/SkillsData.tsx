@@ -10,7 +10,6 @@ import Postgres from '../assets/icons/postgresql.svg'
 import Mysql from '../assets/icons/mysql-3.svg'
 import Cé from '../assets/icons/c-1.svg'
 import Cplus from '../assets/icons/c.svg'
-import Qt from '../assets/icons/qt-1.svg'
 import Java from '../assets/icons/java-svgrepo-com.svg'
 import Routage from '../assets/icons/router-svgrepo-com.svg'
 import Git from '../assets/icons/github-icon-1.svg'
@@ -25,7 +24,22 @@ import routageIP from '../assets/png/RoutageIP.png'
 
 import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
 
-const skillsData = [
+export interface ProjectType {
+  name: string;
+  description: string;
+  descKey: string;
+  image: string;
+  link: string;
+}
+
+export interface SkillSectionType {
+  title: string;
+  icon: React.ReactNode;
+  items: { name: string; icon: string }[];
+  projects?: ProjectType[];
+}
+
+const skillsData: SkillSectionType[] = [
   {
     title: 'web & database',
     icon: <MdWeb size={32} />,
@@ -45,6 +59,7 @@ const skillsData = [
       {
         name: 'website restau',
         description: 'A complete restaurant website that I created during my first-year internship.',
+        descKey: 'projectRestoDesc',
         image: restau,
         link: 'https://resto-flame.vercel.app/'
       }
@@ -55,7 +70,6 @@ const skillsData = [
     icon: <MdSettings size={32} />,
     items: [
       { name: 'C++', icon: Cplus },
-      { name: 'QtCreator', icon: Qt },
       { name: 'C', icon: Cé },
       { name: 'Java', icon: Java },
     ],
@@ -63,12 +77,14 @@ const skillsData = [
       {
         name: 'app desktop',
         description: 'first application in JAVA about car selling with Apache NetBeans.',
+        descKey: 'projectCarDesc',
         image: javaVenteVoiture,
         link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture'
       },
       {
         name: 'app desktop',
         description: 'first application about IT park management with QTCreator based on C++.',
+        descKey: 'projectParkDesc',
         image: appQt,
         link: 'https://github.com/Rktmmnrn/ParckInformatiqueInC-'
       }
@@ -85,8 +101,9 @@ const skillsData = [
       {
         name: 'routage ip',
         description: 'first project with GNS3 using OSPF & RIP.',
+        descKey: 'projectRouteDesc',
         image: routageIP,
-        link: routageIP
+        link: 'https://github.com/Rktmmnrn'
       }
     ]
   },

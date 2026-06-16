@@ -7,52 +7,81 @@ import down from '../assets/icons/Download.svg'
 import CV from './CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
 
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { translations, Language } from '../component/i18n';
 
-const Hero = () => {
-    const color1 = '#800000';
+type HeroProps = { lang: Language };
 
-    const handleClick = () => {
-        const link = document.createElement('a');
-        link.href = CV;
-        link.download = 'CV_FANOMEZANIAVO.pdf';
-        link.click();
+const Hero = ({ lang }: HeroProps) => {
+  const handleClick = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'CV_FANOMEZANIAVO.pdf';
+    link.click();
+    window.open(CV, '_blank');
+  };
 
-        window.open(CV, '_blank');
-    };
-    return (
-        <section id='Hero' className="hero">
-            <div>
-                <p>hi, i'm</p>
-                <h1>fanomezan<span style={{ color: color1 }}>iavo</span></h1>
-                <h2 style={{ color: color1 }}>
-                    <Writer /> {/** autre alternatice que <Typewriter /> */}
-                </h2>
-                <Btn
-                    onClick={handleClick}
-                    className='bg-[#800000] text-white gap-2'
-                >
-                    download my CV here
-                    <VectorD nameVector={down} style={{ width: '28px', height: '28px', objectFit: 'cover' }}></VectorD>
-                </Btn>
-            </div>
-            <div>
-                <figure>
-                    <img src={profil} alt="profil" />
-                </figure>
-                <div>
-                    <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin size={28} />
-                    </a>
-                    <a href="https://github.com/Rktmmnrn" target="_blank" rel="noopener noreferrer">
-                        <FaGithub size={28} />
-                    </a>
-                    <a href="https://www.facebook.com/fenoherysarobidy.rakotomami" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook size={28} color='' />
-                    </a>
-                </div>
-            </div>
-        </section>
-    )
-}
+  return (
+    <section id='Hero' className="hero">
+      {/* Colonne texte */}
+      <div>
+        {/* Prompt terminal */}
+        <p>
+          <span style={{ color: 'rgba(180,20,20,0.5)', fontFamily: 'var(--mono)' }}>
+            user@portfolio:~$&nbsp;
+          </span>
+          {translations[lang].hiIm}
+        </p>
+
+        {/* Titre avec effet glitch — data-text nécessaire pour ::before / ::after CSS */}
+        <h1 data-text="fanomezaniavo">
+          fanomezan<span>iavo</span>
+        </h1>
+
+        {/* Typewriter */}
+        <h2>
+          <Writer lang={lang} />
+        </h2>
+
+        {/* CTA download CV */}
+        <Btn
+          onClick={handleClick}
+          className='bg-[#b41414] text-white gap-3'
+          style={{
+            fontFamily: 'var(--mono)',
+            fontSize: '11px',
+            letterSpacing: '2px',
+            borderRadius: '2px',
+            padding: '12px 22px',
+          } as React.CSSProperties}
+        >
+          {translations[lang].downloadCv}
+          <VectorD
+            nameVector={down}
+            style={{ width: '16px', height: '16px', objectFit: 'cover', filter: 'invert(1)' }}
+          />
+        </Btn>
+      </div>
+
+      {/* Colonne photo + réseaux */}
+      <div>
+        <figure>
+          <img src={profil} alt="Fanomezaniavo" />
+        </figure>
+
+        <div>
+          <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <FaLinkedin size={18} />
+          </a>
+          <a href="https://github.com/Rktmmnrn" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <FaGithub size={18} />
+          </a>
+          <a href="https://www.facebook.com/fenoherysarobidy.rakotomami" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <FaFacebook size={18} />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Hero;

@@ -1,43 +1,75 @@
 import { useEffect, useState } from 'react';
+import { translations, Language } from './i18n';
 
-const CompTypewriter = () => {
-  const words = ['developer web&desktop', 'react developer'];
+type TypewriterProps = { lang: Language };
+
+const CompTypewriter = ({ lang }: TypewriterProps) => {
+  const words = translations[lang].typewriterWords;
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(100); // vitesse initiale
+  const [speed, setSpeed] = useState(95);
+
+  // Réinitialiser l'animation quand la langue change
+  useEffect(() => {
+    setText('');
+    setIsDeleting(false);
+    setWordIndex(0);
+  }, [lang]);
 
   useEffect(() => {
+    if (words.length === 0) return;
     const currentWord = words[wordIndex % words.length];
 
-    const type = () => {
+    const tick = () => {
       if (isDeleting) {
         setText(currentWord.substring(0, text.length - 1));
-        setTypingSpeed(50);
+        setSpeed(38);
       } else {
         setText(currentWord.substring(0, text.length + 1));
-        setTypingSpeed(100);
+        setSpeed(90);
       }
 
-      // changement d'état quand le mot est complètement tapé
       if (!isDeleting && text === currentWord) {
-        setTimeout(() => setIsDeleting(true), 1000); // pause avant suppression
+        setTimeout(() => setIsDeleting(true), 1400);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
-        setWordIndex((prev) => prev + 1);
+        setWordIndex(p => p + 1);
       }
     };
 
-    const timer = setTimeout(type, typingSpeed);
-
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, wordIndex]);
+    const t = setTimeout(tick, speed);
+    return () => clearTimeout(t);
+  }, [text, isDeleting, wordIndex, words, speed]);
 
   return (
-    <>
-      <span>{text}</span>
-      <span className="cursor">|</span>
-    </>
+    <span
+      style={{
+        fontFamily: 'var(--mono)',
+        fontSize: '13px',
+        letterSpacing: '2px',
+        color: 'var(--text-2)',
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '3px',
+      }}
+    >
+      {/* Prompt */}
+      <span style={{ color: 'rgba(180,20,20,0.45)', fontSize: '11px' }}>$&nbsp;</span>
+      {text}
+      {/* Curseur bloc clignotant */}
+      <span
+        style={{
+          display: 'inline-block',
+          width: '8px',
+          height: '15px',
+          background: 'var(--red)',
+          verticalAlign: 'middle',
+          animation: 'blink-cursor 1s step-end infinite',
+          flexShrink: 0,
+        }}
+      />
+    </span>
   );
 };
 
