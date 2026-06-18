@@ -3,7 +3,7 @@ export type Language = 'en' | 'fr' | 'mg';
 export const translations = {
   en: {
     // Header & Navigation
-    availableForWork: "AVAILABLE_FOR_WORK",
+    availableForWork: "AVAILABLE",
     available: "AVAILABLE",
     skillsAndProjects: "skills & projects",
     experiences: "experiences",
@@ -23,7 +23,7 @@ export const translations = {
     // About
     aboutTitle: "About Me",
     aboutPara1: "Passionate about technology, I am a computer science student at the École Nationale Informatique de Madagascar (ENI). I enjoy building applications — web and desktop — and constantly push my skills forward.",
-    aboutPara2: "I have worked on various projects involving front-end development, databases, and system programming. Particularly interested in network security, design systems, and efficient collaboration.",
+    aboutPara2: "I have worked on various projects involving web and desktop application development, and network configuration. I am particularly interested in network security.",
 
     // Experiences
     experiencesTitle: "experiences",
@@ -48,7 +48,7 @@ export const translations = {
   },
   fr: {
     // Header & Navigation
-    availableForWork: "DISPONIBLE_POUR_DES_MISSIONS",
+    availableForWork: "DISPONIBLE",
     available: "DISPONIBLE",
     skillsAndProjects: "compétences & projets",
     experiences: "expériences",
@@ -68,7 +68,7 @@ export const translations = {
     // About
     aboutTitle: "À Propos de Moi",
     aboutPara1: "Passionné par la technologie, je suis étudiant en informatique à l'École Nationale d'Informatique de Madagascar (ENI). J'aime concevoir des applications — web et desktop — et je cherche constamment à faire progresser mes compétences.",
-    aboutPara2: "J'ai travaillé sur divers projets impliquant du développement front-end, des bases de données et de la programmation système. Particulièrement intéressé par la sécurité réseau, les design systems et la collaboration efficace.",
+    aboutPara2: "J'ai travaillé sur divers projets impliquant du développement d'application Web et Bureau, et la configuration Réseau. Particulièrement intéressé par la sécurité réseau.",
 
     // Experiences
     experiencesTitle: "expériences",

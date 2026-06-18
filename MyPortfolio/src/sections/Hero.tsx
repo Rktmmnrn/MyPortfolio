@@ -27,7 +27,7 @@ const Hero = ({ lang }: HeroProps) => {
         {/* Prompt terminal */}
         <p>
           <span style={{ color: 'rgba(180,20,20,0.5)', fontFamily: 'var(--mono)' }}>
-            user@portfolio:~$&nbsp;
+            fenohery@portfolio:~$&nbsp;
           </span>
           {translations[lang].hiIm}
         </p>

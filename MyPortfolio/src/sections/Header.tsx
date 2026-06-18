@@ -1,7 +1,7 @@
 import Logo from '/Logo.svg';
 import { translations, Language } from '../component/i18n';
 
-type HeaderProps = { 
+type HeaderProps = {
   scrolled: boolean;
   lang: Language;
   setLang: (lang: Language) => void;
@@ -14,9 +14,32 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
       <img src={Logo} alt="Logo" />
     </figure>
 
-    <div className="flex items-center gap-5">
+    <div className="flex flex-col items-center gap-2">
+      {/* Badge disponibilité — visible md+ */}
+      <div
+        className="hidden md:flex items-center gap-2"
+        style={{
+          fontFamily: 'var(--mono)',
+          fontSize: '10px',
+          letterSpacing: '2px',
+          color: 'var(--text-3)',
+        }}
+      >
+        <span
+          style={{
+            width: '7px',
+            height: '7px',
+            borderRadius: '50%',
+            background: '#22c55e',
+            display: 'inline-block',
+            boxShadow: '0 0 6px rgba(34,197,94,0.7)',
+            animation: 'status-pulse 2.5s ease-in-out infinite',
+          }}
+        />
+        {translations[lang].availableForWork}
+      </div>
       {/* Sélecteur de langue */}
-      <div 
+      <div
         className="flex items-center gap-1 border-r border-[rgba(180,20,20,0.18)] pr-4 mr-2"
         style={{
           fontFamily: 'var(--mono)',
@@ -42,30 +65,6 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
             {l}
           </button>
         ))}
-      </div>
-
-      {/* Badge disponibilité — visible md+ */}
-      <div
-        className="hidden md:flex items-center gap-2"
-        style={{
-          fontFamily: 'var(--mono)',
-          fontSize: '10px',
-          letterSpacing: '2px',
-          color: 'var(--text-3)',
-        }}
-      >
-        <span
-          style={{
-            width: '7px',
-            height: '7px',
-            borderRadius: '50%',
-            background: '#22c55e',
-            display: 'inline-block',
-            boxShadow: '0 0 6px rgba(34,197,94,0.7)',
-            animation: 'status-pulse 2.5s ease-in-out infinite',
-          }}
-        />
-        {translations[lang].availableForWork}
       </div>
     </div>
   </header>
