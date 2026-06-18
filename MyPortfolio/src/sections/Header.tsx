@@ -14,7 +14,7 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
       <img src={Logo} alt="Logo" />
     </figure>
 
-    <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center w-auto gap-2">
       {/* Badge disponibilité — visible md+ */}
       <div
         className="hidden md:flex items-center gap-2"
@@ -38,9 +38,10 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
         />
         {translations[lang].availableForWork}
       </div>
+
       {/* Sélecteur de langue */}
       <div
-        className="flex items-center gap-1 border-r border-[rgba(180,20,20,0.18)] pr-4 mr-2"
+        className="flex items-center border-r border-[rgba(180,20,20,0.18)] pr-4 mr-2 w-full justify-between"
         style={{
           fontFamily: 'var(--mono)',
           fontSize: '11px',

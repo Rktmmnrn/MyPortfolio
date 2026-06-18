@@ -2,7 +2,7 @@ import Writer from '../component/MyTypeWriter'
 import VectorD from '../component/vectorDown'
 import Btn from '../component/boutton'
 
-import profil from '../assets/jpg/IMG_20250428_092309.jpg'
+import profil from '../assets/png/IMG_20250428_092309.png'
 import down from '../assets/icons/Download.svg'
 import CV from './CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
 
@@ -22,9 +22,7 @@ const Hero = ({ lang }: HeroProps) => {
 
   return (
     <section id='Hero' className="hero">
-      {/* Colonne texte */}
       <div>
-        {/* Prompt terminal */}
         <p>
           <span style={{ color: 'rgba(180,20,20,0.5)', fontFamily: 'var(--mono)' }}>
             fenohery@portfolio:~$&nbsp;
@@ -62,7 +60,7 @@ const Hero = ({ lang }: HeroProps) => {
         </Btn>
       </div>
 
-      {/* Colonne photo + réseaux */}
+      {/* Colonne photo */}
       <div>
         <figure>
           <img src={profil} alt="Fanomezaniavo" />
