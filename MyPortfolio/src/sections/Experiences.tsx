@@ -22,7 +22,7 @@ const getExperiences = (lang: Language) => [
     entreprise: 'ENEAM',
     poste: translations[lang].eneamPoste,
     lien: 'https://eneam.mg/',
-    pediode: translations[lang].eneamPeriode,
+    periode: translations[lang].eneamPeriode,
     description: translations[lang].eneamDesc,
   },
 ];
@@ -63,7 +63,7 @@ const Experience = ({ lang }: ExperienceProps) => {
             {/* Point sur la timeline */}
             <span
               style={{
-                position: 'absolute',
+                position: 'relative',
                 left: '-37px', top: '22px',
                 width: '10px', height: '10px',
                 borderRadius: '50%',
