@@ -178,12 +178,19 @@ main {
   z-index: 1;
 }
 
+/* Bouton talk */
+main aside > button:first-child {
+  @apply flex items-center justify-center relative;
+  border-radius: 80%;
+  width: 80px; height: 80px;
+  animation: border-glow 3s ease-in-out infinite;
+  border: 1px solid var(--border-md);
+}
+
 /* Bouton scroll-to-top */
-main > button {
-  @apply fixed flex items-center justify-center transition-all duration-300;
+main aside > button:last-child {
+  @apply relative flex items-center justify-center transition-all duration-300;
   width: 44px; height: 44px;
-  bottom: 32px; right: 32px;
-  z-index: 50;
   border: 1px solid var(--border-md);
   border-radius: 2px;
   background: rgba(13,13,13,0.92);
@@ -191,7 +198,7 @@ main > button {
   animation: border-glow 3s ease-in-out infinite;
 }
 
-main > button.scrolled { transform: translateY(0); }
+main aside > button:last-child.scrolled { transform: translateY(0); }
 main > button img { @apply w-full h-full object-contain; }
 
 /* ════════════════════════════════════════════

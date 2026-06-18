@@ -58,17 +58,15 @@ function App() {
 
       <main>
         <aside
-          className={`fixed z-10 flex-col items-center gap-4 transition-all duration-300 ${scrolled ? 'bottom-4 right-4' : 'bottom-[-60px] right-[-60px]'}`}
+          className={`fixed z-20 flex flex-col items-center transition-all duration-300 bottom-[40px] right-[40px] gap-5`}
         >
           <Btn
             onClick={() => window.open('mailto:rfanomezaniavo@gmail.com', '_blank')}
             className="relative transition-all duration-300"
-            style={{
-              padding: '9px 18px',
-            } as React.CSSProperties}
           >
-            <RiKakaoTalkLine className="w-10 h-10 text-[#b41414] group-hover:text-white transition-colors duration-300" />
+            <RiKakaoTalkLine className="w-full h-full text-[#b41414] group-hover:text-white transition-colors duration-300" />
           </Btn>
+          {/* up */}
           <Btn
             onClick={up}
             className={scrolled ? "scrolled" : ""}
