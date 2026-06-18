@@ -152,8 +152,8 @@ header {
   -webkit-backdrop-filter: blur(16px);
 }
 
-header figure { width: 120px; height: 58px; transition: all 0.2s; }
-header figure.scrolled { width: 36px; height: 46px; }
+header figure { max-width: 115px; height: 58px; transition: all 0.2s; }
+header figure.scrolled { width: auto; height: 40px; }
 header img { @apply w-full h-full object-cover cursor-pointer; }
 
 header button {

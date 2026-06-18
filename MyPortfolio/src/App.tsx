@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import './styles/App.css'
 import './styles/styleHN.css'
 import Home from './Home.tsx'
-// import Form from './Form.tsx' // formulaire
 import Loader from './component/Loader.tsx'
 import NotFound from './sections/NotFound.tsx'
 

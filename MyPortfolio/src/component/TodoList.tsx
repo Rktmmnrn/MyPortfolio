@@ -10,7 +10,6 @@ const TodoList = () => {
     "Add chat box",
     "Improved the section skills",
     "Add some details for skills",
-    "Add traduction instead of google trad",
     "Improved the interface",
     "Optimize the performances"
   ];
