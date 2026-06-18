@@ -8,15 +8,22 @@ const getExperiences = (lang: Language) => [
     entreprise: 'École Nationale Informatique',
     poste: translations[lang].eniPoste,
     lien: 'https://eni.mg/',
-    periode: lang === 'en' ? '2023 — today' : lang === 'fr' ? "2023 — aujourd'hui" : '2023 — ankehitriny',
+    periode: translations[lang].eniPeriode,
     description: translations[lang].eniDesc,
   },
   {
     entreprise: 'SAHA Technology',
     poste: translations[lang].sahaPoste,
     lien: 'https://saha-technology.com/fr',
-    periode: lang === 'en' ? 'Dec 2024 — Jan 2025' : lang === 'fr' ? 'Déc 2024 — Jan 2025' : 'Des 2024 — Jan 2025',
+    periode: translations[lang].sahaPeriode,
     description: translations[lang].sahaDesc,
+  },
+  {
+    entreprise: 'ENEAM',
+    poste: translations[lang].eneamPoste,
+    lien: 'https://eneam.mg/',
+    pediode: translations[lang].eneamPeriode,
+    description: translations[lang].eneamDesc,
   },
 ];
 

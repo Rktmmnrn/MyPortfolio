@@ -51,61 +51,15 @@ const About = ({ lang }: AboutProps) => {
           paddingBottom: '10px',
           borderBottom: '1px solid var(--border)',
         }}>
-          // cat about.txt
+          // about.txt
         </p>
 
         <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}>
-          {lang === 'en' ? (
-            <>
-              Passionate about technology, I am a computer science student at the{' '}
-              <strong style={{ color: 'var(--text-1)', fontWeight: 600 }}>
-                École Nationale Informatique de Madagascar (ENI)
-              </strong>
-              . I enjoy building applications — web and desktop — and constantly push my skills forward.
-            </>
-          ) : lang === 'fr' ? (
-            <>
-              Passionné par la technologie, je suis étudiant en informatique à l'{' '}
-              <strong style={{ color: 'var(--text-1)', fontWeight: 600 }}>
-                École Nationale d'Informatique de Madagascar (ENI)
-              </strong>
-              . J'aime concevoir des applications — web et desktop — et je cherche constamment à faire progresser mes compétences.
-            </>
-          ) : (
-            <>
-              Mpankafy teknolojia, mpianatra ho an'ny informatika ao amin'ny{' '}
-              <strong style={{ color: 'var(--text-1)', fontWeight: 600 }}>
-                École Nationale d'Informatique de Madagascar (ENI)
-              </strong>
-              . Tiako ny manoratra rindrankajy — tranonkala & desktop — ary miezaka hatrany manatsara ny fahaizako.
-            </>
-          )}
+          {translations[lang].aboutPara1}
         </p>
 
         <p style={{ color: 'var(--text-2)', lineHeight: '1.85' }}>
-          {lang === 'en' ? (
-            <>
-              I have worked on various projects involving{' '}
-              <span style={{ color: 'var(--red)' }}>front-end development</span>,{' '}
-              <span style={{ color: 'var(--red)' }}>databases</span>, and{' '}
-              <span style={{ color: 'var(--red)' }}>system programming</span>. Particularly
-              interested in network security, design systems, and efficient collaboration.
-            </>
-          ) : lang === 'fr' ? (
-            <>
-              J'ai travaillé sur divers projets impliquant du{' '}
-              <span style={{ color: 'var(--red)' }}>développement front-end</span>, des{' '}
-              <span style={{ color: 'var(--red)' }}>bases de données</span> et de la{' '}
-              <span style={{ color: 'var(--red)' }}>programmation système</span>. Participeront particulièrement à la sécurité réseau, aux design systems et à la collaboration efficace.
-            </>
-          ) : (
-            <>
-              Efa niasa tamina tetikasa samihafa mifandraika amin'ny fampandrosoana{' '}
-              <span style={{ color: 'var(--red)' }}>front-end</span>,{' '}
-              <span style={{ color: 'var(--red)' }}>tahirin-kevitra (databases)</span> ary{' '}
-              <span style={{ color: 'var(--red)' }}>fandaharana rafitra (system programming)</span>. Mahaliana ahy manokana ny fiarovana tambajotra, design systems ary fiaraha-miasa mahomby.
-            </>
-          )}
+          {translations[lang].aboutPara2}
         </p>
       </motion.div>
     </section>

@@ -28,9 +28,14 @@ export const translations = {
     // Experiences
     experiencesTitle: "experiences",
     eniPoste: "Computer Science Student",
-    eniDesc: "Several mini-projects with PHP, VueJS, C#, C++, C and Java. Academic projects covering databases, system programming, and network architecture.",
+    eniPeriode: "2023 — Today",
+    eniDesc: "Several mini-projects with Php, VueJS, C#, C++, C and Java. Academic projects covering databases, system programming, and network architecture.",
     sahaPoste: "Front-End Developer",
+    sahaPeriode: "Dec 2024 — Feb 2025",
     sahaDesc: "Modern responsive interface integration with HTML, JS and TailwindCSS. Collaboration with designers and developers in an agile environment.",
+    eneamPoste: "FullStack Developer",
+    eneamPeriode: "Sept 2025 — Dec 2025",
+    eneamDesc: "Website conception with integration of an intranet pointing platform with ODOO, DJANGO et POSTGRESQL.",
 
     // Skills
     skillsTitle: "Skills & Projects",
@@ -73,9 +78,14 @@ export const translations = {
     // Experiences
     experiencesTitle: "expériences",
     eniPoste: "Étudiant en Informatique",
-    eniDesc: "Plusieurs mini-projets en PHP, VueJS, C#, C++, C et Java. Projets académiques couvrant les bases de données, la programmation système et l'architecture réseau.",
+    eniPeriode: "2023 — Aujourd'hui",
+    eniDesc: "Plusieurs mini-projets en Php, VueJS, C#, C++, C et Java. Projets académiques couvrant les bases de données, la programmation système et l'architecture réseau.",
     sahaPoste: "Développeur Front-End",
+    sahaPeriode: "Dec 2024 — Fev 2025",
     sahaDesc: "Intégration d'interfaces réactives et modernes avec HTML, JS et TailwindCSS. Collaboration avec des designers et développeurs dans un environnement agile.",
+    eneamPoste: "Développeur Full-Stack",
+    eneamPeriode: "Sept 2025 — Dec 2025",
+    eneamDesc: "Conception du site Web avec integration d'une plateforme de pointage intranet avec ODOO, DJANGO et POSTGRESQL.",
 
     // Skills
     skillsTitle: "Compétences & Projets",
@@ -93,8 +103,8 @@ export const translations = {
   },
   mg: {
     // Header & Navigation
-    availableForWork: "AF AFAKA_MIASA",
-    available: "AF AFAKA",
+    availableForWork: "AFAKA_MIASA",
+    available: "AFAKA",
     skillsAndProjects: "fahaizana & tetikasa",
     experiences: "traikefa",
     about: "mombamomba",
@@ -106,7 +116,7 @@ export const translations = {
     downloadCv: "./haka_cv.sh",
     typewriterWords: [
       "mpamorona tranonkala & rindrankajy",
-      "mpamorona react & python",
+      "fitaovana react & python",
       "mpandraharaha tambajotra & rafitra"
     ],
 
@@ -118,9 +128,14 @@ export const translations = {
     // Experiences
     experiencesTitle: "traikefa",
     eniPoste: "Mpianatra Informatika",
+    eniPeriode: "2023 — ankehitriny",
     eniDesc: "Tetikasa madinika maromaro tamin'ny PHP, VueJS, C#, C++, C ary Java. Tetikasa akademika mikasika ny tahirin-kevitra, fandaharana rafitra ary mari-trano tambajotra.",
-    sahaPoste: "Mpamorona Front-End",
+    sahaPoste: "Developpeur Front-End",
+    sahaPeriode: "Des 2024 — Feb 2025",
     sahaDesc: "Fampidirana interface modely sy mandray andraikitra amin'ny HTML, JS ary TailwindCSS. Fiaraha-miasa amin'ny mpamorona sy mpandraharaha amin'ny tontolo agile.",
+    eneamPoste: "Developpeur Full-Stack",
+    eneamPeriode: "Sept 2025 — Des 2025",
+    eneamDesc: "Fanamboarana ny tranokala sy fampidirana modely fanamarinana ny fahatongavan'ny mpiasa, vita t@ ODOO, DJANGO sy POSTGRESQL",
 
     // Skills
     skillsTitle: "Fahaizana & Tetikasa",
