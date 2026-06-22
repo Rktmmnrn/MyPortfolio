@@ -48,8 +48,6 @@ const Footer = ({ lang }: FooterProps) => (
       </span>
 
       <span style={{ opacity: 0.3 }}>|</span>
-
-      <span>REACT · NODE · TAILWIND</span>
     </div>
 
     {/* Crédit */}
