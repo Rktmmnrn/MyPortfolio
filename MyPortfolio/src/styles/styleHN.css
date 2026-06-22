@@ -271,7 +271,7 @@ main > button img { @apply w-full h-full object-contain; }
 
 /* Réseaux sociaux */
 .hero > div:last-child > div {
-  @apply flex flex-col w-auto justify-center items-center;
+  @apply flex justify-center items-center;
   gap: 14px;
 }
 

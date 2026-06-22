@@ -66,7 +66,7 @@ const Hero = ({ lang }: HeroProps) => {
           <img src={profil} alt="Fanomezaniavo" />
         </figure>
 
-        <div>
+        <div className='flex-col lg:flex-row lg:w-full'>
           <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin size={18} />
           </a>

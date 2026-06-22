@@ -16,6 +16,8 @@ import Wind from '../assets/icons/microsoft-windows-22.svg'
 import Linux from '../assets/icons/linux-svgrepo-com.svg'
 import Docker from '../assets/icons/docker-svgrepo-com.svg'
 import Vscode from '../assets/icons/vscode-svgrepo-com.svg'
+import Odoo from '../assets/icons/odoo_logo.svg'
+import Python from '../assets/icons/python-svgrepo-com.svg'
 // import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
 import Antigravity from '../assets/jpeg/antigravity.jpeg'
@@ -25,6 +27,7 @@ import appQt from '../assets/png/interfaceAppQt.png'
 import javaVenteVoiture from '../assets/png/javaVenteVoiture.png'
 import routageIP from '../assets/png/RoutageIP.png'
 import omv from '../assets/png/OMV.png'
+import resto from '../assets/png/resto.png'
 
 import { MdWeb, MdNetworkCheck, MdLink } from "react-icons/md";
 import { translations } from './i18n';
@@ -61,8 +64,17 @@ const skillsData: SkillSectionType[] = [
       { name: 'C++', icon: Cplus },
       { name: 'C', icon: Cé },
       { name: 'Java', icon: Java },
+      { name: 'Odoo', icon: Odoo },
+      { name: 'Python', icon: Python },
     ],
     projects: [
+      {
+        name: 'gestion resto',
+        description: 'A user interface project that allows you to manage a restaurant and take online orders; the backend has not yet been deployed.',
+        descKey: 'projectResto',
+        image: resto,
+        link: 'https://gestion-commande-react.vercel.app/'
+      },
       {
         name: 'website restau',
         description: 'A complete restaurant website that I created during my first-year internship.',
