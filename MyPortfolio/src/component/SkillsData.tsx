@@ -1,5 +1,4 @@
 import Tailwind from '../assets/icons/tailwind-svgrepo-com.svg'
-import Sass from '../assets/icons/sass-svgrepo.svg'
 import ReactSvg from '../assets/react.svg'
 import Figma from '../assets/icons/figma-svgrepo-com.svg'
 import Node from '../assets/icons/nodejs-1.svg'
@@ -15,14 +14,19 @@ import Routage from '../assets/icons/router-svgrepo-com.svg'
 import Git from '../assets/icons/github-icon-1.svg'
 import Wind from '../assets/icons/microsoft-windows-22.svg'
 import Linux from '../assets/icons/linux-svgrepo-com.svg'
-import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
+import Docker from '../assets/icons/docker-svgrepo-com.svg'
+import Vscode from '../assets/icons/vscode-svgrepo-com.svg'
+// import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
+
+import Antigravity from '../assets/jpeg/antigravity.jpeg'
 
 import restau from '../assets/png/restau.png'
 import appQt from '../assets/png/interfaceAppQt.png'
 import javaVenteVoiture from '../assets/png/javaVenteVoiture.png'
 import routageIP from '../assets/png/RoutageIP.png'
+import omv from '../assets/png/OMV.png'
 
-import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
+import { MdWeb, MdNetworkCheck, MdLink } from "react-icons/md";
 import { translations } from './i18n';
 
 export interface ProjectType {
@@ -42,12 +46,11 @@ export interface SkillSectionType {
 
 const skillsData: SkillSectionType[] = [
   {
-    title: 'skillsWeb',
+    title: 'skillsTech',
     icon: <MdWeb size={32} />,
     items: [
       { name: 'React', icon: ReactSvg },
       { name: 'Tailwind', icon: Tailwind },
-      { name: 'Sass', icon: Sass },
       { name: 'Figma', icon: Figma },
       { name: 'Node.js', icon: Node },
       { name: 'JavaScript', icon: Js },
@@ -55,6 +58,9 @@ const skillsData: SkillSectionType[] = [
       { name: 'SQLite', icon: SQlite },
       { name: 'PostgreSQL', icon: Postgres },
       { name: 'MySQL', icon: Mysql },
+      { name: 'C++', icon: Cplus },
+      { name: 'C', icon: Cé },
+      { name: 'Java', icon: Java },
     ],
     projects: [
       {
@@ -63,18 +69,7 @@ const skillsData: SkillSectionType[] = [
         descKey: 'projectRestoDesc',
         image: restau,
         link: 'https://resto-flame.vercel.app/'
-      }
-    ]
-  },
-  {
-    title: 'skillsSys',
-    icon: <MdSettings size={32} />,
-    items: [
-      { name: 'C++', icon: Cplus },
-      { name: 'C', icon: Cé },
-      { name: 'Java', icon: Java },
-    ],
-    projects: [
+      },
       {
         name: 'app desktop',
         description: 'first application in JAVA about car selling with Apache NetBeans.',
@@ -92,11 +87,13 @@ const skillsData: SkillSectionType[] = [
     ]
   },
   {
-    title: 'skillsNetw',
+    title: 'skillsNet',
     icon: <MdNetworkCheck size={32} />,
     items: [
       { name: 'Routage IP', icon: Routage },
-      { name: 'GitHub', icon: Git },
+      { name: 'OpenMediaVault', icon: omv },
+      { name: 'Windows', icon: Wind },
+      { name: 'Linux', icon: Linux },
     ],
     projects: [
       {
@@ -109,12 +106,13 @@ const skillsData: SkillSectionType[] = [
     ]
   },
   {
-    title: 'skillsOth',
+    title: 'skillsOps',
     icon: <MdLink size={32} />,
     items: [
-      { name: 'Windows', icon: Wind },
-      { name: 'Linux', icon: Linux },
-      { name: 'Chess', icon: Chess },
+      { name: 'Docker', icon: Docker },
+      { name: 'GitHub', icon: Git },
+      {name: 'VSCode', icon: Vscode},
+      {name: 'Antigravity', icon: Antigravity},
     ]
   },
 ];

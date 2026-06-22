@@ -31,11 +31,10 @@
   0%, 100% { opacity: 1; }
   50%       { opacity: 0.4; }
 }
-@keyframes scroll-horizontal {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
+/* @keyframes scroll-horizontal {
+  from {transform: translateX(0);}
+  to {transform: translateX(-50%);}
+} */
 @keyframes float-in {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -436,12 +435,12 @@ h4 {
   border-radius: 2px;
 }
 
-.auto-scroll {
+/* .auto-scroll {
   @apply flex gap-2 min-w-max items-center justify-between;
-  animation: scroll-horizontal 15s linear infinite;
-}
-.auto-scroll:hover { animation: scroll-horizontal 15s linear infinite paused; }
-.auto { @apply flex gap-2 min-w-max items-center justify-between; }
+  animation: scroll-horizontal 20s linear infinite;
+} */
+.auto-scroll:hover { animation: scroll-horizontal 20s linear infinite paused; }
+.auto { @apply w-full items-center justify-between; }
 
 /* ════════════════════════════════════════════
    EXPERIENCES

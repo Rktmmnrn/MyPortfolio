@@ -55,14 +55,13 @@ const Skills = ({ lang }: SkillsProps) => {
                   />
                 </a>
               )}
-              {section.title !== 'skillsOth' && (
-                <Btn
-                  className='my-4 capitalize rounded bg-[#800000] text-white hover:bg-transparent hover:text-[#800000] border-1 border-[#800000] transition-all duration-200'
-                  onClick={() => toggleProjects(index)}
-                >
-                  {activeSection === index ? translations[lang].viewLess : translations[lang].viewAll}
-                </Btn>
-              )}
+              {/* botton view */}
+              <Btn
+                className='my-4 capitalize rounded bg-[#800000] text-white hover:bg-transparent hover:text-[#800000] border-1 border-[#800000] transition-all duration-200'
+                onClick={() => toggleProjects(index)}
+              >
+                {activeSection === index ? translations[lang].viewLess : translations[lang].viewAll}
+              </Btn>
             </div>
 
             {/* Popup */}
@@ -84,16 +83,18 @@ const Skills = ({ lang }: SkillsProps) => {
                 ))}
               </div>
             </Popup>
-
-            <div className="overflow-hidden flex w-full"> {/* Skills icons */}
-              <div className={index === 0 ? 'auto-scroll' : 'auto'}>
+            {/* Skills icons */}
+            <div className="overflow-hidden flex w-full">
+              <div className="auto sm:grid-cols-4 grid grid-cols-3">
                 {section.items?.map((item, j) => (
-                  <div key={j} className='flex flex-col items-center relative justify-center w-[80px] h-[70px] group overflow-hidden'>
+                  <div key={`${item.name}-${j}`} className='flex flex-col items-center relative justify-center w-[80px] h-[70px] group overflow-hidden'>
                     <img key={item.name} src={item.icon} alt={item.name}
                       className="w-12 h-12 object-contain Skills-div-img group-hover:translate-y-[-4px]"
                       title={item.name}
                     />
-                    <p className='font-light transition-transform translate-y-full duration-300 group-hover:translate-y-0  group-hover:flex'>{item.name}</p>
+                    <p className='font-light transition-transform translate-y-full duration-300 group-hover:translate-y-0 group-hover:flex'>
+                      {item.name}
+                    </p>
                   </div>
                 ))}
               </div>
