@@ -39,6 +39,10 @@ export const translations = {
 
     // Skills
     skillsTitle: "Skills & Projects",
+    skillsWeb: "web & database",
+    skillsSys: "system & logiciel",
+    skillsNetw: "network & tools",
+    skillsOth: "others",
     viewAll: "view all",
     viewLess: "view less",
     myProjects: "My projects",
@@ -89,6 +93,10 @@ export const translations = {
 
     // Skills
     skillsTitle: "Compétences & Projets",
+    skillsWeb: "web & bases de données",
+    skillsSys: "système & logiciel",
+    skillsNetw: "réseau et outils",
+    skillsOth: "autres",
     viewAll: "voir tout",
     viewLess: "voir moins",
     myProjects: "Mes projets",
@@ -139,6 +147,10 @@ export const translations = {
 
     // Skills
     skillsTitle: "Fahaizana & Tetikasa",
+    skillsWeb: "tranonkala & tahirin-kevitra",
+    skillsSys: "rafitra & rindrankajy",
+    skillsNetw: "tambazotra & fitaovana",
+    skillsOth: "hafa",
     viewAll: "hijery ny rehetra",
     viewLess: "hikatona",
     myProjects: "Ny tetikasako",

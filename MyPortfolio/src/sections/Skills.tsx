@@ -8,22 +8,6 @@ import { translations, Language } from '../component/i18n';
 
 type SkillsProps = { lang: Language };
 
-const getCategoryTitle = (title: string, lang: Language) => {
-  if (lang === 'fr') {
-    if (title === 'web & database') return 'web & bases de données';
-    if (title === 'system & logiciel') return 'système & logiciel';
-    if (title === 'network & tools') return 'réseau & outils';
-    if (title === 'others') return 'autres';
-  }
-  if (lang === 'mg') {
-    if (title === 'web & database') return 'tranonkala & tahirin-kevitra';
-    if (title === 'system & logiciel') return 'rafitra & rindrankajy';
-    if (title === 'network & tools') return 'tambajotra & fitaovana';
-    if (title === 'others') return 'hafa';
-  }
-  return title;
-};
-
 const Skills = ({ lang }: SkillsProps) => {
   const [activeSection, setActiveSection] = useState<number | null>(null);
 
@@ -58,7 +42,7 @@ const Skills = ({ lang }: SkillsProps) => {
           >
             <h3 className="flex items-center gap-2 text-xl font-semibold capitalize">
               <span className="w-7 h-7 flex items-center justify-center">{section.icon}</span>
-              {getCategoryTitle(section.title, lang)}
+              {translations[lang][section.title]}
             </h3>
 
             <div className='w-full relative'>
@@ -71,7 +55,7 @@ const Skills = ({ lang }: SkillsProps) => {
                   />
                 </a>
               )}
-              {section.title !== 'others' && (
+              {section.title !== 'skillsOth' && (
                 <Btn
                   className='my-4 capitalize rounded bg-[#800000] text-white hover:bg-transparent hover:text-[#800000] border-1 border-[#800000] transition-all duration-200'
                   onClick={() => toggleProjects(index)}

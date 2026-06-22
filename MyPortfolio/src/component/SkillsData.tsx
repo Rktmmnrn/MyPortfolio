@@ -23,6 +23,7 @@ import javaVenteVoiture from '../assets/png/javaVenteVoiture.png'
 import routageIP from '../assets/png/RoutageIP.png'
 
 import { MdWeb, MdSettings, MdNetworkCheck, MdLink } from "react-icons/md";
+import { translations } from './i18n';
 
 export interface ProjectType {
   name: string;
@@ -33,7 +34,7 @@ export interface ProjectType {
 }
 
 export interface SkillSectionType {
-  title: string;
+  title: keyof typeof translations.en;
   icon: React.ReactNode;
   items: { name: string; icon: string }[];
   projects?: ProjectType[];
@@ -41,7 +42,7 @@ export interface SkillSectionType {
 
 const skillsData: SkillSectionType[] = [
   {
-    title: 'web & database',
+    title: 'skillsWeb',
     icon: <MdWeb size={32} />,
     items: [
       { name: 'React', icon: ReactSvg },
@@ -66,7 +67,7 @@ const skillsData: SkillSectionType[] = [
     ]
   },
   {
-    title: 'system & logiciel',
+    title: 'skillsSys',
     icon: <MdSettings size={32} />,
     items: [
       { name: 'C++', icon: Cplus },
@@ -91,7 +92,7 @@ const skillsData: SkillSectionType[] = [
     ]
   },
   {
-    title: 'network & tools',
+    title: 'skillsNetw',
     icon: <MdNetworkCheck size={32} />,
     items: [
       { name: 'Routage IP', icon: Routage },
@@ -108,7 +109,7 @@ const skillsData: SkillSectionType[] = [
     ]
   },
   {
-    title: 'others',
+    title: 'skillsOth',
     icon: <MdLink size={32} />,
     items: [
       { name: 'Windows', icon: Wind },
