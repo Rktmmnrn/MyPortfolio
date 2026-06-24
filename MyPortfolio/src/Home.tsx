@@ -11,6 +11,7 @@ import Header from './sections/Header'
 import Nav from './sections/NavMenu'
 import Hero from './sections/Hero'
 import Skills from './sections/Skills'
+import Project from './sections/Projects'
 import Experience from './sections/Experiences'
 import About from './sections/About'
 import Contact from './sections/Contact'
@@ -86,6 +87,8 @@ function App() {
         </aside>
 
         <Hero lang={lang} />
+
+        <Project lang={lang}/>
 
         <Skills lang={lang} />
 

@@ -1,0 +1,192 @@
+import { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
+
+import { projectsData, ProjectCategory } from '../component/SkillsData';
+import { translations, Language } from '../component/i18n';
+
+type ProjectsProps = { lang: Language };
+
+const FILTERS: { key: ProjectCategory | 'all'; labelKey: keyof typeof translations.en }[] = [
+  { key: 'all', labelKey: 'filterAll' },
+  { key: 'web', labelKey: 'filterWeb' },
+  { key: 'desktop', labelKey: 'filterDesktop' },
+  { key: 'network', labelKey: 'filterNetwork' },
+];
+
+const Projects = ({ lang }: ProjectsProps) => {
+  const [activeFilter, setActiveFilter] = useState<ProjectCategory | 'all'>('all');
+  const t = translations[lang];
+
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'all') return projectsData;
+    return projectsData.filter((p) => p.category === activeFilter);
+  }, [activeFilter]);
+
+  return (
+    <section id="Prj" className="flex-col w-full">
+      <motion.h2
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.4 }}
+        viewport={{ once: true }}
+      >
+        {t.projectsTitle}
+      </motion.h2>
+
+      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', margin: '28px 0', justifyContent: 'center'}}>
+        {FILTERS.map((f) => {
+          const isActive = activeFilter === f.key;
+          return (
+            <button
+              key={f.key}
+              onClick={() => setActiveFilter(f.key)}
+              style={{
+                fontFamily: 'var(--mono)',
+                fontSize: '11px',
+                letterSpacing: '1px',
+                padding: '7px 16px',
+                borderRadius: '2px',
+                cursor: 'pointer',
+                border: isActive ? '1px solid var(--red)' : '1px solid var(--border)',
+                background: isActive ? 'var(--red)' : 'transparent',
+                color: isActive ? 'var(--bg)' : 'var(--text-3)',
+                transition: 'all 0.2s',
+                textTransform: 'lowercase',
+              }}
+            >
+              {t[f.labelKey]}
+            </button>
+          );
+        })}
+      </div>
+
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: '20px',
+          width: '100%',
+        }}
+      >
+        <AnimatePresence mode="popLayout">
+          {filteredProjects.map((project) => (
+            <motion.div
+              key={project.name}
+              layout
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="group"
+              style={{
+                background: 'var(--bg-card)',
+                border: project.featured ? '1px solid var(--border-md)' : '1px solid var(--border)',
+                borderRadius: '3px',
+                overflow: 'hidden',
+                position: 'relative',
+              }}
+            >
+              {project.featured && (
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '10px',
+                    left: '10px',
+                    zIndex: 2,
+                    fontFamily: 'var(--mono)',
+                    fontSize: '9px',
+                    letterSpacing: '2px',
+                    color: 'var(--red)',
+                    border: '1px solid var(--border-md)',
+                    background: 'rgba(13,13,13,0.85)',
+                    padding: '3px 8px',
+                    borderRadius: '2px',
+                    textTransform: 'uppercase',
+                  }}
+                >
+                  {t.featuredTag}
+                </span>
+              )}
+
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  loading="lazy"
+                  className="transition-transform duration-300 group-hover:scale-105"
+                  style={{ width: '100%', height: '160px', objectFit: 'cover', display: 'block' }}
+                />
+              </a>
+
+              <div style={{ padding: '16px 18px' }}>
+                <h3
+                  style={{
+                    fontFamily: 'var(--sans)',
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    color: 'var(--text-1)',
+                    margin: '0 0 6px',
+                    textTransform: 'none',
+                    letterSpacing: '0',
+                    justifyContent: 'flex-start',
+                  }}
+                >
+                  {project.name}
+                </h3>
+
+                <p style={{ fontSize: '12px', color: 'var(--text-2)', lineHeight: '1.6', margin: '0 0 14px' }}>
+                  {t[project.descKey] as string}
+                </p>
+
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '14px' }}>
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      style={{
+                        fontFamily: 'var(--mono)',
+                        fontSize: '9px',
+                        letterSpacing: '1px',
+                        color: 'var(--red)',
+                        border: '1px solid var(--border)',
+                        padding: '3px 8px',
+                        borderRadius: '2px',
+                      }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    fontFamily: 'var(--mono)',
+                    fontSize: '11px',
+                    letterSpacing: '1px',
+                    color: 'var(--red)',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {project.linkType === 'live' ? (
+                    <FiExternalLink size={13} />
+                  ) : (
+                    <FiGithub size={13} />
+                  )}
+                  {project.linkType === 'live' ? t.viewLive : t.viewCode}
+                </a>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

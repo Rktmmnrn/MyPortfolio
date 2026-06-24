@@ -6,6 +6,8 @@ export const translations = {
     availableForWork: "AVAILABLE",
     available: "AVAILABLE",
     skillsAndProjects: "skills & projects",
+    projectsNav: "projects",
+    skillsNav: "skills",
     experiences: "experiences",
     about: "about",
     contact: "contact",
@@ -38,12 +40,22 @@ export const translations = {
     eneamDesc: "Website conception with integration of an intranet pointing platform with ODOO, DJANGO et POSTGRESQL.",
 
     // Skills
-    skillsTitle: "Skills & Projects",
+    skillsTitle: "Skills",
+    skillsSubtitle: "languages, tools and systems I work with",
     skillsTech: "langage & technology",
     skillsNet: "network & system",
     skillsOps: 'devops & tools',
-    viewAll: "view all",
-    viewLess: "view less",
+
+    // Projects
+    projectsTitle: "Projects",
+    projectsSubtitle: "selected work, web, desktop and network",
+    filterAll: "all",
+    filterWeb: "web",
+    filterDesktop: "desktop",
+    filterNetwork: "network",
+    featuredTag: "featured",
+    viewLive: "view live",
+    viewCode: "view code",
     myProjects: "My projects",
     projectResto: "A user interface project that allows you to manage a restaurant and take online orders; the backend has not yet been deployed.",
     projectRestoDesc: "A complete restaurant website that I created during my first-year internship.",
@@ -60,6 +72,8 @@ export const translations = {
     availableForWork: "DISPONIBLE",
     available: "DISPONIBLE",
     skillsAndProjects: "compétences & projets",
+    projectsNav: "projets",
+    skillsNav: "compétences",
     experiences: "expériences",
     about: "à propos",
     contact: "contact",
@@ -93,11 +107,21 @@ export const translations = {
 
     // Skills
     skillsTitle: "Compétences & Projets",
+    skillsSubtitle: "langages, outils et systèmes que je maîtrise",
     skillsTech: "langage & technologie",
     skillsNet: "réseau & système",
     skillsOps: 'devops & outils',
-    viewAll: "voir tout",
-    viewLess: "voir moins",
+
+    // Projects
+    projectsTitle: "Projets",
+    projectsSubtitle: "travaux sélectionnés, web, desktop et réseau",
+    filterAll: "tous",
+    filterWeb: "web",
+    filterDesktop: "desktop",
+    filterNetwork: "réseau",
+    featuredTag: "à la une",
+    viewLive: "voir le site",
+    viewCode: "voir le code",
     myProjects: "Mes projets",
     projectResto: "Une projet IHM qui permet de gérer un resto et de prendre des commandes en ligne, backend pas encore déployer.",
     projectRestoDesc: "Un site web complet de restaurant que j'ai créé pendant mon stage de première année.",
@@ -114,6 +138,8 @@ export const translations = {
     availableForWork: "AFAKA_MIASA",
     available: "AFAKA",
     skillsAndProjects: "fahaizana & tetikasa",
+    projectsNav: "tetikasa",
+    skillsNav: "fahaizana",
     experiences: "traikefa",
     about: "mombamomba",
     contact: "fifandraisana",
@@ -147,11 +173,21 @@ export const translations = {
 
     // Skills
     skillsTitle: "Fahaizana & Tetikasa",
+    skillsSubtitle: "langages, fitaovana ary rafitra ampiasaiko",
     skillsTech: "langage & technology",
     skillsNet: "tambazotra & rafitra",
     skillsOps: 'devops & fitaovana',
-    viewAll: "hijery ny rehetra",
-    viewLess: "hikatona",
+
+    // Projects
+    projectsTitle: "Tetikasa",
+    projectsSubtitle: "asa voafantina, web, desktop ary tambajotra",
+    filterAll: "rehetra",
+    filterWeb: "web",
+    filterDesktop: "desktop",
+    filterNetwork: "tambajotra",
+    featuredTag: "voafantina",
+    viewLive: "hijery ny tranonkala",
+    viewCode: "hijery ny kaody",
     myProjects: "Ny tetikasako",
     projectResto: "Tetik'asa interface tsara izay ahafahanao mitantana trano fisakafoanana sy mandray baiko an-tserasera; ny backend dia tsy mbola napetraka.",
     projectRestoDesc: "Tranonkala fisakafoanana feno izay noforoniko nandritra ny internship tamin'ny taona voalohany.",
@@ -164,3 +200,5 @@ export const translations = {
     contactDesc: "Misokatra amin'ny fahafahana vaovao sy fiaraha-miasa amin'izao fotoana izao — aza misalasala mifandray."
   }
 };
+
+export type TranslationKey = keyof typeof translations.en;

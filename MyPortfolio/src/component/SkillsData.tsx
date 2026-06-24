@@ -30,27 +30,80 @@ import omv from '../assets/png/OMV.png'
 import resto from '../assets/png/resto.png'
 
 import { MdWeb, MdNetworkCheck, MdLink } from "react-icons/md";
-import { translations } from './i18n';
+import { TranslationKey } from './i18n';
+
+export type ProjectCategory = 'web' | 'desktop' | 'network';
 
 export interface ProjectType {
   name: string;
-  description: string;
-  descKey: string;
+  descKey: TranslationKey;
   image: string;
   link: string;
+  category: ProjectCategory;
+  stack: string[];
+  linkType: 'live' | 'code';
+  featured?: boolean;
 }
 
-export interface SkillSectionType {
-  title: keyof typeof translations.en;
+export const projectsData: ProjectType[] = [
+  {
+    name: 'Gestion resto',
+    descKey: 'projectResto',
+    image: resto,
+    link: 'https://gestion-commande-react.vercel.app/',
+    category: 'web',
+    stack: ['React', 'Tailwind', 'Django', 'SQLite'],
+    linkType: 'live',
+    featured: true,
+  },
+  {
+    name: 'website restau',
+    descKey: 'projectRestoDesc',
+    image: restau,
+    link: 'https://resto-flame.vercel.app/',
+    category: 'web',
+    stack: ['HTML', 'CSS', 'JS'],
+    linkType: 'live',
+  },
+  {
+    name: 'Vente voiture',
+    descKey: 'projectCarDesc',
+    image: javaVenteVoiture,
+    link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture',
+    category: 'desktop',
+    stack: ['Java', 'Maven', 'MySQL'],
+    linkType: 'code',
+  },
+  {
+    name: 'Parc informatique',
+    descKey: 'projectParkDesc',
+    image: appQt,
+    link: 'https://github.com/Rktmmnrn/ParckInformatiqueInC-',
+    category: 'desktop',
+    stack: ['C++', 'MySQL'],
+    linkType: 'code',
+  },
+  {
+    name: 'Routage IP',
+    descKey: 'projectRouteDesc',
+    image: routageIP,
+    link: 'https://github.com/Rktmmnrn',
+    category: 'network',
+    stack: ['GNS3', 'OSPF', 'RIP'],
+    linkType: ' ',
+  },
+];
+
+export interface SkillGroupType {
+  title: TranslationKey;
   icon: React.ReactNode;
   items: { name: string; icon: string }[];
-  projects?: ProjectType[];
 }
 
-const skillsData: SkillSectionType[] = [
+const skillsData: SkillGroupType[] = [
   {
     title: 'skillsTech',
-    icon: <MdWeb size={32} />,
+    icon: <MdWeb size={20} />,
     items: [
       { name: 'React', icon: ReactSvg },
       { name: 'Tailwind', icon: Tailwind },
@@ -67,59 +120,20 @@ const skillsData: SkillSectionType[] = [
       { name: 'Odoo', icon: Odoo },
       { name: 'Python', icon: Python },
     ],
-    projects: [
-      {
-        name: 'gestion resto',
-        description: 'A user interface project that allows you to manage a restaurant and take online orders; the backend has not yet been deployed.',
-        descKey: 'projectResto',
-        image: resto,
-        link: 'https://gestion-commande-react.vercel.app/'
-      },
-      {
-        name: 'website restau',
-        description: 'A complete restaurant website that I created during my first-year internship.',
-        descKey: 'projectRestoDesc',
-        image: restau,
-        link: 'https://resto-flame.vercel.app/'
-      },
-      {
-        name: 'app desktop',
-        description: 'first application in JAVA about car selling with Apache NetBeans.',
-        descKey: 'projectCarDesc',
-        image: javaVenteVoiture,
-        link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture'
-      },
-      {
-        name: 'app desktop',
-        description: 'first application about IT park management with QTCreator based on C++.',
-        descKey: 'projectParkDesc',
-        image: appQt,
-        link: 'https://github.com/Rktmmnrn/ParckInformatiqueInC-'
-      }
-    ]
   },
   {
     title: 'skillsNet',
-    icon: <MdNetworkCheck size={32} />,
+    icon: <MdNetworkCheck size={20} />,
     items: [
       { name: 'Routage IP', icon: Routage },
       { name: 'OpenMediaVault', icon: omv },
       { name: 'Windows', icon: Wind },
       { name: 'Linux', icon: Linux },
     ],
-    projects: [
-      {
-        name: 'routage ip',
-        description: 'first project with GNS3 using OSPF & RIP.',
-        descKey: 'projectRouteDesc',
-        image: routageIP,
-        link: 'https://github.com/Rktmmnrn'
-      }
-    ]
   },
   {
     title: 'skillsOps',
-    icon: <MdLink size={32} />,
+    icon: <MdLink size={20} />,
     items: [
       { name: 'Docker', icon: Docker },
       { name: 'GitHub', icon: Git },

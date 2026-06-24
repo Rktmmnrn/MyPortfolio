@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FiCpu, FiBriefcase, FiUser, FiMail } from 'react-icons/fi';
+import { FiCpu, FiBriefcase, FiUser, FiMail, FiFolder } from 'react-icons/fi';
 import { translations, Language } from '../component/i18n';
 
 type NavMenuProps = { lang: Language };
@@ -15,15 +15,18 @@ const NavMenu = ({ lang }: NavMenuProps) => {
 
   return (
     <nav
-      className={`fixed z-20 flex font-bold uppercase transition-all duration-300 ${
-        isDesktop
+      className={`fixed z-20 flex font-bold uppercase transition-all duration-300 ${isDesktop
           ? 'top-0 left-1/2 -translate-x-1/2 translate-y-[18px]'
           : 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[-20px]'
-      }`}
+        }`}
     >
+      <a href="#Prj">
+        <FiFolder className="w-4 h-4 inline lg:hidden" />
+        <span>{translations[lang].projectsNav}</span>
+      </a>
       <a href="#Skl">
         <FiCpu className="w-4 h-4 inline lg:hidden" />
-        <span>{translations[lang].skillsAndProjects}</span>
+        <span>{translations[lang].skillsNav}</span>
       </a>
       <a href="#Exp">
         <FiBriefcase className="w-4 h-4 inline lg:hidden" />
