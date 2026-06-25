@@ -42,7 +42,9 @@ export const translations = {
     // Skills
     skillsTitle: "Skills",
     skillsSubtitle: "languages, tools and systems I work with",
-    skillsTech: "langage & technology",
+    skillsTech: "technology & ERP",
+    skillsLang: "langage",
+    skillsDb: "management system",
     skillsNet: "network & system",
     skillsOps: 'devops & tools',
 
@@ -58,6 +60,7 @@ export const translations = {
     viewCode: "view code",
     myProjects: "My projects",
     projectResto: "A user interface project that allows you to manage a restaurant and take online orders; the backend has not yet been deployed.",
+    projectEneam: "An ERP platform that integrates staff point management and works in intranet mode.",
     projectRestoDesc: "A complete restaurant website that I created during my first-year internship.",
     projectCarDesc: "first application in JAVA about car selling with Apache NetBeans.",
     projectParkDesc: "first application about IT park management with QTCreator based on C++.",
@@ -108,7 +111,9 @@ export const translations = {
     // Skills
     skillsTitle: "Compétences & Projets",
     skillsSubtitle: "langages, outils et systèmes que je maîtrise",
-    skillsTech: "langage & technologie",
+    skillsTech: "technologie & ERP",
+    skillsLang: "langage",
+    skillsDb: "système de gestion",
     skillsNet: "réseau & système",
     skillsOps: 'devops & outils',
 
@@ -124,6 +129,7 @@ export const translations = {
     viewCode: "voir le code",
     myProjects: "Mes projets",
     projectResto: "Une projet IHM qui permet de gérer un resto et de prendre des commandes en ligne, backend pas encore déployer.",
+    projectEneam: "Une plateforme ERP qui intègre la gestion de pointage des personnels et qui fonctionne en mode intranet.",
     projectRestoDesc: "Un site web complet de restaurant que j'ai créé pendant mon stage de première année.",
     projectCarDesc: "Première application en JAVA de vente de voitures avec Apache NetBeans.",
     projectParkDesc: "Première application de gestion de parc informatique avec QTCreator basée sur C++.",
@@ -174,7 +180,9 @@ export const translations = {
     // Skills
     skillsTitle: "Fahaizana & Tetikasa",
     skillsSubtitle: "langages, fitaovana ary rafitra ampiasaiko",
-    skillsTech: "langage & technology",
+    skillsTech: "technology & ERP",
+    skillsLang: "langage",
+    skillsDb: "rafitra fitantanana",
     skillsNet: "tambazotra & rafitra",
     skillsOps: 'devops & fitaovana',
 
@@ -190,6 +198,7 @@ export const translations = {
     viewCode: "hijery ny kaody",
     myProjects: "Ny tetikasako",
     projectResto: "Tetik'asa interface tsara izay ahafahanao mitantana trano fisakafoanana sy mandray baiko an-tserasera; ny backend dia tsy mbola napetraka.",
+    projectEneam: "Sehatra ERP izay mampiditra ny fitantanana ny teboka mpiasa ary miasa amin'ny fomba intranet.",
     projectRestoDesc: "Tranonkala fisakafoanana feno izay noforoniko nandritra ny internship tamin'ny taona voalohany.",
     projectCarDesc: "Rindrankajy voalohany amin'ny JAVA momba ny fivarotana fiara amin'ny Apache NetBeans.",
     projectParkDesc: "Rindrankajy voalohany momba ny fitantanana ny zaridaina IT miaraka amin'ny QTCreator miorina amin'ny C++.",

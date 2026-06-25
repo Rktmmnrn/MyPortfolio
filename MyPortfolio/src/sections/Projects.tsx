@@ -67,10 +67,10 @@ const Projects = ({ lang }: ProjectsProps) => {
                         <motion.div
                             key={project.name}
                             layout
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.25 }}
+                            initial={{ opacity: 0, x: 100 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -100 }}
+                            transition={{ duration: 0.4 }}
                             className="group"
                             style={{
                                 border: project.featured ? '1px solid var(--border-md)' : '1px solid var(--border)',

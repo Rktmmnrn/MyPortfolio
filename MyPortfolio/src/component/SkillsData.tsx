@@ -18,6 +18,8 @@ import Docker from '../assets/icons/docker-svgrepo-com.svg'
 import Vscode from '../assets/icons/vscode-svgrepo-com.svg'
 import Odoo from '../assets/icons/odoo_logo.svg'
 import Python from '../assets/icons/python-svgrepo-com.svg'
+import Django from '../assets/icons/django-svgrepo-com.svg'
+import FastAPI from '../assets/icons/fastapi-svgrepo-com.svg'
 // import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
 import Antigravity from '../assets/jpeg/antigravity.jpeg'
@@ -28,8 +30,9 @@ import javaVenteVoiture from '../assets/png/javaVenteVoiture.png'
 import routageIP from '../assets/png/RoutageIP.png'
 import omv from '../assets/png/OMV.png'
 import resto from '../assets/png/resto.png'
+import eneamwebsite from '../assets/png/pageAcceuil.png'
 
-import { MdWeb, MdNetworkCheck, MdLink } from "react-icons/md";
+import { MdWeb, MdDeveloperMode, MdLink, MdLan, MdDataArray } from "react-icons/md";
 import { TranslationKey } from './i18n';
 
 export type ProjectCategory = 'web' | 'desktop' | 'network';
@@ -46,6 +49,16 @@ export interface ProjectType {
 }
 
 export const projectsData: ProjectType[] = [
+  {
+    name: 'Site ENEAM avec integration gestion pointage',
+    descKey: 'projectEneam',
+    image: eneamwebsite,
+    link: 'https://github.com/Rktmmnrn/Projet_eneam',
+    category: 'web',
+    stack: ['Odoo', 'Django', 'PostgreSQL', 'Docker'],
+    linkType: 'code',
+    featured: true,
+  },
   {
     name: 'Gestion resto',
     descKey: 'projectResto',
@@ -71,7 +84,7 @@ export const projectsData: ProjectType[] = [
     image: javaVenteVoiture,
     link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture',
     category: 'desktop',
-    stack: ['Java', 'Maven', 'MySQL'],
+    stack: ['Java', 'Maven', 'MySQL', 'Apache'],
     linkType: 'code',
   },
   {
@@ -90,7 +103,7 @@ export const projectsData: ProjectType[] = [
     link: 'https://github.com/Rktmmnrn',
     category: 'network',
     stack: ['GNS3', 'OSPF', 'RIP'],
-    linkType: ' ',
+    linkType: 'code',
   },
 ];
 
@@ -102,28 +115,8 @@ export interface SkillGroupType {
 
 const skillsData: SkillGroupType[] = [
   {
-    title: 'skillsTech',
-    icon: <MdWeb size={20} />,
-    items: [
-      { name: 'React', icon: ReactSvg },
-      { name: 'Tailwind', icon: Tailwind },
-      { name: 'Figma', icon: Figma },
-      { name: 'Node.js', icon: Node },
-      { name: 'JavaScript', icon: Js },
-      { name: 'PHP', icon: Php },
-      { name: 'SQLite', icon: SQlite },
-      { name: 'PostgreSQL', icon: Postgres },
-      { name: 'MySQL', icon: Mysql },
-      { name: 'C++', icon: Cplus },
-      { name: 'C', icon: Cé },
-      { name: 'Java', icon: Java },
-      { name: 'Odoo', icon: Odoo },
-      { name: 'Python', icon: Python },
-    ],
-  },
-  {
     title: 'skillsNet',
-    icon: <MdNetworkCheck size={20} />,
+    icon: <MdLan size={20} />,
     items: [
       { name: 'Routage IP', icon: Routage },
       { name: 'OpenMediaVault', icon: omv },
@@ -132,13 +125,47 @@ const skillsData: SkillGroupType[] = [
     ],
   },
   {
+    title: 'skillsTech',
+    icon: <MdWeb size={20} />,
+    items: [
+      { name: 'React', icon: ReactSvg },
+      { name: 'Tailwind', icon: Tailwind },
+      { name: 'Django', icon: Django },
+      { name: 'FastAPI', icon: FastAPI },
+      { name: 'Node.js', icon: Node },
+      { name: 'Odoo', icon: Odoo },
+      { name: 'PHP', icon: Php },
+      { name: 'Figma', icon: Figma },
+    ]
+  },
+  {
+    title: 'skillsLang',
+    icon: <MdDeveloperMode size={20} />,
+    items: [
+      { name: 'JavaScript', icon: Js },
+      { name: 'Python', icon: Python },
+      { name: 'Java', icon: Java },
+      { name: 'C', icon: Cé },
+      { name: 'C++', icon: Cplus },
+    ]
+  },
+  {
+    title: 'skillsDb',
+    icon: <MdDataArray size={20} />,
+    items: [
+      { name: 'MySQL', icon: Mysql },
+      { name: 'PostgreSQL', icon: Postgres },
+      { name: 'SQLite', icon: SQlite },
+    ]
+  },
+  {
     title: 'skillsOps',
     icon: <MdLink size={20} />,
     items: [
       { name: 'Docker', icon: Docker },
       { name: 'GitHub', icon: Git },
-      {name: 'VSCode', icon: Vscode},
-      {name: 'Antigravity', icon: Antigravity},
+      { name: 'VSCode', icon: Vscode },
+      { name: 'Antigravity', icon: Antigravity },
     ]
   },
 ];
