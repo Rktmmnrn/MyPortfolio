@@ -29,19 +29,7 @@ const Skills = ({ lang }: SkillsProps) => {
             viewport={{ once: true }}
             className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl"
           >
-            <h3
-              style={{
-                fontFamily: 'var(--sans)',
-                fontSize: '14px',
-                fontWeight: 600,
-                color: 'var(--text-1)',
-                textTransform: 'capitalize',
-                letterSpacing: '0',
-                justifyContent: 'flex-start',
-                gap: '8px',
-                marginBottom: '14px',
-              }}
-            >
+            <h3>
               <span className="flex items-center justify-center" style={{ color: 'var(--red)' }}>{group.icon}</span>
               {t[group.title] as string}
             </h3>
@@ -51,29 +39,15 @@ const Skills = ({ lang }: SkillsProps) => {
                 <div
                   key={item.name}
                   title={item.name}
-                  className='flex items-center gap-2'
-                  style={{
-                    background: 'var(--bg-card)',
-                    border: '1px solid var(--border)',
-                    borderRadius: '2px',
-                    padding: '7px 12px',
-                    transition: 'border-color 0.2s, box-shadow 0.2s',
-                  }}
+                  className='Skills-div-stacklist flex items-center gap-2'
                 >
                   <img
                     src={item.icon}
                     alt={item.name}
                     loading="lazy"
-                    style={{ width: '18px', height: '18px', objectFit: 'contain' }}
                     className="Skills-div-img"
                   />
                   <span
-                    style={{
-                      fontFamily: 'var(--mono)',
-                      fontSize: '11px',
-                      letterSpacing: '0.5px',
-                      color: 'var(--text-2)',
-                    }}
                   >
                     {item.name}
                   </span>
