@@ -27,7 +27,7 @@ const Skills = ({ lang }: SkillsProps) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: index * 0.12 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl"
+            className="grid grid-cols-1 gap-4 items-center justify-center rounded-xl w-full"
           >
             <h3>
               <span className="flex items-center justify-center" style={{ color: 'var(--red)' }}>{group.icon}</span>

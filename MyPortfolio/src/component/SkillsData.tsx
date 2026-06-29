@@ -20,6 +20,7 @@ import Odoo from '../assets/icons/odoo_logo.svg'
 import Python from '../assets/icons/python-svgrepo-com.svg'
 import Django from '../assets/icons/django-svgrepo-com.svg'
 import FastAPI from '../assets/icons/fastapi-svgrepo-com.svg'
+import Claude from '../assets/icons/Claude_AI_symbol.svg'
 // import Chess from '../assets/icons/chess-8-svgrepo-com.svg'
 
 import Antigravity from '../assets/jpeg/antigravity.jpeg'
@@ -134,7 +135,6 @@ const skillsData: SkillGroupType[] = [
       { name: 'FastAPI', icon: FastAPI },
       { name: 'Node.js', icon: Node },
       { name: 'Odoo', icon: Odoo },
-      { name: 'PHP', icon: Php },
       { name: 'Figma', icon: Figma },
     ]
   },
@@ -142,11 +142,12 @@ const skillsData: SkillGroupType[] = [
     title: 'skillsLang',
     icon: <MdDeveloperMode size={20} />,
     items: [
-      { name: 'JavaScript', icon: Js },
+      { name: 'JavaScript/Typescript', icon: Js },
       { name: 'Python', icon: Python },
       { name: 'Java', icon: Java },
       { name: 'C', icon: Cé },
       { name: 'C++', icon: Cplus },
+      { name: 'PHP', icon: Php },
     ]
   },
   {
@@ -166,6 +167,7 @@ const skillsData: SkillGroupType[] = [
       { name: 'GitHub', icon: Git },
       { name: 'VSCode', icon: Vscode },
       { name: 'Antigravity', icon: Antigravity },
+      { name: 'Claude AI', icon: Claude },
     ]
   },
 ];

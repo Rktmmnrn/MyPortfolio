@@ -46,7 +46,7 @@ export const translations = {
     skillsLang: "langage",
     skillsDb: "management system",
     skillsNet: "network & system",
-    skillsOps: 'devops & tools',
+    skillsOps: 'devOps & tools',
 
     // Projects
     projectsTitle: "Projects",
@@ -115,7 +115,7 @@ export const translations = {
     skillsLang: "langage",
     skillsDb: "système de gestion",
     skillsNet: "réseau & système",
-    skillsOps: 'devops & outils',
+    skillsOps: 'devOps & outils',
 
     // Projects
     projectsTitle: "Projets",
@@ -184,7 +184,7 @@ export const translations = {
     skillsLang: "langage",
     skillsDb: "rafitra fitantanana",
     skillsNet: "tambazotra & rafitra",
-    skillsOps: 'devops & fitaovana',
+    skillsOps: 'devOps & fitaovana',
 
     // Projects
     projectsTitle: "Tetikasa",
