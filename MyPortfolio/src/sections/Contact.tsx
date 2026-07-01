@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import Vector from '../component/vector';
+import Vector from '../component/ui/vector';
 import mail from '../assets/icons/mail.svg';
 import git from '../assets/icons/github-icon-1.svg';
 import lnkdn from '../assets/icons/linkedin-svgrepo-com.svg';
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type ContactProps = { lang: Language };
 

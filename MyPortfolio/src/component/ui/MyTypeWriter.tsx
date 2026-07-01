@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { translations, Language } from './i18n';
+import { translations, Language } from '../../data/i18n';
 
 type TypewriterProps = { lang: Language };
 

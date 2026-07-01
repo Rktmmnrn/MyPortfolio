@@ -1,5 +1,5 @@
 import Logo from '/Logo.svg';
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type FooterProps = { lang: Language };
 

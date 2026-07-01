@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
 import './styles/styleHN.css' // styles
-import ProgressBar from './component/ProgressBar'
-import Cube3D from './component/cube3D'
-import Btn from './component/boutton'
+import ProgressBar from './component/layout/ProgressBar'
+import Cube3D from './component/layout/cube3D'
+import Btn from './component/ui/boutton'
 
 import { FiArrowUp } from "react-icons/fi"
 
@@ -16,9 +16,9 @@ import Experience from './sections/Experiences'
 import About from './sections/About'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
-import Todo from './component/TodoList'
+import Todo from './component/layout/TodoList'
 import { RiKakaoTalkLine } from "react-icons/ri";
-import { Language } from './component/i18n'
+import { Language } from './data/i18n'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);

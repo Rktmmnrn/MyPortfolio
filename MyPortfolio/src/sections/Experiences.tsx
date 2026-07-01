@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type ExperienceProps = { lang: Language };
 

@@ -2,8 +2,8 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
-import { projectsData, ProjectCategory } from '../component/SkillsData';
-import { translations, Language } from '../component/i18n';
+import { projectsData, ProjectCategory } from '../component/ui/SkillsData';
+import { translations, Language } from '../data/i18n';
 
 type ProjectsProps = { lang: Language };
 

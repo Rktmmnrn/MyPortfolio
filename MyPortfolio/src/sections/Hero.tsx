@@ -1,13 +1,13 @@
-import Writer from '../component/MyTypeWriter'
-import VectorD from '../component/vectorDown'
-import Btn from '../component/boutton'
+import Writer from '../component/ui/MyTypeWriter'
+import VectorD from '../component/ui/vectorDown'
+import Btn from '../component/ui/boutton'
 
 import profil from '../assets/png/IMG_20250428_092309.png'
 import down from '../assets/icons/Download.svg'
-import CV from './CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
+import CV from '../data/CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
 
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type HeroProps = { lang: Language };
 

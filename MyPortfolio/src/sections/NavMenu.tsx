@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FiCpu, FiBriefcase, FiUser, FiMail, FiFolder } from 'react-icons/fi';
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type NavMenuProps = { lang: Language };
 

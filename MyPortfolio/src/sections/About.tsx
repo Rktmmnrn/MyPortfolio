@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type AboutProps = { lang: Language };
 
@@ -21,7 +21,8 @@ const About = ({ lang }: AboutProps) => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
         style={{
-          width: 'min(66%, 600px)',
+          width: '100%',
+          maxWidth: '700px',
           background: 'var(--bg-card)',
           border: '1px solid var(--border)',
           borderRadius: '3px',

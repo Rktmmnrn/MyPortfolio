@@ -1,4 +1,4 @@
-import '../styles/styleCube.css';
+import '../../styles/styleCube.css';
 
 const Cube3D = () => (
   <div className="cube3D">

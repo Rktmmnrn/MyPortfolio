@@ -1,7 +1,7 @@
-import skillsData from '../component/SkillsData'
+import skillsData from '../component/ui/SkillsData'
 import { motion } from 'framer-motion'
 
-import { translations, Language } from '../component/i18n';
+import { translations, Language } from '../data/i18n';
 
 type SkillsProps = { lang: Language };
 
