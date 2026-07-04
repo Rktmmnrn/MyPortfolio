@@ -42,7 +42,7 @@ const LanguageSelector = ({
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 flex flex-col rounded-lg border border-white/10 bg-[#111] shadow-lg overflow-hidden z-50">
+        <div className="absolute right-0 mt-1 flex flex-col overflow-hidden z-50">
           {(["en", "fr", "mg"] as Language[])
             .filter((l) => l !== lang)
             .map((l) => (
