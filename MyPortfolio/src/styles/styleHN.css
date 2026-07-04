@@ -234,7 +234,7 @@ nav span {
    HEADER
 ════════════════════════════════════════════ */
 header {
-  @apply flex justify-between items-center fixed w-full z-10 overflow-hidden;
+  @apply flex justify-between items-center fixed w-full z-10;
   padding: 14px 40px;
   background: rgba(13, 13, 13, 0.93);
   border-bottom: 1px solid var(--border);
@@ -258,7 +258,7 @@ header img {
 }
 
 header button {
-  padding: 9px 18px;
+  padding: 5px 10px;
   border: 1px solid var(--border-md);
   font-family: var(--mono);
   font-size: 11px;

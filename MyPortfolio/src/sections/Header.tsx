@@ -1,5 +1,6 @@
 import Logo from '/Logo.svg';
 import { translations, Language } from '../data/i18n';
+import LanguageSelector from '../component/ui/LanguageSelector';
 
 type HeaderProps = {
   scrolled: boolean;
@@ -40,33 +41,9 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
       </div>
 
       {/* Sélecteur de langue */}
-      <div
-        className="flex items-center border-r border-[rgba(180,20,20,0.18)] pr-4 mr-2 w-full justify-between"
-        style={{
-          fontFamily: 'var(--mono)',
-          fontSize: '11px',
-          letterSpacing: '1px',
-        }}
-      >
-        {(['en', 'fr', 'mg'] as Language[]).map((l) => (
-          <button
-            key={l}
-            onClick={() => setLang(l)}
-            style={{
-              background: 'none',
-              border: 'none',
-              color: lang === l ? 'var(--red)' : 'var(--text-3)',
-              cursor: 'pointer',
-              fontWeight: lang === l ? '600' : 'normal',
-              textTransform: 'uppercase',
-              padding: '0 4px',
-              transition: 'color 0.2s',
-            }}
-          >
-            {l}
-          </button>
-        ))}
-      </div>
+      <LanguageSelector
+        lang={lang}
+        setLang={setLang} />
     </div>
   </header>
 );
