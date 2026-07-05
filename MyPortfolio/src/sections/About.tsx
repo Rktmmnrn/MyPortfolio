@@ -55,17 +55,14 @@ const About = ({ lang }: AboutProps) => {
           // about.txt
         </p>
 
-        <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}>
-          {translations[lang].aboutPara1}
-        </p>
+        <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}
+          dangerouslySetInnerHTML={{ __html: translations[lang].aboutPara1 }} />
 
-        <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}>
-          {translations[lang].aboutPara2}
-        </p>
-        
-        <p style={{ color: 'var(--text-2)', lineHeight: '1.85' }}>
-          {translations[lang].aboutPara3}
-        </p>
+        <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}
+          dangerouslySetInnerHTML={{ __html: translations[lang].aboutPara2 }} />
+
+        <p style={{ color: 'var(--text-2)', lineHeight: '1.85' }}
+          dangerouslySetInnerHTML={{ __html: translations[lang].aboutPara3 }} />
       </motion.div>
     </section>
   );

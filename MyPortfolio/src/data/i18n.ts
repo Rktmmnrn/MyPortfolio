@@ -25,8 +25,8 @@ export const translations = {
     // About
     aboutTitle: "About Me",
     aboutPara1: "Passionate about technology, I love getting hands-on — tinkering and building — and I am curious about how things work; I am constantly looking to advance my skills.",
-    aboutPara2: "I have worked on various projects — whether academic, corporate, or personal — including web, mobile, and desktop applications, as well as setting up a mini NAS server on Linux.",
-    aboutPara3: "I currently have experience in web development, but I am also passionate about cybersecurity.",
+    aboutPara2: "I have worked on various projects — whether academic, corporate, or personal — including <strong> web, mobile </strong>, and <strong> desktop applications </strong>, as well as setting up a mini <strong> NAS server on Linux </strong>.",
+    aboutPara3: "I currently have <strong> 1 year </strong> of experience in <strong> web development (react, Python, Odoo) </strong>, but I am also passionate about network and cybersecurity.",
 
     // Experiences
     experiencesTitle: "experiences",
@@ -95,8 +95,8 @@ export const translations = {
     // About
     aboutTitle: "À Propos de Moi",
     aboutPara1: "Passionné par la technologie, j'aime toucher, bidouiller, construire et curieux de comprendre comment quelque chose fonctionne — et je cherche constamment à faire progresser mes compétences.",
-    aboutPara2: "J'ai travaillé sur divers projets que ce soit académique, en entreprise ou personnel; incluant des applications Web, Mobile ou de Bureau aussi la mise en place d'un mini serveur NAS sous Linux.",
-    aboutPara3: "Actuellement j'ai des expériences dans le Developpement Web mais aussi je suis passionné par la CyberSécurité.",
+    aboutPara2: "J'ai travaillé sur divers projets que ce soit académique, en entreprise ou personnel; incluant des <strong> applications Web, Mobile </strong> ou de <strong> Bureau </strong> aussi la mise en place d'un mini serveur <strong> NAS sous Linux </strong>.",
+    aboutPara3: "Actuellement j'ai <strong> 1 ans </strong> d'expériences dans le <strong> Developpement d'application Web (React, Python, Odoo) </strong> mais aussi je suis passionné par le monde du réseau et de la CyberSécurité.",
 
     // Experiences
     experiencesTitle: "expériences",
@@ -165,8 +165,8 @@ export const translations = {
     // About
     aboutTitle: "Mombamomba ahy",
     aboutPara1: "Mpankafy teknolojia, tia mikirakira, manamboatra sy liana tia ahafantatra ny fomba fiasan'ny zavatra iray — ary miezaka hatrany manatsara ny fahaizako.",
-    aboutPara2: "Efa niasa tamina tetikasa samihafa aho, anatin'izany ny tao am-pianarana, fiasana na ny tenako manokana; tafiditra anatin'izany ny application Web, Mobile na Bureau ary ny fanamboarana serveur NAS iray tamin'ny alalan'ny Linux.",
-    aboutPara3: "Ankehitriny aho manana fahaizana amin'ny Developpement Web ary manana fitiavana manokana amin'ny cybersecurite.",
+    aboutPara2: "Efa niasa tamina tetikasa samihafa aho, anatin'izany ny tao am-pianarana, fiasana na ny tenako manokana; tafiditra anatin'izany ny <strong> application Web, Mobile na Bureau </strong> ary ny fanamboarana <strong> serveur NAS </strong> iray tamin'ny alalan'ny <strong> Linux </strong>.",
+    aboutPara3: "Ankehitriny aho manana fahaizana <strong> 1 taona </strong> amin'ny <strong> Developpement Web (react, Odoo) </strong> ary manana fitiavana manokana amin'ny cybersecurite.",
 
     // Experiences
     experiencesTitle: "traikefa",
