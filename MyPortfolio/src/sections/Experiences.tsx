@@ -92,7 +92,7 @@ const Experience = ({ lang }: ExperienceProps) => {
                 href={exp.lien}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[11px] text-[var(--text-3)] no-underline ml-2.5 transition-colors duration-200 hover:text-[var(--red)]"
+                className="border rounded-[5px] py-1 px-2 font-mono text-[11px] text-[var(--text-3)] no-underline ml-2.5 transition-colors duration-200 hover:text-[var(--red)]"
               >
                 — {exp.entreprise}
               </a>
@@ -102,10 +102,10 @@ const Experience = ({ lang }: ExperienceProps) => {
             <p
               style={{
                 fontFamily: 'var(--mono)',
-                fontSize: '10px',
+                fontSize: '11px',
                 letterSpacing: '2px',
                 color: 'var(--red)',
-                opacity: 0.6,
+                opacity: 1,
                 marginBottom: '12px',
               }}
             >
