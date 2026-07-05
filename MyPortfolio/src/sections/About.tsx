@@ -59,8 +59,12 @@ const About = ({ lang }: AboutProps) => {
           {translations[lang].aboutPara1}
         </p>
 
-        <p style={{ color: 'var(--text-2)', lineHeight: '1.85' }}>
+        <p style={{ color: 'var(--text-2)', lineHeight: '1.85', marginBottom: '12px' }}>
           {translations[lang].aboutPara2}
+        </p>
+        
+        <p style={{ color: 'var(--text-2)', lineHeight: '1.85' }}>
+          {translations[lang].aboutPara3}
         </p>
       </motion.div>
     </section>

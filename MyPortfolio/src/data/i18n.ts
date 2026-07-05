@@ -24,8 +24,9 @@ export const translations = {
 
     // About
     aboutTitle: "About Me",
-    aboutPara1: "Passionate about technology, I am a computer science student at the École Nationale Informatique de Madagascar (ENI). I enjoy building applications — web and desktop — and constantly push my skills forward.",
-    aboutPara2: "I have worked on various projects involving web and desktop application development, and network configuration. I am particularly interested in network security.",
+    aboutPara1: "Passionate about technology, I love getting hands-on — tinkering and building — and I am curious about how things work; I am constantly looking to advance my skills.",
+    aboutPara2: "I have worked on various projects — whether academic, corporate, or personal — including web, mobile, and desktop applications, as well as setting up a mini NAS server on Linux.",
+    aboutPara3: "I currently have experience in web development, but I am also passionate about cybersecurity.",
 
     // Experiences
     experiencesTitle: "experiences",
@@ -93,8 +94,9 @@ export const translations = {
 
     // About
     aboutTitle: "À Propos de Moi",
-    aboutPara1: "Passionné par la technologie, je suis étudiant en informatique à l'École Nationale d'Informatique de Madagascar (ENI). J'aime concevoir des applications — web et desktop — et je cherche constamment à faire progresser mes compétences.",
-    aboutPara2: "J'ai travaillé sur divers projets impliquant du développement d'application Web et Bureau, et la configuration Réseau. Particulièrement intéressé par la sécurité réseau.",
+    aboutPara1: "Passionné par la technologie, j'aime toucher, bidouiller, construire et curieux de comprendre comment quelque chose fonctionne — et je cherche constamment à faire progresser mes compétences.",
+    aboutPara2: "J'ai travaillé sur divers projets que ce soit académique, en entreprise ou personnel; incluant des applications Web, Mobile ou de Bureau aussi la mise en place d'un mini serveur NAS sous Linux.",
+    aboutPara3: "Actuellement j'ai des expériences dans le Developpement Web mais aussi je suis passionné par la CyberSécurité.",
 
     // Experiences
     experiencesTitle: "expériences",
@@ -162,8 +164,9 @@ export const translations = {
 
     // About
     aboutTitle: "Mombamomba ahy",
-    aboutPara1: "Mpankafy teknolojia, mpianatra ho an'ny informatika ao amin'ny École Nationale d'Informatique de Madagascar (ENI) aho. Tiako ny manoratra rindrankajy — tranonkala & desktop — ary miezaka hatrany manatsara ny fahaizako.",
-    aboutPara2: "Efa niasa tamina tetikasa samihafa mifandraika amin'ny fampandrosoana front-end, tahirin-kevitra (databases) ary fandaharana rafitra (system programming) aho. Mahaliana ahy manokana ny fiarovana tambajotra, design systems ary fiaraha-miasa mahomby.",
+    aboutPara1: "Mpankafy teknolojia, tia mikirakira, manamboatra sy liana tia ahafantatra ny fomba fiasan'ny zavatra iray — ary miezaka hatrany manatsara ny fahaizako.",
+    aboutPara2: "Efa niasa tamina tetikasa samihafa aho, anatin'izany ny tao am-pianarana, fiasana na ny tenako manokana; tafiditra anatin'izany ny application Web, Mobile na Bureau ary ny fanamboarana serveur NAS iray tamin'ny alalan'ny Linux.",
+    aboutPara3: "Ankehitriny aho manana fahaizana amin'ny Developpement Web ary manana fitiavana manokana amin'ny cybersecurite.",
 
     // Experiences
     experiencesTitle: "traikefa",
