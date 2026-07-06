@@ -69,7 +69,12 @@ export const translations = {
 
     // Contact
     contactTitle: "Contact",
-    contactDesc: "Currently open to new opportunities and collaborations — feel free to reach out."
+    contactDesc: "Currently open to new opportunities and collaborations — feel free to reach out.",
+    
+    // Footer
+    footerFollow: "follow me",
+    footerLinks: "links",
+    footerContact: "contact"
   },
   fr: {
     // Header & Navigation
@@ -139,7 +144,12 @@ export const translations = {
 
     // Contact
     contactTitle: "Contact",
-    contactDesc: "Actuellement ouvert aux opportunités et aux collaborations — n'hésitez pas à me contacter."
+    contactDesc: "Actuellement ouvert aux opportunités et aux collaborations — n'hésitez pas à me contacter.",
+
+    // Footer
+    footerFollow: "suivez-moi",
+    footerLinks: "liens",
+    footerContact: "contact"
   },
   mg: {
     // Header & Navigation
@@ -209,7 +219,12 @@ export const translations = {
 
     // Contact
     contactTitle: "fifandraisana",
-    contactDesc: "Misokatra amin'ny fahafahana vaovao sy fiaraha-miasa amin'izao fotoana izao — aza misalasala mifandray."
+    contactDesc: "Misokatra amin'ny fahafahana vaovao sy fiaraha-miasa amin'izao fotoana izao — aza misalasala mifandray.",
+
+    // Footer
+    footerFollow: "araho aho",
+    footerLinks: "rohy",
+    footerContact: "fifandraisana"
   }
 };
 

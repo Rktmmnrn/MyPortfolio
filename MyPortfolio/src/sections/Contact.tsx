@@ -8,9 +8,9 @@ import { translations, Language } from '../data/i18n';
 type ContactProps = { lang: Language };
 
 const links = [
-  { href: 'mailto:rfanomezaniavo@gmail.com', icon: mail, label: 'rfanomezaniavo@gmail.com', prefix: 'mail →' },
-  { href: 'https://github.com/Rktmmnrn',     icon: git,  label: 'github.com/Rktmmnrn',        prefix: 'git  →' },
-  { href: 'https://linkedin.com/in/fenohery-maminiriana', icon: lnkdn, label: 'linkedin / fenohery-maminiriana', prefix: 'net  →' },
+  { href: 'mailto:rfanomezaniavo@gmail.com', icon: mail, label: 'rfanomezaniavo@gmail.com'},
+  { href: 'https://github.com/Rktmmnrn',     icon: git,  label: 'github.com/Rktmmnrn'},
+  { href: 'https://linkedin.com/in/fenohery-maminiriana', icon: lnkdn, label: 'linkedin / fenohery-maminiriana'},
 ];
 
 const Contact = ({ lang }: ContactProps) => (
@@ -55,7 +55,7 @@ const Contact = ({ lang }: ContactProps) => (
         fontFamily: 'var(--mono)',
         fontSize: '10px',
         letterSpacing: '3px',
-        color: 'rgba(180,20,20,0.45)',
+        color: 'rgba(201, 187, 187, 0.45)',
         marginBottom: '16px',
         paddingBottom: '10px',
         borderBottom: '1px solid var(--border)',

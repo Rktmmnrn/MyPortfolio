@@ -746,7 +746,6 @@ h4 {
 ════════════════════════════════════════════ */
 footer {
   margin: 0 40px;
-  padding: 12px 0;
   border-top: 1px solid var(--border);
   font-family: var(--mono);
   font-size: 10px;
