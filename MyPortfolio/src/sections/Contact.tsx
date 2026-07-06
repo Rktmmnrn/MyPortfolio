@@ -77,9 +77,6 @@ const Contact = ({ lang }: ContactProps) => (
             className="flex items-center gap-3 p-[11px_14px] border border-[rgba(180,20,20,0.18)] hover:border-[rgba(180,20,20,0.4)] hover:text-white hover:bg-[rgba(180,20,20,0.07)] hover:shadow-[0_0_12px_rgba(180,20,20,0.35)] rounded-[2px] font-mono text-xs text-[var(--text-3)] no-underline transition-all duration-200"
             style={{ letterSpacing: '1px' }}
           >
-            <span style={{ color: 'rgba(180,20,20,0.4)', minWidth: '48px', fontSize: '11px' }}>
-              {prefix}
-            </span>
             <Vector nameVector={icon} style={{ width: '16px', flexShrink: 0, filter: 'invert(0.35)' }} />
             <span style={{ color: 'var(--text-2)', fontSize: '11px' }}>{label}</span>
           </a>

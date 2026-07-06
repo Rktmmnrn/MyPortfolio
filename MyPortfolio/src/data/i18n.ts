@@ -111,7 +111,7 @@ export const translations = {
     eneamDesc: "Conception du site Web avec integration d'une plateforme de pointage intranet avec ODOO, DJANGO et POSTGRESQL.",
 
     // Skills
-    skillsTitle: "Compétences & Projets",
+    skillsTitle: "Compétences",
     skillsSubtitle: "langages, outils et systèmes que je maîtrise",
     skillsTech: "technologie & ERP",
     skillsLang: "langage",
@@ -181,7 +181,7 @@ export const translations = {
     eneamDesc: "Fanamboarana ny tranokala sy fampidirana modely fanamarinana ny fahatongavan'ny mpiasa, vita t@ ODOO, DJANGO sy POSTGRESQL",
 
     // Skills
-    skillsTitle: "Fahaizana & Tetikasa",
+    skillsTitle: "Fahaizana",
     skillsSubtitle: "langages, fitaovana ary rafitra ampiasaiko",
     skillsTech: "technology & ERP",
     skillsLang: "langage",
