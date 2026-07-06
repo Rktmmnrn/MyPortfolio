@@ -68,7 +68,7 @@ const Contact = ({ lang }: ContactProps) => (
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        {links.map(({ href, icon, label, prefix }) => (
+        {links.map(({ href, icon, label }) => (
           <a
             key={href}
             href={href}

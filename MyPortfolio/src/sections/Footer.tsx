@@ -1,5 +1,6 @@
 import Logo from '/Logo.svg';
 import { translations, Language } from '../data/i18n';
+import Available from '../component/ui/Available';
 
 type FooterProps = { lang: Language };
 
@@ -19,18 +20,7 @@ const Footer = ({ lang }: FooterProps) => (
       }}
     >
       {/* Point vert : disponible */}
-      <span style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-        <span
-          style={{
-            width: '6px', height: '6px',
-            borderRadius: '50%',
-            background: '#22c55e',
-            boxShadow: '0 0 5px rgba(34,197,94,0.7)',
-            animation: 'status-pulse 2.5s ease-in-out infinite',
-          }}
-        />
-        {translations[lang].available}
-      </span>
+      <Available lang={lang}/>
 
       <span style={{ opacity: 0.3 }}>|</span>
 
