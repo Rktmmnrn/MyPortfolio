@@ -269,7 +269,7 @@ header button {
 }
 
 header.scrolled {
-  padding: 10px 40px;
+  padding: 8px 40px;
   transition: padding 0.2s;
 }
 
@@ -317,10 +317,9 @@ main>button img {
 ════════════════════════════════════════════ */
 .hero {
   @apply flex flex-col-reverse items-center w-full gap-10;
-  min-height: 100svh;
+  min-height: 640px;
   max-height: 720px;
   justify-content: center;
-  margin-top: 0px;
 }
 
 .hero>div:first-child {
@@ -781,7 +780,7 @@ footer {
   }
 
   header.scrolled {
-    padding: 10px 60px;
+    padding: 8px 60px;
   }
 
   main {
@@ -816,7 +815,7 @@ footer {
   }
 
   header.scrolled {
-    padding: 10px 80px;
+    padding: 8px 80px;
   }
 
   main {
