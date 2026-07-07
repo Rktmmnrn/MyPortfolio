@@ -129,7 +129,7 @@
 }
 
 /* ════════════════════════════════════════════
-   VARIABLES CSS
+   VARIABLES CSS -- Dark par defaut
 ════════════════════════════════════════════ */
 :root {
   --red: #b41414;
@@ -161,6 +161,7 @@ body {
   background-color: var(--bg);
   color: var(--text-1);
   font-family: var(--sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Grille de fond subtile */

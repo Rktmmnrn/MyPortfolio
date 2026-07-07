@@ -1,22 +1,25 @@
 import Logo from '/Logo.svg';
 import { Language } from '../data/i18n';
 import LanguageSelector from '../component/ui/LanguageSelector';
-// import Available from '../component/ui/Available';
+import { Theme } from '../types/theme';
+import ThemeToggle from '../component/ui/ThemeToogle'
 
 type HeaderProps = {
   scrolled: boolean;
   lang: Language;
   setLang: (lang: Language) => void;
+  theme: Theme;
+  toggleTheme: () => void;
 };
 
-const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
+const Header = ({ scrolled, lang, setLang, theme, toggleTheme }: HeaderProps) => (
   <header className={scrolled ? 'scrolled' : ''}>
     {/* Logo */}
     <figure className={scrolled ? 'scrolled' : ''}>
       <img src={Logo} alt="Logo" />
     </figure>
 
-    <div className="flex flex-col items-center w-auto gap-2">
+    <div className="flex flex-row items-center w-auto gap-2">
       {/* Badge disponibilité */}
       {/* <Available lang={lang} /> */}
 
@@ -24,6 +27,8 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
       <LanguageSelector
         lang={lang}
         setLang={setLang} />
+
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
     </div>
   </header>
 );
