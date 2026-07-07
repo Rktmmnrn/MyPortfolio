@@ -1,7 +1,7 @@
 import Logo from '/Logo.svg';
 import { Language } from '../data/i18n';
 import LanguageSelector from '../component/ui/LanguageSelector';
-import Available from '../component/ui/Available';
+// import Available from '../component/ui/Available';
 
 type HeaderProps = {
   scrolled: boolean;
@@ -18,7 +18,7 @@ const Header = ({ scrolled, lang, setLang }: HeaderProps) => (
 
     <div className="flex flex-col items-center w-auto gap-2">
       {/* Badge disponibilité */}
-      <Available lang={lang} />
+      {/* <Available lang={lang} /> */}
 
       {/* Sélecteur de langue */}
       <LanguageSelector

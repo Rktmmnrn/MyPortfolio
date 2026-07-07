@@ -195,7 +195,7 @@ body::after {
 nav {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  background-color: rgba(13, 13, 13, 0.9);
+  background-color: var(--bg);
   border: 1px solid var(--border);
 }
 
@@ -235,7 +235,7 @@ nav span {
 ════════════════════════════════════════════ */
 header {
   @apply flex justify-between items-center fixed w-full z-10;
-  padding: 14px 40px;
+  padding: 10px 40px;
   background: rgba(13, 13, 13, 0.93);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
@@ -320,11 +320,11 @@ main>button img {
   min-height: 100svh;
   max-height: 720px;
   justify-content: center;
-  margin-top: 88px;
+  margin-top: 0px;
 }
 
 .hero>div:first-child {
-  @apply flex flex-col justify-center items-center w-full;
+  @apply flex flex-col justify-center items-center w-full gap-2;
 }
 
 .hero>div:last-child {
@@ -777,7 +777,7 @@ footer {
   }
 
   header {
-    padding: 14px 60px;
+    padding: 10px 60px;
   }
 
   header.scrolled {
@@ -812,7 +812,7 @@ footer {
   }
 
   header {
-    padding: 14px 80px;
+    padding: 10px 80px;
   }
 
   header.scrolled {
