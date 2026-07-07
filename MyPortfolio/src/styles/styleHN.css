@@ -749,6 +749,7 @@ footer {
   font-size: 10px;
   letter-spacing: 2px;
   color: var(--text-3);
+  background-color: var(--bg);
 }
 
 /* ════════════════════════════════════════════
