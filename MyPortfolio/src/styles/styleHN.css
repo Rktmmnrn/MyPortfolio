@@ -317,7 +317,7 @@ main>button img {
 ════════════════════════════════════════════ */
 .hero {
   @apply flex flex-col-reverse items-center w-full gap-10;
-  min-height: 640px;
+  min-height: 100svh;
   max-height: 720px;
   justify-content: center;
 }
