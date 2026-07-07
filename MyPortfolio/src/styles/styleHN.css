@@ -277,8 +277,8 @@ header.scrolled {
    MAIN
 ════════════════════════════════════════════ */
 main {
-  @apply flex flex-col items-center relative;
-  margin: 0 40px;
+  @apply flex flex-col items-center relative justify-center;
+  margin: 0 30px;
   z-index: 1;
 }
 
@@ -324,12 +324,11 @@ main>button img {
 }
 
 .hero>div:first-child {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center w-full;
 }
 
 .hero>div:last-child {
-  @apply flex flex-row justify-center items-center w-full;
-  gap: 28px;
+  @apply flex flex-row justify-evenly items-center w-full gap-1;
 }
 
 /* Boutons hero */
@@ -454,7 +453,7 @@ main>button img {
 /* h1 */
 h1 {
   font-family: var(--display);
-  font-size: 46px;
+  font-size: 38px;
   font-weight: 700;
   color: var(--text-1);
   letter-spacing: 1px;
@@ -787,6 +786,10 @@ footer {
 
   main {
     margin: 0 60px;
+  }
+
+  .hero>div:last-child {
+    @apply justify-center gap-5;
   }
 
   footer {
