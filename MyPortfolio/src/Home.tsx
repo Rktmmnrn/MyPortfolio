@@ -19,6 +19,7 @@ import Footer from './sections/Footer'
 import Todo from './component/layout/TodoList'
 import { RiKakaoTalkLine } from "react-icons/ri";
 import { Language } from './data/i18n'
+import { Theme } from './types/theme'
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,10 +27,22 @@ function App() {
     const saved = localStorage.getItem('lang');
     return (saved as Language) || 'en';
   });
+  const [theme, setTheme] = useState<Theme>(() => {
+    const saved = localStorage.getItem('theme') as Theme | null;
+    return saved === 'light' || saved === 'dark' ? saved : 'dark';
+  });
 
   const changeLang = (l: Language) => {
     setLang(l);
     localStorage.setItem('lang', l);
+  };
+
+  const toggleTheme = () => {
+    setTheme((current) => {
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', next);
+      return next;
+    });
   };
 
   const up = () => {
@@ -50,11 +63,21 @@ function App() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme])
+
   return (
     <>
       <ProgressBar />
       <Cube3D />
-      <Header scrolled={scrolled} lang={lang} setLang={changeLang} />
+      <Header
+        scrolled={scrolled}
+        lang={lang}
+        setLang={changeLang}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
       <Nav lang={lang} />
 
       <main>

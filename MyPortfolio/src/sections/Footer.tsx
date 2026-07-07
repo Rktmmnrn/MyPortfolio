@@ -18,14 +18,17 @@ const links = [
   {
     entreprise: 'E.N.I Fianarantsoa',
     lien: 'https://eni.mg/',
+    mark: 'Ecole Nationale d"Informatique',
   },
   {
     entreprise: 'SAHA Technology',
     lien: 'https://saha-technology.com/fr',
+    mark: 'SAHA Tech',
   },
   {
     entreprise: 'ENEAM',
     lien: 'https://eneam.mg/',
+    mark: 'Ecole Nationale d"Enseignement de l"Aeronautique et de la Météorologie',
   },
 ]
 
@@ -57,13 +60,14 @@ const Footer = ({ lang }: FooterProps) => (
         <div
           className='flex flex-col items-start'
         >
-          {links.map(({ lien, entreprise }) => (
+          {links.map(({ lien, entreprise, mark }) => (
             <li className='uppercase py-1 hover:text-[var(--red-light)]'>
               <a
                 key={lien}
                 href={lien}
                 target='_blank'
                 style={{ letterSpacing: '1px', fontSize: '12px' }}
+                title={mark}
               >
                 {entreprise}
               </a>

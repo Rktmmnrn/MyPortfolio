@@ -22,7 +22,7 @@ const Header = ({ scrolled, lang, setLang, theme, toggleTheme }: HeaderProps) =>
     <div className="flex flex-row items-center w-auto gap-2">
       {/* Badge disponibilité */}
       {/* <Available lang={lang} /> */}
-
+  
       {/* Sélecteur de langue */}
       <LanguageSelector
         lang={lang}
