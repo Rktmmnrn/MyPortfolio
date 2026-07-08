@@ -123,7 +123,7 @@ function App() {
         <Contact lang={lang} />
       </main>
 
-      <Todo />
+      <Todo lang={lang} />
       <Footer lang={lang} />
     </>
   )

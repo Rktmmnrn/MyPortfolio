@@ -1,8 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
+import { translations, Language } from '../../data/i18n';
 
 import Btn from '../ui/boutton'
 
-const TodoList = () => {
+type TodoListProps = {
+  lang: Language;
+};
+
+const TodoList = ({ lang, }: TodoListProps) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [showList, setShowList] = useState(false);
@@ -18,12 +23,11 @@ const TodoList = () => {
   })
 
   const todos = [
-    "Add clear mode",
-    "Add chat box",
-    "Improved the section skills",
-    "Add some details for skills",
-    "Improved the interface",
-    "Optimize the performances"
+    translations[lang].todo1,
+    translations[lang].todo2,
+    translations[lang].todo3,
+    translations[lang].todo4,
+    translations[lang].todo5
   ];
 
   return (
@@ -33,8 +37,8 @@ const TodoList = () => {
         style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '1px' } as React.CSSProperties}
         onClick={() => { setShowList(!showList), setOpen(!open) }}
       >
-        <span>Improvement to come</span>
-        <span className='font-black'>{showList ? "Hide" : "Show"}</span>
+        <span>{translations[lang].todoTitle}</span>
+        <span className='font-black'>{showList ? translations[lang].todoHide : translations[lang].todoShow}</span>
         <span
           className={`transition-transform duration-200 ${open ? "rotate-180" : ""
             }`}
