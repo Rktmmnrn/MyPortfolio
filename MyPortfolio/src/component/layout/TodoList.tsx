@@ -1,9 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import Btn from '../ui/boutton'
 
 const TodoList = () => {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
   const [showList, setShowList] = useState(false);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  })
 
   const todos = [
     "Add clear mode",
@@ -15,14 +27,20 @@ const TodoList = () => {
   ];
 
   return (
-    <div className="bg-[#131313] border border-[rgba(180,20,20,0.18)] p-4 rounded shadow-md w-fit text-[#e2e2e2]" style={{ fontFamily: 'var(--sans)' }}>
+    <div className="bg-[#131313] p-2 border border-[var(--border)] w-fit text-[#e2e2e2]" style={{ fontFamily: 'var(--sans)' }}>
       <Btn
         className="rounded hover:bg-[#a00000] transition-all flex-col bg-[#800000] text-white"
         style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '1px' } as React.CSSProperties}
-        onClick={() => setShowList(!showList)}
+        onClick={() => { setShowList(!showList), setOpen(!open) }}
       >
         <span>Improvement to come</span>
         <span className='font-black'>{showList ? "Hide" : "Show"}</span>
+        <span
+          className={`transition-transform duration-200 ${open ? "rotate-180" : ""
+            }`}
+        >
+          ▼
+        </span>
       </Btn>
 
       {showList && (

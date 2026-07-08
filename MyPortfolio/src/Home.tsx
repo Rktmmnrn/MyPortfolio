@@ -78,6 +78,7 @@ function App() {
         theme={theme}
         toggleTheme={toggleTheme}
       />
+
       <Nav lang={lang} />
 
       <main>
@@ -111,7 +112,7 @@ function App() {
 
         <Hero lang={lang} />
 
-        <Project lang={lang}/>
+        <Project lang={lang} />
 
         <Skills lang={lang} />
 
