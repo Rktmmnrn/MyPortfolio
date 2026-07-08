@@ -44,7 +44,7 @@ const Experience = ({ lang }: ExperienceProps) => {
       <div
         style={{
           width: 'min(100%, 600px)',
-          borderLeft: '2px solid rgba(180,20,20,0.3)',
+          borderLeft: '2px solid var(--red-glow)',
           paddingLeft: '28px',
           display: 'flex',
           flexDirection: 'column',
@@ -58,7 +58,7 @@ const Experience = ({ lang }: ExperienceProps) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: index * 0.15 }}
             viewport={{ once: true }}
-            className="group bg-[#131313] border border-[var(--border)] hover:border-[var(--border-md)] hover:shadow-[0_0_18px_var(--red-faint)] rounded-[3px] p-[22px_24px] relative transition-all duration-300"
+            className="group bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-md)] hover:shadow-[0_0_18px_var(--red-faint)] rounded-[3px] p-[22px_24px] relative transition-all duration-300"
           >
             {/* Point sur la timeline */}
             <span

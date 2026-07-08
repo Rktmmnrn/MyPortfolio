@@ -129,9 +129,9 @@
 }
 
 /* ════════════════════════════════════════════
-   VARIABLES CSS -- Dark par defaut
+   VARIABLES CSS -- Dark (defaut) et Light
 ════════════════════════════════════════════ */
-:root {
+:root, [data-theme="dark"] {
   --red: #b41414;
   --red-light: #cc2222;
   --red-glow: rgba(180, 20, 20, 0.35);
@@ -144,9 +144,39 @@
   --text-1: #e2e2e2;
   --text-2: #9a9a9a;
   --text-3: #8e8e8e;
+  --shadow-card: none;
+  --shadow-card-hover: 0 0 20px rgba(180,20,20,0.09);
+  --grid-line: rgba(180,20,20,0.022);
+  --scanline: rgba(180,20,20,0.05);
+  --img-filter: invert(0.4);
+  --img-filter-hover: invert(20%) sepia(100%) saturate(2000%) hue-rotate(330deg);
   --mono: 'Share Tech Mono', 'Courier New', monospace;
   --display: 'Orbitron', sans-serif;
   --sans: 'Space Grotesk', system-ui, sans-serif;
+}
+
+[data-theme="light"] {
+  --red:        #b41414;
+  --red-light:  #cc2222;
+  --red-glow:   rgba(180, 20, 20, 0.18);
+  --red-faint:  rgba(180, 20, 20, 0.05);
+  --bg:         #fafafa;
+  --bg-card:    #ffffff;
+  --bg-card2:   #f3f3f3;
+  --border:     rgba(0, 0, 0, 0.1);
+  --border-md:  rgba(180, 20, 20, 0.35);
+  --text-1:     #1a1a1a;
+  --text-2:     #5a5a5a;
+  --text-3:     #767676;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-card-hover: 0 4px 14px rgba(0,0,0,0.08);
+  --grid-line:  rgba(0,0,0,0.025);
+  --scanline:   rgba(180,20,20,0.03);
+  --img-filter: invert(0);
+  --img-filter-hover: invert(0) sepia(100%) saturate(2000%) hue-rotate(330deg) brightness(0.9);
+  --mono:       'Share Tech Mono', 'Courier New', monospace;
+  --display:    'Orbitron', sans-serif;
+  --sans:       'Space Grotesk', system-ui, sans-serif;
 }
 
 /* ════════════════════════════════════════════
@@ -170,8 +200,8 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(180, 20, 20, 0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(180, 20, 20, 0.022) 1px, transparent 1px);
+    linear-gradient(var(----grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(----grid-line) 1px, transparent 1px);
   background-size: 50px 50px;
   pointer-events: none;
   z-index: 0;
@@ -184,7 +214,7 @@ body::after {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(transparent, rgba(180, 20, 20, 0.05), transparent);
+  background: linear-gradient(transparent, var(--red-faint), transparent);
   animation: scanline 9s linear infinite;
   pointer-events: none;
   z-index: 998;
@@ -237,7 +267,7 @@ nav span {
 header {
   @apply flex justify-between items-center fixed w-full z-10;
   padding: 10px 40px;
-  background: rgba(13, 13, 13, 0.93);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -300,7 +330,7 @@ main aside>button:last-child {
   height: 44px;
   border: 1px solid var(--border-md);
   border-radius: 2px;
-  background: rgba(13, 13, 13, 0.92);
+  background: var(--bg);
   transform: translateY(120px);
   animation: border-glow 3s ease-in-out infinite;
 }
@@ -350,7 +380,7 @@ main>button img {
   width: 230px;
   height: 215px;
   position: relative;
-  box-shadow: 0 0 28px rgba(180, 20, 20, 0.18), inset 0 0 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 28px var(--red-glow), inset 0 0 20px rgba(0, 0, 0, 0.4);
   flex-shrink: 0;
 }
 
@@ -398,7 +428,7 @@ main>button img {
 .hero>div>div::before,
 .hero>div>div::after {
   content: '';
-  border: 1px solid rgba(180, 20, 20, 0.3);
+  border: 1px solid var(--border-md);
   width: 0;
   height: 24px;
 }
@@ -558,7 +588,7 @@ h4 {
   letter-spacing: 2px;
   color: var(--red);
   border: 1px solid var(--border-md);
-  background: rgba(13, 13, 13, 0.85);
+  background: var(--bg);
   padding: 3px 8px;
   border-radius: 2px;
   text-transform: uppercase;
@@ -695,7 +725,7 @@ h4 {
   background: var(--bg-card) !important;
   border: 1px solid var(--border) !important;
   border-radius: 3px !important;
-  box-shadow: none !important;
+  box-shadow: var(--shadow-card) !important;
 }
 
 .text-gray-700 {
@@ -727,7 +757,7 @@ h4 {
 
 /* Shadow md cards exp/about */
 .shadow-md {
-  box-shadow: none !important;
+  box-shadow: var(--shadow-card) !important;
 }
 
 /* ════════════════════════════════════════════
