@@ -55,7 +55,7 @@ const Contact = ({ lang }: ContactProps) => (
         fontFamily: 'var(--mono)',
         fontSize: '10px',
         letterSpacing: '3px',
-        color: 'rgba(201, 187, 187, 0.45)',
+        color: 'rgba(180,20,20,0.45)',
         marginBottom: '16px',
         paddingBottom: '10px',
         borderBottom: '1px solid var(--border)',
