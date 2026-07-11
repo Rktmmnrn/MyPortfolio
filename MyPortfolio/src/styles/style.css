@@ -578,10 +578,9 @@ h4 {
   margin: 0 0 6px;
   text-transform: none;
   letter-spacing: 0;
-  justify-content: flex-start;
 }
 
-.prj-span-featured {
+.prj-span-featured { /* feature span */
   position: absolute;
   top: 10px;
   left: 10px;
@@ -633,7 +632,8 @@ h4 {
   width: 100%;
 }
 
-#Prj>div:last-child>div {
+#Prj>div:last-child>div { /* motion div après animatepresence */
+  @apply flex flex-col items-start;
   max-width: 400px;
   background: var(--bg-card);
   border-radius: 3px;

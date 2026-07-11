@@ -82,7 +82,7 @@ const Projects = ({ lang }: ProjectsProps) => {
                                 </span>
                             )}
 
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className='w-full'>
                                 <img
                                     src={project.image}
                                     alt={project.name}
@@ -92,7 +92,10 @@ const Projects = ({ lang }: ProjectsProps) => {
                                 />
                             </a>
 
-                            <div style={{ padding: '16px 18px' }}>
+                            <div
+                                style={{ padding: '12px 15px' }}
+                                className='flex flex-col items-start justify-between h-full w-full'
+                            >
                                 <h3>
                                     {project.name}
                                 </h3>
