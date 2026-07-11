@@ -131,7 +131,8 @@
 /* ════════════════════════════════════════════
    VARIABLES CSS -- Dark (defaut) et Light
 ════════════════════════════════════════════ */
-:root, [data-theme="dark"] {
+:root,
+[data-theme="dark"] {
   --red: #b41414;
   --red-light: #cc2222;
   --red-glow: rgba(180, 20, 20, 0.35);
@@ -145,9 +146,9 @@
   --text-2: #9a9a9a;
   --text-3: #8e8e8e;
   --shadow-card: none;
-  --shadow-card-hover: 0 0 20px rgba(180,20,20,0.09);
-  --grid-line: rgba(180,20,20,0.022);
-  --scanline: rgba(180,20,20,0.05);
+  --shadow-card-hover: 0 0 20px rgba(180, 20, 20, 0.09);
+  --grid-line: rgba(180, 20, 20, 0.022);
+  --scanline: rgba(180, 20, 20, 0.05);
   --img-filter: invert(0.4);
   --img-filter-hover: invert(20%) sepia(100%) saturate(2000%) hue-rotate(330deg);
   --mono: 'Share Tech Mono', 'Courier New', monospace;
@@ -156,27 +157,27 @@
 }
 
 [data-theme="light"] {
-  --red:        #b41414;
-  --red-light:  #cc2222;
-  --red-glow:   rgba(180, 20, 20, 0.18);
-  --red-faint:  rgba(180, 20, 20, 0.05);
-  --bg:         #f4eaea;
-  --bg-card:    #ffffff;
-  --bg-card2:   #f3f3f3;
-  --border:     rgba(0, 0, 0, 0.1);
-  --border-md:  rgba(180, 20, 20, 0.35);
-  --text-1:     #1a1a1a;
-  --text-2:     #5a5a5a;
-  --text-3:     #767676;
-  --shadow-card: 0 1px 3px rgba(0,0,0,0.05);
-  --shadow-card-hover: 0 4px 14px rgba(0,0,0,0.08);
-  --grid-line:  rgba(0,0,0,0.025);
-  --scanline:   rgba(180,20,20,0.03);
+  --red: #b41414;
+  --red-light: #cc2222;
+  --red-glow: rgba(180, 20, 20, 0.18);
+  --red-faint: rgba(180, 20, 20, 0.05);
+  --bg: #f4eaea;
+  --bg-card: #ffffff;
+  --bg-card2: #f3f3f3;
+  --border: rgba(0, 0, 0, 0.1);
+  --border-md: rgba(180, 20, 20, 0.35);
+  --text-1: #1a1a1a;
+  --text-2: #5a5a5a;
+  --text-3: #767676;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --grid-line: rgba(0, 0, 0, 0.025);
+  --scanline: rgba(180, 20, 20, 0.03);
   --img-filter: invert(0);
   --img-filter-hover: invert(0) sepia(100%) saturate(2000%) hue-rotate(330deg) brightness(0.9);
-  --mono:       'Share Tech Mono', 'Courier New', monospace;
-  --display:    'Orbitron', sans-serif;
-  --sans:       'Space Grotesk', system-ui, sans-serif;
+  --mono: 'Share Tech Mono', 'Courier New', monospace;
+  --display: 'Orbitron', sans-serif;
+  --sans: 'Space Grotesk', system-ui, sans-serif;
 }
 
 /* ════════════════════════════════════════════
@@ -231,13 +232,15 @@ nav {
 }
 
 nav a {
-  @apply flex items-center p-2 transition-all duration-200 ease-in-out;
+  @apply flex items-center p-2 transition-all duration-200 ease-in-out justify-center;
+  min-width: auto;
+  max-width: auto;
   color: var(--text-3);
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  gap: 6px;
+  gap: 2px;
 }
 
 nav a::before {
@@ -848,6 +851,10 @@ footer {
 
   header.scrolled {
     padding: 8px 80px;
+  }
+
+  nav a {
+    min-width: 103px;
   }
 
   main {

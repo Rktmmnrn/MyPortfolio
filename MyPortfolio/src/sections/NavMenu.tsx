@@ -16,7 +16,7 @@ const NavMenu = ({ lang }: NavMenuProps) => {
   return (
     <nav
       className={`fixed z-20 flex font-bold uppercase transition-all duration-300 ${isDesktop
-          ? 'top-0 left-1/2 -translate-x-1/2 translate-y-[18px]'
+          ? 'top-0 left-1/2 -translate-x-1/2 translate-y-[20px]'
           : 'bottom-0 left-1/2 -translate-x-1/2 translate-y-[-20px]'
         }`}
     >

@@ -45,7 +45,7 @@ export const translations = {
     skillsSubtitle: "languages, tools and systems I work with",
     skillsTech: "technology & ERP",
     skillsLang: "langage",
-    skillsDb: "management system",
+    skillsDb: "database management system",
     skillsNet: "network & system",
     skillsOps: 'devOps & tools',
 
@@ -130,7 +130,7 @@ export const translations = {
     skillsSubtitle: "langages, outils et systèmes que je maîtrise",
     skillsTech: "technologie & ERP",
     skillsLang: "langage",
-    skillsDb: "système de gestion",
+    skillsDb: "système de gestion de base de donnée",
     skillsNet: "réseau & système",
     skillsOps: 'devOps & outils',
 

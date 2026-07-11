@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import './styles/App.css'
-import './styles/styleHN.css'
+import './styles/style.css'
 import Home from './Home.tsx'
 import Loader from './component/layout/Loader.tsx'
 import NotFound from './sections/NotFound.tsx'
