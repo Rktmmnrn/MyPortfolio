@@ -26,8 +26,7 @@ const TodoList = ({ lang, }: TodoListProps) => {
     translations[lang].todo1,
     translations[lang].todo2,
     translations[lang].todo3,
-    translations[lang].todo4,
-    translations[lang].todo5
+    translations[lang].todo4
   ];
 
   return (

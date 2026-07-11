@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 import { projectsData, ProjectCategory } from '../component/ui/SkillsData';
+import TagPill from '../component/ui/TagPill';
 import { translations, Language } from '../data/i18n';
 
 type ProjectsProps = { lang: Language };
@@ -106,20 +107,7 @@ const Projects = ({ lang }: ProjectsProps) => {
 
                                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '14px' }}>
                                     {project.stack.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            style={{
-                                                fontFamily: 'var(--mono)',
-                                                fontSize: '9px',
-                                                letterSpacing: '1px',
-                                                color: 'var(--red)',
-                                                border: '1px solid var(--border)',
-                                                padding: '3px 8px',
-                                                borderRadius: '2px',
-                                            }}
-                                        >
-                                            {tech}
-                                        </span>
+                                        <TagPill key={tech}>{tech}</TagPill>
                                     ))}
                                 </div>
 

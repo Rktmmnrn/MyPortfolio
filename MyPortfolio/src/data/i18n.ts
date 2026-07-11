@@ -80,11 +80,10 @@ export const translations = {
     todoTitle: "Improvement to come",
     todoHide: "Hide",
     todoShow: "Show",
-    todo1: "Add clear mode",
+    todo1: "Optimize the performances",
     todo2: "Add chat box & AI",
     todo3: "Improved the section skills",
-    todo4: "Improved the interface",
-    todo5: "Optimize the performances"
+    todo4: "Improved the interface"
   },
   fr: {
     // Header & Navigation
@@ -165,11 +164,10 @@ export const translations = {
     todoTitle: "Amélioration à venir",
     todoHide: "Cacher",
     todoShow: "Montrer",
-    todo1: "Ajout mode claire",
+    todo1: "Optimization du performance",
     todo2: "Ajout chat pour discuter et IA",
     todo3: "Amélioration du partie compétence",
-    todo4: "Amélioration de l'UI/UX",
-    todo5: "Optimization du performance"
+    todo4: "Amélioration de l'UI/UX"
   },
   mg: {
     // Header & Navigation
@@ -250,11 +248,10 @@ export const translations = {
     todoTitle: "Fanatsarana ho avy",
     todoHide: "Afenina",
     todoShow: "Aseho",
-    todo1: "Fanampiana option mazava",
+    todo1: "Fanatsarana ny tanjak'ilay portfolio",
     todo2: "Fanampiana fandefasana message sy IA",
     todo3: "Fanatsarana ny eo amin'ny fahaizana",
-    todo4: "Fanatsarana ny UI/UX",
-    todo5: "Fanatsarana ny tanjak'ilay portfolio"
+    todo4: "Fanatsarana ny UI/UX"
   }
 };
 
