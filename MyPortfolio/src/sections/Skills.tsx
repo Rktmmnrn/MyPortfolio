@@ -15,6 +15,7 @@ const Skills = ({ lang }: SkillsProps) => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
+        className='min-w-[125px]'
       >
         {t.skillsTitle}
       </motion.h2>

@@ -307,6 +307,21 @@ header.scrolled {
   transition: padding 0.2s;
 }
 
+.theme-toggle { /* Bouton toggle theme */
+  @apply flex items-center justify-center;
+  background: transparent;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: none !important;
+}
+
+.theme-toggle:hover {
+  color: var(--red);
+  border-color: var(--border-md);
+  background: var(--red-faint);
+}
+
 /* ════════════════════════════════════════════
    MAIN
 ════════════════════════════════════════════ */
