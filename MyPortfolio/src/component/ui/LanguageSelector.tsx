@@ -1,10 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Language } from "../../data/i18n";
+import ReactCountryFlag from "react-country-flag";
 
 type LanguageSelectorProps = {
   lang: Language;
   setLang: (lang: Language) => void;
 };
+
+const languages = [
+  { code: "en", country: "GB" },
+  { code: "fr", country: "FR" },
+  { code: "mg", country: "MG" },
+] as const;
 
 const LanguageSelector = ({
   lang,
@@ -21,7 +28,7 @@ const LanguageSelector = ({
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  })
+  });
 
   return (
     <div
@@ -43,15 +50,23 @@ const LanguageSelector = ({
 
       {open && (
         <div className="absolute right-0 mt-1 flex flex-col overflow-hidden z-50 bg-[var(--bg)]">
-          {(["en", "fr", "mg"] as Language[])
-            .filter((l) => l !== lang)
-            .map((l) => (
+          {languages
+            .filter(({ code }) => code !== lang)
+            .map(({ code, country }) => (
               <button
-                key={l}
-                onClick={() => { setLang(l); setOpen(false); }}
-                className="px-4 py-2 text-left uppercase hover:bg-white/10 transition"
+                key={code}
+                onClick={() => { setLang(code as Language); setOpen(false); }}
+                className="px-4 py-2 text-left uppercase hover:bg-white/10 transition flex items-center gap-2"
               >
-                {l}
+                <ReactCountryFlag
+                  countryCode={country}
+                  svg
+                  style={{
+                    width: "1.5em",
+                    height: "1.5em",
+                  }}
+                />
+                {code.toUpperCase()}
               </button>
             ))}
         </div>

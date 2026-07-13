@@ -2,7 +2,7 @@ import Logo from '/Logo.svg';
 import { Language } from '../data/i18n';
 import LanguageSelector from '../component/ui/LanguageSelector';
 import { Theme } from '../types/theme';
-import ThemeToggle from '../component/ui/ThemeToogle'
+import ThemeToggle from '../component/ui/ThemeToggle'
 
 type HeaderProps = {
   scrolled: boolean;
