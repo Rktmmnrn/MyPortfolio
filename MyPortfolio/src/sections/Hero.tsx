@@ -15,7 +15,7 @@ const Hero = ({ lang }: HeroProps) => {
   const handleClick = () => {
     const link = document.createElement('a');
     link.href = CV;
-    link.download = 'CV_FANOMEZANIAVO.pdf';
+    // link.download = 'CV_FANOMEZANIAVO.pdf';
     link.click();
     window.open(CV, '_blank');
   };

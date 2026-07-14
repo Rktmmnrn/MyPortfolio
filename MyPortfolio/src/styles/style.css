@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* ════════════════════════════════════════════
-   ANIMATIONS
+  ANIMATIONS
 ════════════════════════════════════════════ */
 @keyframes scanline {
   0% {
@@ -100,10 +100,6 @@
   }
 }
 
-/* @keyframes scroll-horizontal {
-  from {transform: translateX(0);}
-  to {transform: translateX(-50%);}
-} */
 @keyframes float-in {
   from {
     opacity: 0;
@@ -129,7 +125,7 @@
 }
 
 /* ════════════════════════════════════════════
-   VARIABLES CSS -- Dark (defaut) et Light
+  VARIABLES CSS -- Dark (defaut) et Light
 ════════════════════════════════════════════ */
 :root,
 [data-theme="dark"] {
@@ -147,7 +143,7 @@
   --text-3: #8e8e8e;
   --shadow-card: none;
   --shadow-card-hover: 0 0 20px rgba(180, 20, 20, 0.09);
-  --grid-line: rgba(180, 20, 20, 0.022);
+  --grid-line: rgba(180, 20, 20, 0.057);
   --scanline: rgba(180, 20, 20, 0.05);
   --img-filter: invert(0.4);
   --img-filter-hover: invert(20%) sepia(100%) saturate(2000%) hue-rotate(330deg);
@@ -171,7 +167,7 @@
   --text-3: #767676;
   --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-card-hover: 0 4px 14px rgba(0, 0, 0, 0.08);
-  --grid-line: rgba(0, 0, 0, 0.025);
+  --grid-line: rgba(0, 0, 0, 0.034);
   --scanline: rgba(180, 20, 20, 0.03);
   --img-filter: invert(0);
   --img-filter-hover: invert(0) sepia(100%) saturate(2000%) hue-rotate(330deg) brightness(0.9);
@@ -181,7 +177,7 @@
 }
 
 /* ════════════════════════════════════════════
-   BASE
+  BASE
 ════════════════════════════════════════════ */
 * {
   scroll-behavior: smooth;
@@ -222,7 +218,7 @@ body::after {
 }
 
 /* ════════════════════════════════════════════
-   NAV
+  NAV
 ════════════════════════════════════════════ */
 nav {
   backdrop-filter: blur(16px);
@@ -265,11 +261,11 @@ nav span {
 }
 
 /* ════════════════════════════════════════════
-   HEADER
+  HEADER
 ════════════════════════════════════════════ */
 header {
   @apply flex justify-between items-center fixed w-full z-10;
-  padding: 10px 40px;
+  padding: 10px 30px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(16px);
@@ -292,6 +288,7 @@ header img {
 }
 
 header button {
+  /* boutton dans header */
   padding: 5px 10px;
   border: 1px solid var(--border-md);
   font-family: var(--mono);
@@ -307,7 +304,8 @@ header.scrolled {
   transition: padding 0.2s;
 }
 
-.theme-toggle { /* Bouton toggle theme */
+.theme-toggle {
+  /* Bouton toggle theme */
   @apply flex items-center justify-center;
   background: transparent;
   color: var(--text-3);
@@ -323,7 +321,7 @@ header.scrolled {
 }
 
 /* ════════════════════════════════════════════
-   MAIN
+  MAIN
 ════════════════════════════════════════════ */
 main {
   @apply flex flex-col items-center relative justify-center;
@@ -362,12 +360,11 @@ main>button img {
 }
 
 /* ════════════════════════════════════════════
-   HERO
+  HERO
 ════════════════════════════════════════════ */
 .hero {
   @apply flex flex-col-reverse items-center w-full gap-10;
   min-height: 100svh;
-  max-height: 720px;
   justify-content: center;
 }
 
@@ -480,7 +477,7 @@ main>button img {
 }
 
 /* ════════════════════════════════════════════
-   TYPOGRAPHIE
+  TYPOGRAPHIE
 ════════════════════════════════════════════ */
 
 /* p terminal hero */
@@ -583,7 +580,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   PROJECTS
+  PROJECTS
 ════════════════════════════════════════════ */
 #Prj h3 {
   font-family: var(--sans);
@@ -595,7 +592,8 @@ h4 {
   letter-spacing: 0;
 }
 
-.prj-span-featured { /* feature span */
+.prj-span-featured {
+  /* feature span */
   position: absolute;
   top: 10px;
   left: 10px;
@@ -647,7 +645,8 @@ h4 {
   width: 100%;
 }
 
-#Prj>div:last-child>div { /* motion div après animatepresence */
+#Prj>div:last-child>div {
+  /* motion div après animatepresence */
   @apply flex flex-col items-start;
   max-width: 400px;
   background: var(--bg-card);
@@ -657,7 +656,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   SKILLS
+  SKILLS
 ════════════════════════════════════════════ */
 #Skl h3 {
   font-family: var(--sans);
@@ -699,7 +698,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   EXPERIENCES
+  EXPERIENCES
 ════════════════════════════════════════════ */
 #Exp>div>div>span {
   @apply duration-200 ease-in transition-all;
@@ -737,7 +736,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   BACKGROUNDS TAILWIND → THEME
+  BACKGROUNDS TAILWIND → THEME
 ════════════════════════════════════════════ */
 .bg-white {
   background: var(--bg-card) !important;
@@ -779,7 +778,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   SECTIONS
+  SECTIONS
 ════════════════════════════════════════════ */
 #Skl,
 #Exp,
@@ -789,7 +788,7 @@ h4 {
 }
 
 /* ════════════════════════════════════════════
-   FOOTER
+  FOOTER
 ════════════════════════════════════════════ */
 footer {
   margin: 0 40px;
@@ -802,7 +801,7 @@ footer {
 }
 
 /* ════════════════════════════════════════════
-   PROGRESS BAR
+  PROGRESS BAR
 ════════════════════════════════════════════ */
 .h-full.bg-\[\#800000\] {
   background: var(--red) !important;
@@ -810,7 +809,7 @@ footer {
 }
 
 /* ════════════════════════════════════════════
-   RESPONSIVE
+  RESPONSIVE
 ════════════════════════════════════════════ */
 @media (min-width: 768px) {
   h1 {

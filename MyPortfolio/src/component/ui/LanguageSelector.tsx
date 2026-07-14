@@ -56,7 +56,7 @@ const LanguageSelector = ({
               <button
                 key={code}
                 onClick={() => { setLang(code as Language); setOpen(false); }}
-                className="px-4 py-2 text-left uppercase hover:bg-white/10 transition flex items-center gap-2"
+                className="uppercase hover:bg-white/10 transition flex gap-1"
               >
                 <ReactCountryFlag
                   countryCode={country}

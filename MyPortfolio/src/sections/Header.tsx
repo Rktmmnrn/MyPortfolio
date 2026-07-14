@@ -19,7 +19,7 @@ const Header = ({ scrolled, lang, setLang, theme, toggleTheme }: HeaderProps) =>
       <img src={Logo} alt="Logo" />
     </figure>
 
-    <div className="flex flex-row items-center w-auto gap-2">
+    <div className="flex flex-row items-center w-auto gap-2 justify-between">
       {/* Badge disponibilité */}
       {/* <Available lang={lang} /> */}
   
