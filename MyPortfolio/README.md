@@ -35,6 +35,19 @@ Puis ouvrez l’adresse suivante dans votre navigateur :
 http://localhost:5173
 ```
 
+## Structure du projet
+```
+src/
+├── assets/
+├── components/
+│   ├── layout/
+│   └── ui/
+├── data/
+├── sections/
+├── styles/
+├── types/
+```
+
 ## Scripts disponibles
 - `npm run dev` : démarre le serveur de développement
 - `npm run build` : génère la version de production
