@@ -34,7 +34,7 @@ const TodoList = ({ lang, }: TodoListProps) => {
       <Btn
         className="rounded hover:bg-[#a00000] transition-all flex-col bg-[#800000] text-[white]"
         style={{ fontFamily: 'var(--mono)', fontSize: '11px', letterSpacing: '1px' } as React.CSSProperties}
-        onClick={() => { setShowList(!showList), setOpen(!open) }}
+        onClick={() => { setShowList(!showList); setOpen(!open) }}
       >
         <span>{translations[lang].todoTitle}</span>
         <span className='font-black'>{showList ? translations[lang].todoHide : translations[lang].todoShow}</span>

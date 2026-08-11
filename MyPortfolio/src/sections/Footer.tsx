@@ -66,6 +66,7 @@ const Footer = ({ lang }: FooterProps) => (
                 key={lien}
                 href={lien}
                 target='_blank'
+                rel="noopener noreferrer"
                 style={{ letterSpacing: '1px', fontSize: '12px' }}
                 title={mark}
               >

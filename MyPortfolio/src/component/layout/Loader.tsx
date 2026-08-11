@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
+const lines = [
+  "Initializing neural core...",
+  "Loading tech stack modules...",
+  "Establishing secure handshake...",
+  "Decrypting digital architecture...",
+  "System ready. Welcome to the grid."
+];
 const Loader = () => {
   const [progress, setProgress] = useState(0);
   const [activeLine, setActiveLine] = useState(0);
 
-  const lines = [
-    "Initializing neural core...",
-    "Loading tech stack modules...",
-    "Establishing secure handshake...",
-    "Decrypting digital architecture...",
-    "System ready. Welcome to the grid."
-  ];
 
   useEffect(() => {
     const duration = 1600; // 1.6 secondes
