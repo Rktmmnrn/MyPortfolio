@@ -39,7 +39,7 @@ http://localhost:5173
 ```
 src/
 ├── assets/
-├── components/
+├── component/
 │   ├── layout/
 │   └── ui/
 ├── data/
