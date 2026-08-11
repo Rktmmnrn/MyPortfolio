@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# MyPortfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personnel moderne et responsive construit avec React, TypeScript et Vite.
 
-Currently, two official plugins are available:
+## Présentation
+Ce projet sert de vitrine professionnelle pour présenter :
+- mon profil et mes compétences,
+- mes projets réalisés,
+- mon expérience,
+- et un moyen de me contacter.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités principales
+- interface moderne et animée,
+- thème clair/sombre,
+- support multilingue (EN / FR / MG),
+- sections dédiées : accueil, projets, compétences, expériences, à propos, contact.
 
-## Expanding the ESLint configuration
+## Stack technique
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS / SCSS
+- Framer Motion
+- React Router
+- React Icons
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Démarrage rapide
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Puis ouvrez l’adresse suivante dans votre navigateur :
+```bash
+http://localhost:5173
 ```
+
+## Scripts disponibles
+- `npm run dev` : démarre le serveur de développement
+- `npm run build` : génère la version de production
+- `npm run preview` : prévisualise la build locale
+- `npm run lint` : vérifie le code avec ESLint
+
+## Structure du projet
+- `src/sections` : sections du portfolio
+- `src/component` : composants UI et layout
+- `src/data` : fichiers de traduction et données
+- `src/styles` : styles globaux du site
+
+## Contact
+Vous pouvez me contacter via la section contact du portfolio ou par e-mail si cette information est renseignée dans l’interface.
