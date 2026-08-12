@@ -1,21 +1,32 @@
 import { useEffect, useState } from 'react';
+import { projectsData } from '../ui/SkillsData';
+import skillsData from '../ui/SkillsData';
+import { translations } from '../../data/i18n';
 
-const lines = [
-  "Initializing neural core...",
-  "Loading tech stack modules...",
-  "Establishing secure handshake...",
-  "Decrypting digital architecture...",
-  "System ready. Welcome to the grid."
+// ── Calcul des métriques réelles du portfolio ──────────────────────────────
+const NB_PROJECTS = projectsData.length;
+const NB_SKILL_CATEGORIES = skillsData.length;
+const NB_TECHNOLOGIES = skillsData.reduce((acc, g) => acc + g.items.length, 0);
+const NB_EXPERIENCES = Object.values(translations.en).filter(
+  (_, idx) => ['eniPoste', 'sahaPoste', 'eneamPoste'].includes(Object.keys(translations.en)[idx])
+).length || 3;
+
+const BOOT_LINES = [
+  `Initializing neural core...`,
+  `Scanning ${NB_SKILL_CATEGORIES} skill categories (${NB_TECHNOLOGIES} technologies)...`,
+  `Mounting ${NB_PROJECTS} projects into memory...`,
+  `Loading ${NB_EXPERIENCES} experience records...`,
+  `System ready. Welcome to the grid.`,
 ];
+
 const Loader = () => {
   const [progress, setProgress] = useState(0);
   const [activeLine, setActiveLine] = useState(0);
 
-
   useEffect(() => {
-    const duration = 1600; // 1.6 secondes
-    const interval = 20; // mise à jour toutes les 20ms
-    const totalSteps = duration / interval;
+    const duration = 1800; // ms
+    const intervalMs = 20;
+    const totalSteps = duration / intervalMs;
     let currentStep = 0;
 
     const timer = setInterval(() => {
@@ -23,28 +34,26 @@ const Loader = () => {
       const nextProgress = Math.min(Math.round((currentStep / totalSteps) * 100), 100);
       setProgress(nextProgress);
 
-      const lineIndex = Math.floor((nextProgress / 100) * lines.length);
-      setActiveLine(Math.min(lineIndex, lines.length - 1));
+      const lineIndex = Math.floor((nextProgress / 100) * BOOT_LINES.length);
+      setActiveLine(Math.min(lineIndex, BOOT_LINES.length - 1));
 
-      if (nextProgress === 100) {
-        clearInterval(timer);
-      }
-    }, interval);
+      if (nextProgress === 100) clearInterval(timer);
+    }, intervalMs);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="fixed inset-0 z-50 bg-[#0d0d0d] flex items-center justify-center p-4">
-      <div 
+      <div
         style={{
-          width: 'min(90%, 500px)',
+          width: 'min(90%, 520px)',
           background: '#131313',
           border: '1px solid rgba(180, 20, 20, 0.3)',
           borderRadius: '3px',
           padding: '24px',
           position: 'relative',
-          boxShadow: '0 0 30px rgba(180, 20, 20, 0.15)',
+          boxShadow: '0 0 40px rgba(180, 20, 20, 0.15)',
         }}
       >
         {/* Coins décoratifs rétro */}
@@ -87,7 +96,7 @@ const Loader = () => {
           fontFamily: 'var(--mono)',
           fontSize: '12px',
           color: '#9a9a9a',
-          minHeight: '110px',
+          minHeight: '120px',
           display: 'flex',
           flexDirection: 'column',
           gap: '8px',
@@ -95,11 +104,11 @@ const Loader = () => {
           <p style={{ color: 'rgba(180, 20, 20, 0.7)' }}>
             user@portfolio:~$ ./load_assets.sh
           </p>
-          {lines.slice(0, activeLine + 1).map((line, idx) => (
+          {BOOT_LINES.slice(0, activeLine + 1).map((line, idx) => (
             <p key={idx} style={{ color: idx === activeLine ? '#e2e2e2' : '#9a9a9a' }}>
               <span style={{ color: '#b41414', opacity: 0.6 }}>&gt;</span> {line}
               {idx === activeLine && progress < 100 && (
-                <span 
+                <span
                   style={{
                     display: 'inline-block',
                     width: '6px',
@@ -115,7 +124,7 @@ const Loader = () => {
           ))}
         </div>
 
-        {/* Barre de progression de chargement */}
+        {/* Barre de progression */}
         <div style={{ marginTop: '20px' }}>
           <div style={{
             display: 'flex',
@@ -129,7 +138,7 @@ const Loader = () => {
             <span>SYSTEM_LOAD</span>
             <span>{progress}%</span>
           </div>
-          
+
           <div style={{
             height: '6px',
             background: '#0d0d0d',
@@ -137,7 +146,7 @@ const Loader = () => {
             borderRadius: '1px',
             overflow: 'hidden',
           }}>
-            <div 
+            <div
               style={{
                 height: '100%',
                 width: `${progress}%`,

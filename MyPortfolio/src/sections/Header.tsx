@@ -6,6 +6,7 @@ import ThemeToggle from '../components/ui/ThemeToggle'
 
 type HeaderProps = {
   scrolled: boolean;
+  show
   lang: Language;
   setLang: (lang: Language) => void;
   theme: Theme;

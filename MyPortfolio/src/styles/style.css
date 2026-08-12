@@ -630,6 +630,29 @@ h4 {
   transition: ease 200ms;
 }
 
+.prj-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border: 1px solid var(--border-md);
+  padding: 5px 10px;
+  border-radius: 0 5px;
+  background-color: transparent;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.prj-details:hover {
+  color: var(--red);
+  border-color: var(--red);
+  background-color: var(--red-faint);
+}
+
 .prj-filter {
   display: flex;
   gap: 8px;

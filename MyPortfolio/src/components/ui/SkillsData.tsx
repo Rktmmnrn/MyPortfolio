@@ -42,6 +42,7 @@ export interface ProjectType {
   name: string;
   descKey: TranslationKey;
   image: string;
+  gallery?: string[];   // Images supplémentaires affichées dans la popup
   link: string;
   category: ProjectCategory;
   stack: string[];
@@ -54,6 +55,7 @@ export const projectsData: ProjectType[] = [
     name: 'Site ENEAM avec integration gestion pointage',
     descKey: 'projectEneam',
     image: eneamwebsite,
+    gallery: [eneamwebsite],
     link: 'https://github.com/Rktmmnrn/Projet_eneam',
     category: 'web',
     stack: ['Odoo', 'Django', 'PostgreSQL', 'Docker'],
@@ -64,6 +66,7 @@ export const projectsData: ProjectType[] = [
     name: 'Gestion resto',
     descKey: 'projectResto',
     image: resto,
+    gallery: [resto],
     link: 'https://gestion-commande-react.vercel.app/',
     category: 'web',
     stack: ['React', 'Tailwind', 'Django', 'SQLite'],
@@ -74,6 +77,7 @@ export const projectsData: ProjectType[] = [
     name: 'website restau',
     descKey: 'projectRestoDesc',
     image: restau,
+    gallery: [restau],
     link: 'https://resto-flame.vercel.app/',
     category: 'web',
     stack: ['HTML', 'CSS', 'JS'],
@@ -83,6 +87,7 @@ export const projectsData: ProjectType[] = [
     name: 'Vente voiture',
     descKey: 'projectCarDesc',
     image: javaVenteVoiture,
+    gallery: [javaVenteVoiture],
     link: 'https://github.com/Rktmmnrn/JavaAppVenteVoiture',
     category: 'desktop',
     stack: ['Java', 'Maven', 'MySQL', 'Apache'],
@@ -92,6 +97,7 @@ export const projectsData: ProjectType[] = [
     name: 'Parc informatique',
     descKey: 'projectParkDesc',
     image: appQt,
+    gallery: [appQt],
     link: 'https://github.com/Rktmmnrn/ParckInformatiqueInC-',
     category: 'desktop',
     stack: ['C++', 'MySQL'],
@@ -101,7 +107,8 @@ export const projectsData: ProjectType[] = [
     name: 'Routage IP',
     descKey: 'projectRouteDesc',
     image: routageIP,
-    link: 'https://github.com/Rktmmnrn',
+    gallery: [routageIP],
+    link: '',
     category: 'network',
     stack: ['GNS3', 'OSPF', 'RIP'],
     linkType: 'code',

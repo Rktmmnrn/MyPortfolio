@@ -59,6 +59,7 @@ export const translations = {
     featuredTag: "featured",
     viewLive: "view live",
     viewCode: "view code",
+    detailsBtn: "details",
     myProjects: "My projects",
     projectResto: "A user interface project that allows you to manage a restaurant and take online orders; the backend has not yet been deployed.",
     projectEneam: "An ERP platform that integrates staff point management and works in intranet mode.",
@@ -66,6 +67,10 @@ export const translations = {
     projectCarDesc: "first application in JAVA about car selling with Apache NetBeans.",
     projectParkDesc: "first application about IT park management with QTCreator based on C++.",
     projectRouteDesc: "first project with GNS3 using OSPF & RIP.",
+
+    // Popup
+    downloadCvBtn: "download",
+    closeBtn: "close",
 
     // Contact
     contactTitle: "Contact",
@@ -82,7 +87,6 @@ export const translations = {
     todoShow: "Show",
     todo1: "Optimize the performances",
     todo2: "Add chat box & AI",
-    todo3: "Improved the section skills",
     todo4: "Improved the interface"
   },
   fr: {
@@ -143,6 +147,7 @@ export const translations = {
     featuredTag: "à la une",
     viewLive: "voir le site",
     viewCode: "voir le code",
+    detailsBtn: "détails",
     myProjects: "Mes projets",
     projectResto: "Une projet IHM qui permet de gérer un resto et de prendre des commandes en ligne, backend pas encore déployer.",
     projectEneam: "Une plateforme ERP qui intègre la gestion de pointage des personnels et qui fonctionne en mode intranet.",
@@ -166,8 +171,11 @@ export const translations = {
     todoShow: "Montrer",
     todo1: "Optimization du performance",
     todo2: "Ajout chat pour discuter et IA",
-    todo3: "Amélioration du partie compétence",
-    todo4: "Amélioration de l'UI/UX"
+    todo4: "Amélioration de l'UI/UX",
+
+    // Popup
+    downloadCvBtn: "télécharger",
+    closeBtn: "fermer",
   },
   mg: {
     // Header & Navigation
@@ -227,6 +235,7 @@ export const translations = {
     featuredTag: "voafantina",
     viewLive: "hijery ny tranonkala",
     viewCode: "hijery ny kaody",
+    detailsBtn: "antsipiriany",
     myProjects: "Ny tetikasako",
     projectResto: "Tetik'asa interface tsara izay ahafahanao mitantana trano fisakafoanana sy mandray baiko an-tserasera; ny backend dia tsy mbola napetraka.",
     projectEneam: "Sehatra ERP izay mampiditra ny fitantanana ny teboka mpiasa ary miasa amin'ny fomba intranet.",
@@ -250,8 +259,11 @@ export const translations = {
     todoShow: "Aseho",
     todo1: "Fanatsarana ny tanjak'ilay portfolio",
     todo2: "Fanampiana fandefasana message sy IA",
-    todo3: "Fanatsarana ny eo amin'ny fahaizana",
-    todo4: "Fanatsarana ny UI/UX"
+    todo4: "Fanatsarana ny UI/UX",
+
+    // Popup
+    downloadCvBtn: "haka",
+    closeBtn: "hidio",
   }
 };
 
