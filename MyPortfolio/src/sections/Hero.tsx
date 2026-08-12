@@ -1,22 +1,23 @@
-import Writer from '../component/ui/MyTypeWriter'
-import VectorD from '../component/ui/vectorDown'
-import Btn from '../component/ui/boutton'
+import Writer from '../components/ui/MyTypeWriter';
+import VectorD from '../components/ui/VectorDown';
+import Btn from '../components/ui/Button';
 
-import profil from '../assets/png/IMG_20250428_092309.png'
-import down from '../assets/icons/Download.svg'
-import CV from '../data/CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
+import profil from '../assets/png/IMG_20250428_092309.png';
+import down from '../assets/icons/Download.svg';
+import CV from '../../public/CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
 
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { translations, Language } from '../data/i18n';
+import { SOCIAL_LINKS } from '../data/socials'
 
 type HeroProps = { lang: Language };
 
 const Hero = ({ lang }: HeroProps) => {
   const handleClick = () => {
-    const link = document.createElement('a');
-    link.href = CV;
+    // const link = document.createElement('a');
+    // link.href = CV;
     // link.download = 'CV_FANOMEZANIAVO.pdf';
-    link.click();
+    // link.click();
     window.open(CV, '_blank');
   };
 
@@ -67,13 +68,13 @@ const Hero = ({ lang }: HeroProps) => {
         </figure>
 
         <div className='flex-col lg:flex-row lg:w-full'>
-          <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin size={18} />
           </a>
-          <a href="https://github.com/Rktmmnrn" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub size={18} />
           </a>
-          <a href="https://www.facebook.com/fenoherysarobidy.rakotomami" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" title="Facebook">
             <FaFacebook size={18} />
           </a>
         </div>

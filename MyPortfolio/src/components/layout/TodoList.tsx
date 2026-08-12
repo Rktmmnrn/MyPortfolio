@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { translations, Language } from '../../data/i18n';
 
-import Btn from '../ui/boutton'
+import Btn from '../ui/Button'
 
 type TodoListProps = {
   lang: Language;

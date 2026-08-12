@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { easeInOut, motion } from 'framer-motion'
 import './styles/style.css'
-import ProgressBar from './component/layout/ProgressBar'
-import Cube3D from './component/layout/cube3D'
-import Btn from './component/ui/boutton'
+import ProgressBar from './components/layout/ProgressBar'
+import Cube3D from './components/layout/Cube3D'
+import Btn from './components/ui/Button'
 
 import { FiArrowUp } from "react-icons/fi"
 
@@ -16,7 +16,7 @@ import Experience from './sections/Experiences'
 import About from './sections/About'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
-import Todo from './component/layout/TodoList'
+import Todo from './components/layout/TodoList'
 import { RiKakaoTalkLine } from "react-icons/ri";
 import { Language } from './data/i18n'
 import { Theme } from './types/theme'

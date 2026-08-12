@@ -2,8 +2,8 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
-import { projectsData, ProjectCategory } from '../component/ui/SkillsData';
-import TagPill from '../component/ui/TagPill';
+import { projectsData, ProjectCategory } from '../components/ui/SkillsData';
+import TagPill from '../components/ui/TagPill';
 import { translations, Language } from '../data/i18n';
 
 type ProjectsProps = { lang: Language };

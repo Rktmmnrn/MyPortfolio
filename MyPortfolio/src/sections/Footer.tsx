@@ -1,9 +1,10 @@
 // import Logo from '/Logo.svg';
 import { translations, Language } from '../data/i18n';
+import { SOCIAL_LINKS } from '../data/socials';
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import Available from '../component/ui/Available';
+import Available from '../components/ui/Available';
 
-import Vector from '../component/ui/vector';
+import Vector from '../components/ui/Vector';
 import mail from '../assets/icons/mail.svg';
 import Phone from '../assets/icons/phone-calling-rounded-svgrepo-com.svg'
 
@@ -42,13 +43,13 @@ const Footer = ({ lang }: FooterProps) => (
           {translations[lang].footerFollow}
         </span>
         <div className='flex flex-row items-center gap-3'>
-          <a href="https://linkedin.com/in/fenohery-maminiriana" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
             <FaLinkedin size={22} />
           </a>
-          <a href="https://github.com/Rktmmnrn" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" title="GitHub">
             <FaGithub size={22} />
           </a>
-          <a href="https://www.facebook.com/fenoherysarobidy.rakotomami" target="_blank" rel="noopener noreferrer" title="Facebook">
+          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" title="Facebook">
             <FaFacebook size={22} />
           </a>
         </div>

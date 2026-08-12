@@ -20,6 +20,7 @@ const CompTypewriter = ({ lang }: TypewriterProps) => {
   useEffect(() => {
     if (words.length === 0) return;
     const currentWord = words[wordIndex % words.length];
+    let pauseTimer: ReturnType<typeof setTimeout>;
 
     const tick = () => {
       if (isDeleting) {
@@ -31,7 +32,7 @@ const CompTypewriter = ({ lang }: TypewriterProps) => {
       }
 
       if (!isDeleting && text === currentWord) {
-        setTimeout(() => setIsDeleting(true), 1400);
+        pauseTimer = setTimeout(() => setIsDeleting(true), 1400);
       } else if (isDeleting && text === '') {
         setIsDeleting(false);
         setWordIndex(p => p + 1);
@@ -39,7 +40,10 @@ const CompTypewriter = ({ lang }: TypewriterProps) => {
     };
 
     const t = setTimeout(tick, speed);
-    return () => clearTimeout(t);
+    return () => {
+      clearTimeout(t);
+      if (pauseTimer) clearTimeout(pauseTimer);
+    }
   }, [text, isDeleting, wordIndex, words, speed]);
 
   return (

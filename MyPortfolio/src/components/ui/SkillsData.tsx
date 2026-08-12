@@ -7,7 +7,7 @@ import Php from '../../assets/icons/php2-svgrepo-com.svg'
 import SQlite from '../../assets/icons/sqlite.svg'
 import Postgres from '../../assets/icons/postgresql.svg'
 import Mysql from '../../assets/icons/mysql-3.svg'
-import Cé from '../../assets/icons/c-1.svg'
+import C from '../../assets/icons/c-1.svg'
 import Cplus from '../../assets/icons/c.svg'
 import Java from '../../assets/icons/java-svgrepo-com.svg'
 import Routage from '../../assets/icons/router-svgrepo-com.svg'
@@ -145,7 +145,7 @@ const skillsData: SkillGroupType[] = [
       { name: 'JavaScript/Typescript', icon: Js },
       { name: 'Python', icon: Python },
       { name: 'Java', icon: Java },
-      { name: 'C', icon: Cé },
+      { name: 'C', icon: C },
       { name: 'C++', icon: Cplus },
       { name: 'PHP', icon: Php },
     ]

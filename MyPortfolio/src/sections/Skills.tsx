@@ -1,4 +1,4 @@
-import skillsData from '../component/ui/SkillsData'
+import skillsData from '../components/ui/SkillsData'
 import { motion } from 'framer-motion'
 
 import { translations, Language } from '../data/i18n';

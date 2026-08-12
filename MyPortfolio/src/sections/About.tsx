@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { translations, Language } from '../data/i18n';
-import Card from '../component/ui/Card';
+import Card from '../components/ui/Card';
 
 type AboutProps = { lang: Language };
 

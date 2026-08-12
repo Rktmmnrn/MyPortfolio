@@ -1,8 +1,8 @@
 import Logo from '/Logo.svg';
 import { Language } from '../data/i18n';
-import LanguageSelector from '../component/ui/LanguageSelector';
+import LanguageSelector from '../components/ui/LanguageSelector';
 import { Theme } from '../types/theme';
-import ThemeToggle from '../component/ui/ThemeToggle'
+import ThemeToggle from '../components/ui/ThemeToggle'
 
 type HeaderProps = {
   scrolled: boolean;

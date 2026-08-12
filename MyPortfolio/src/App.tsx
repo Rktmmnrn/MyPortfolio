@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './styles/App.css'
 import './styles/style.css'
 import Home from './Home.tsx'
-import Loader from './component/layout/Loader.tsx'
+import Loader from './components/layout/Loader.tsx'
 import NotFound from './sections/NotFound.tsx'
 
 function App() {

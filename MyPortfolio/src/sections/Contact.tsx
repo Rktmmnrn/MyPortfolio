@@ -1,17 +1,18 @@
 import { motion } from 'framer-motion';
-import Vector from '../component/ui/vector';
-import Card from '../component/ui/Card';
+import Vector from '../components/ui/Vector';
+import Card from '../components/ui/Card';
 import mail from '../assets/icons/mail.svg';
 import git from '../assets/icons/github-icon-1.svg';
 import lnkdn from '../assets/icons/linkedin-svgrepo-com.svg';
 import { translations, Language } from '../data/i18n';
+import { SOCIAL_LINKS } from '../data/socials';
 
 type ContactProps = { lang: Language };
 
 const links = [
   { href: 'mailto:rfanomezaniavo@gmail.com', icon: mail, label: 'rfanomezaniavo@gmail.com' },
-  { href: 'https://github.com/Rktmmnrn', icon: git, label: 'github.com/Rktmmnrn' },
-  { href: 'https://linkedin.com/in/fenohery-maminiriana', icon: lnkdn, label: 'linkedin / fenohery-maminiriana' },
+  { href: SOCIAL_LINKS.github, icon: git, label: 'github.com/Rktmmnrn' },
+  { href: SOCIAL_LINKS.linkedin, icon: lnkdn, label: 'linkedin / fenohery-maminiriana' },
 ];
 
 const Contact = ({ lang }: ContactProps) => (
