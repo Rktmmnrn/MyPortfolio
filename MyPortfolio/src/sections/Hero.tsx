@@ -4,7 +4,7 @@ import Btn from '../components/ui/Button';
 
 import profil from '../assets/png/IMG_20250428_092309.png';
 import down from '../assets/icons/Download.svg';
-import CV from '../../public/CV_Dev_Fanomezaniavo_RAKOTOMAMINIRIANA.pdf';
+import CV from '../../public/CV_Fanomezaniavo.pdf';
 
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { translations, Language } from '../data/i18n';
