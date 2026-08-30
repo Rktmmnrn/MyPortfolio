@@ -21,6 +21,7 @@ import Python from '../../assets/icons/python-svgrepo-com.svg'
 import Django from '../../assets/icons/django-svgrepo-com.svg'
 import FastAPI from '../../assets/icons/fastapi-svgrepo-com.svg'
 import Claude from '../../assets/icons/Claude_AI_symbol.svg'
+import Next from './../../assets/icons/nextjs-icon-svgrepo-com.svg'
 // import Chess from '../../assets/icons/chess-8-svgrepo-com.svg'
 
 import Antigravity from '../../assets/jpeg/antigravity.jpeg'
@@ -80,7 +81,7 @@ export const projectsData: ProjectType[] = [
     gallery: [restau],
     link: 'https://resto-flame.vercel.app/',
     category: 'web',
-    stack: ['HTML', 'CSS', 'JS'],
+    stack: ['NetxJS', 'TailwindCss'],
     linkType: 'live',
   },
   {
@@ -137,6 +138,7 @@ const skillsData: SkillGroupType[] = [
     icon: <MdWeb size={20} />,
     items: [
       { name: 'React', icon: ReactSvg },
+      { name: 'NextJS', icon: Next },
       { name: 'Tailwind', icon: Tailwind },
       { name: 'Django', icon: Django },
       { name: 'FastAPI', icon: FastAPI },
