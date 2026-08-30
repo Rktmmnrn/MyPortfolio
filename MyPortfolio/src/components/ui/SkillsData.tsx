@@ -81,7 +81,7 @@ export const projectsData: ProjectType[] = [
     gallery: [restau],
     link: 'https://resto-flame.vercel.app/',
     category: 'web',
-    stack: ['NetxJS', 'TailwindCss'],
+    stack: ['NetxJS', 'Typescript', 'TailwindCss'],
     linkType: 'live',
   },
   {
