@@ -13,7 +13,7 @@ import { SOCIAL_LINKS } from '../data/socials';
 
 type HeroProps = { lang: Language };
 
-const CV_PATH = '/CV_Fanomezaniavo.pdf';
+const CV_PATH = '/CV_D_Fanomezaniavo.pdf';
 
 const Hero = ({ lang }: HeroProps) => {
   const [showCV, setShowCV] = useState(false);
@@ -47,7 +47,7 @@ const Hero = ({ lang }: HeroProps) => {
             <Writer lang={lang} />
           </h2>
 
-          {/* CTA — ouvre le CV dans la popup */}
+          {/* ouvre le CV dans la popup */}
           <Btn
             onClick={() => setShowCV(true)}
             className='bg-[#b41414] text-white gap-3'

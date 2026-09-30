@@ -15,7 +15,7 @@ export const translations = {
 
     // Hero
     hiIm: "hi, i'm",
-    downloadCv: "./download_cv.sh",
+    downloadCv: "./my_CV",
     typewriterWords: [
       "developer web & desktop",
       "react & python developer",
@@ -103,7 +103,7 @@ export const translations = {
 
     // Hero
     hiIm: "salut, je suis",
-    downloadCv: "./telecharger_cv.sh",
+    downloadCv: "./mon_cv",
     typewriterWords: [
       "développeur web & desktop",
       "développeur react & python",
@@ -191,7 +191,7 @@ export const translations = {
 
     // Hero
     hiIm: "salama, izaho dia",
-    downloadCv: "./haka_cv.sh",
+    downloadCv: "./ny_cv-ako",
     typewriterWords: [
       "mpamorona tranonkala & rindrankajy",
       "fitaovana react & python",
