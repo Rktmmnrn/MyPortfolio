@@ -67,7 +67,7 @@ const Hero = ({ lang }: HeroProps) => {
           </Btn>
         </div>
 
-        {/* Colonne photo */}
+        {/* Partie photo */}
         <div>
           <figure>
             <img src={profil} alt="Fanomezaniavo" />
