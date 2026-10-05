@@ -50,7 +50,7 @@ const Hero = ({ lang }: HeroProps) => {
           {/* ouvre le CV dans la popup */}
           <Btn
             onClick={() => setShowCV(true)}
-            className='bg-[#b41414] text-white gap-3'
+            className='bg-[#b41414] text-white gap-3 uppercase'
             style={{
               fontFamily: 'var(--mono)',
               fontSize: '11px',

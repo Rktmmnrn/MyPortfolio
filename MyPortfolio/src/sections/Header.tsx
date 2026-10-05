@@ -1,4 +1,4 @@
-import Logo from '/Logo.svg';
+import Logo from '../components/ui/Logo';
 import { Language } from '../data/i18n';
 import LanguageSelector from '../components/ui/LanguageSelector';
 import { Theme } from '../types/theme';
@@ -17,7 +17,7 @@ const Header = ({ scrolled, lang, setLang, theme, toggleTheme }: HeaderProps) =>
   <header className={scrolled ? 'scrolled' : ''}>
     {/* Logo */}
     <figure className={scrolled ? 'scrolled' : ''}>
-      <img src={Logo} alt="Logo" />
+      <Logo dark={theme === 'dark'} className='w-38 h-auto' />
     </figure>
 
     <div className="flex flex-row items-center w-auto gap-2 justify-between">
